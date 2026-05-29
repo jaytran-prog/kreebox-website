@@ -478,6 +478,7 @@ body::after {
   border-bottom: 1px solid var(--border);
   position: relative;
 }
+.exp-item:last-child { border-bottom: none; }
 .exp-item__period { font-family: var(--f-mono); font-size: 0.72rem; color: var(--ink-3); padding-top: 0.25rem; }
 .exp-item__company { font-family: var(--f-display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.2rem; color: var(--ink); }
 .exp-item__role { font-family: var(--f-mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.65rem; }
