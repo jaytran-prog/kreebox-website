@@ -384,7 +384,8 @@ body::after {
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 3rem;
-  padding-bottom: 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--border);
 }
 .section-header__index {
