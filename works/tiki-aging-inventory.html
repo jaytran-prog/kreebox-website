@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiki Aging Inventory Report — Phuong Tran</title>
+  <meta name="description" content="Designing a data visualisation tool that gives Tiki sellers a clear picture of aging stock — before slow-moving inventory becomes a write-off problem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Reading progress"></div>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" style="display:flex;align-items:center;gap:9px;"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>Phuong Tran</a>
+      <ul class="nav__links" role="list">
+        <li><a href="../works.html">Works</a></li>
+        <li><a href="../now.html">Now</a></li>
+        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
+        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta">Have a chat</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__hamburger" aria-expanded="false" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="cs-hero">
+    <div class="container">
+      <a href="../works.html" class="cs-hero__back hero-stagger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        See all works
+      </a>
+      <div class="cs-hero__tags hero-stagger">
+        <span class="tag">Web App</span>
+        <span class="tag">Data Visualisation</span>
+        <span class="tag">Seller Tools</span>
+        <span class="tag">E-commerce</span>
+        <span class="tag">Tiki</span>
+      </div>
+      <h1 class="display-xl cs-hero__title hero-stagger">Giving Tiki sellers a clear picture of aging stock — before it became a write-off problem</h1>
+      <p class="cs-hero__subtitle hero-stagger">Sellers on Tiki's marketplace were losing money to slow-moving inventory they couldn't see clearly. I designed the Aging Inventory Report — a data visualisation and analytics tool that turned raw stock data into actionable decisions, in one month.</p>
+      <div class="cs-meta hero-stagger">
+        <div class="cs-meta__item"><p class="cs-meta__label">My Role</p><p class="cs-meta__value">Product Designer</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Company</p><p class="cs-meta__value">Tiki · Vietnam</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Year</p><p class="cs-meta__value">2024</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Type</p><p class="cs-meta__value">Feature design · Data viz</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Duration</p><p class="cs-meta__value">1 month · Full-time</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 0;">
+    <div class="container">
+      <div style="overflow:hidden;border-radius:var(--radius-md);">
+        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6595dd9d257b35a4651b_648c1c56e7bbe3e0360c0182_Untitled.png" alt="Tiki aging inventory report — main dashboard view" style="width:100%;display:block;" loading="eager" />
+      </div>
+      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:0.75rem;text-align:center;letter-spacing:0.04em;">Aging Inventory Report — stock age visualisation with actionable recommendations for Tiki sellers</p>
+    </div>
+  </div>
+
+  <div class="cs-layout">
+    <aside class="cs-toc" aria-label="Table of contents">
+      <p class="cs-toc__label">Contents</p>
+      <ul class="cs-toc__list" role="list">
+        <li><a href="#background" class="cs-toc__link">I — Background</a></li>
+        <li><a href="#problem" class="cs-toc__link">II — The problem</a></li>
+        <li><a href="#approach" class="cs-toc__link">III — Design approach</a></li>
+        <li><a href="#delivery" class="cs-toc__link">IV — What shipped</a></li>
+        <li><a href="#outcomes" class="cs-toc__link">V — Outcomes</a></li>
+      </ul>
+    </aside>
+
+    <main class="cs-content">
+
+      <section class="cs-section fade-up" id="background">
+        <div class="cs-section__header"><span class="cs-section__number">Section I</span><h2 class="cs-section__title">Tiki had seller inventory tools. None of them showed how long stock had been sitting.</h2></div>
+        <div class="cs-body">
+          <p>Tiki is one of Vietnam's largest e-commerce platforms — a marketplace where thousands of sellers manage inventory, logistics, and pricing through the Seller Center. The existing toolset covered stock levels, order history, and sales performance. What it didn't cover was inventory age: how long individual SKUs had been in the warehouse, and which ones were at risk of becoming unsellable.</p>
+          <p>The business signal that surfaced this gap was operational. Finance operations were processing a growing volume of manual clearance requests, seller disputes about storage fees, and ad-hoc reports from account managers trying to help sellers avoid overstocking situations. These were all symptoms of the same missing visibility layer.</p>
+          <p>I was brought in for a one-month sprint to design the Aging Inventory Report — a feature that would give sellers this visibility directly in Seller Center, without relying on account manager intervention or manual data pulls.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><p class="cs-metric__value">4</p><p class="cs-metric__label">Age buckets: 0–30, 31–60, 61–90, 90+ days</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">1 mo</p><p class="cs-metric__label">Research, design, and handoff — full sprint</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">0</p><p class="cs-metric__label">Training required — non-technical sellers onboarded immediately</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="problem">
+        <div class="cs-section__header"><span class="cs-section__number">Section II</span><h2 class="cs-section__title">Sellers were overstocking without knowing it — and discovering the problem too late</h2></div>
+        <div class="cs-body">
+          <p>Seller research revealed a consistent pattern: inventory decisions were being made on instinct rather than data, because the data wasn't available in an actionable form. Sellers knew their total stock count. They didn't know that 30% of it had been in the warehouse for over 60 days and was accumulating storage fees that were eroding their margin.</p>
+          <p>The moment sellers discovered this was typically when they received a storage fee invoice, a clearance deadline notice, or a report from their account manager. By then, the optimal window for action — promotion, repricing, supplier return — had often already passed.</p>
+          <p>There was a second dimension to the problem: the users who most needed this tool were not analytically sophisticated. Tiki's seller base ranges from large brands with dedicated e-commerce teams to small businesses operated by a single person. The design had to work for both — giving deep analysis to those who wanted it, and clear, actionable summary to those who didn't.</p>
+        </div>
+        <div class="cs-pullquote"><p>The goal wasn't to give sellers more data. Tiki already had the data. The goal was to make one specific piece of it — how long stock had been sitting — impossible to ignore.</p></div>
+      </section>
+
+      <section class="cs-section fade-up" id="approach">
+        <div class="cs-section__header"><span class="cs-section__number">Section III</span><h2 class="cs-section__title">Diagnosis, context, action — three questions the design had to answer</h2></div>
+        <div class="cs-body"><p>I started with seller interviews to understand how they thought about inventory — not how analysts thought about it. The mental model that emerged was simple: sellers wanted to know what they should do today, not how to build an inventory management strategy. The design had to translate data into decisions.</p></div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Diagnosis: What's aging?</h3>
+          <div class="cs-body"><p>The primary view is a visual chart showing inventory broken down by age bucket (0–30, 31–60, 61–90, 90+ days). Charts were chosen over tables for this view specifically because pattern recognition works faster than number reading for non-technical users. A tall bar in the 90+ bucket communicates urgency before the user reads a single number.</p></div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Context: Why?</h3>
+          <div class="cs-body"><p>Date range filters and category breakdowns let sellers investigate what drove their current inventory profile — a seasonal slowdown, a promotion that underperformed, a supplier shipment that arrived too large. This context changes what action makes sense, so it needed to be easily accessible without requiring navigation away from the main report.</p></div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Action: What do I do?</h3>
+          <div class="cs-body"><p>For each age bucket, the design surfaces contextual recommendations: run a promotion (31–60 days), reprice below competitor (61–90 days), initiate supplier return or write-off process (90+ days). These aren't algorithmic — they're curated based on what Tiki's category managers know works for each aging profile. Removing the interpretation burden was critical for sellers who needed to act fast.</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="delivery">
+        <div class="cs-section__header"><span class="cs-section__number">Section IV</span><h2 class="cs-section__title">What shipped</h2></div>
+        <div class="cs-segments">
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Aging Chart</p><p class="cs-segment__desc">Visual inventory breakdown by age bucket — pattern recognition over raw tables, immediately communicating which buckets need attention</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Date Range Filters</p><p class="cs-segment__desc">Customisable lookback period — sellers can compare seasons, analyse specific promotions, or track how their inventory profile changes over time</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Recommendations Engine</p><p class="cs-segment__desc">Curated actionable suggestions per age bucket — promote, reprice, return to supplier, or write off — removing the interpretation burden for non-technical sellers</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Seller Center Integration</p><p class="cs-segment__desc">Designed as a native extension of existing Seller Center navigation — zero context switching for sellers already familiar with the platform</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="outcomes">
+        <div class="cs-section__header"><span class="cs-section__number">V — Outcomes</span><h2 class="cs-section__title">Better decisions, earlier — before the problem compounds</h2></div>
+        <div class="cs-body">
+          <p>The Aging Inventory Report shifted when sellers discovered and acted on inventory problems — from after they received a fee invoice or clearance notice, to before those events occurred. Earlier action means more options: promotions, repricing, and supplier returns all require lead time. The report created that lead time by making the problem visible at the right moment.</p>
+          <p>Operationally, the feature reduced the volume of manual clearance requests and account manager interventions for overstocking situations. The self-service visibility layer meant fewer escalations — and more sellers managing their own inventory proactively.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><p class="cs-metric__value">Reduced</p><p class="cs-metric__label">Overstocking instances and manual support requests</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">Earlier</p><p class="cs-metric__label">Intervention — sellers act during the actionable window, not after</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">Higher</p><p class="cs-metric__label">Inventory turnover and seller profitability</p></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:2rem 0;">
+          <span class="tag" style="padding:0.3rem 0.8rem;">Data visualisation</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">Seller tools</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">E-commerce UX</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">Dashboard design</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">UX research</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="container">
+    <section style="padding:4rem 0;border-top:1px solid var(--border);">
+      <p style="font-family:var(--f-mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2rem;">Other Tiki case studies</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <a href="my-balance.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Tiki · Feature</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">My Balance — Seller Payout</p>
+        </a>
+        <a href="great2know.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">great2know · SaaS</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Knowledge Transfer Platform</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p></div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-group"><p class="footer__nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html">Works</a></li><li><a href="../now.html">Now</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:jay.tran@kreebox.com">Email</a></li><li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
+        </nav>
+      </div>
+      <div class="footer__bottom"><p class="footer__copy">© 2026 Phuong Tran. Built with care.</p></div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script>
+    const bar = document.getElementById('progressBar');
+    if (bar) window.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%'; }, { passive: true });
+    const secs = document.querySelectorAll('.cs-section[id]'), tocLinks = document.querySelectorAll('.cs-toc__link');
+    if (secs.length && tocLinks.length) { const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { tocLinks.forEach(l => l.classList.remove('active')); const a = document.querySelector('.cs-toc__link[href="#' + e.target.id + '"]'); if (a) a.classList.add('active'); } }); }, { rootMargin: '-20% 0px -70% 0px' }); secs.forEach(s => io.observe(s)); }
+  </script>
+</body>
+</html>

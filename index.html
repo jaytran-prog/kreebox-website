@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#C2F542" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#3B0D9E" media="(prefers-color-scheme: light)" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phuong Tran — Product Design Manager</title>
+  <meta name="description" content="Product Design Manager with 12+ years turning complex problems into simple, scalable, and user-centric solutions. Currently at TSC.ai." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home" style="display:flex;align-items:center;gap:9px;"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>Phuong Tran</a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="works.html">Works</a></li>
+        <li><a href="now.html">Now</a></li>
+        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
+        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta">Have a chat</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__hamburger" aria-expanded="false" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────────────────── -->
+  <section class="hero">
+    <!-- Floating orbs -->
+    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+    <div class="container">
+      <h1 class="display-xl hero__title hero-stagger">
+        Design leader &amp;<br/><span class="gradient-text">product thinker</span>
+      </h1>
+
+      <p class="hero__subtitle hero-stagger">
+        A Product Design Manager with <strong>12+ years</strong> turning complex problems into
+        simple, scalable, and user-centric solutions. I lead teams at the intersection of
+        strategy and execution — partnering with Product, Engineering, and Business to drive
+        measurable impact through design.<br/><br/>
+        Currently at <a href="https://tsc.ai" target="_blank" rel="noopener"
+          style="color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;transition:opacity 0.2s;">TSC.ai ↗</a>.
+      </p>
+
+      <div class="hero__actions hero-stagger">
+        <a href="works.html" class="btn-primary">
+          <span>View my work</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="mailto:jay.tran@kreebox.com" class="btn-ghost">
+          jay.tran@kreebox.com
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ─── Featured Works ────────────────────────────────────────── -->
+  <section class="works-section" aria-labelledby="works-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div>
+          <p class="section-header__index">01 / Works</p>
+          <h2 class="display-md" id="works-heading">Selected projects</h2>
+        </div>
+        <a href="works.html" class="view-all">
+          See all work
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- Work item 1: Genie Platform -->
+      <a href="works/genie-platform.html" class="work-item fade-up" data-tags="webapp product design leadership">
+        <span class="work-item__year">2021 — Present</span>
+        <div class="work-item__content">
+          <p class="work-item__company">TSC.ai</p>
+          <h3 class="work-item__title">Turning scattered enterprise data into a connected intelligence system — from 0 to production</h3>
+          <p class="work-item__desc">Designed the full Genie platform from scratch: 8 feature areas, a shared design system, and an AI co-pilot that brings media, stakeholders, and analysis into one workflow.</p>
+          <div class="work-item__tags">
+            <span class="tag">0→1 Product</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Design System</span>
+            <span class="tag">AI</span>
+          </div>
+        </div>
+        <div class="work-item__meta">
+          <svg class="work-item__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Work item 2: My Balance -->
+      <a href="works/my-balance.html" class="work-item fade-up" data-tags="webapp product design research">
+        <span class="work-item__year">2020</span>
+        <div class="work-item__content">
+          <p class="work-item__company">Tiki</p>
+          <h3 class="work-item__title">Cutting seller payout time from 7 days to instant on Vietnam's largest e-commerce platform</h3>
+          <p class="work-item__desc">Unified fragmented balance views across multiple seller roles, enabled same-day withdrawals, and removed the bank-transfer bottleneck that was costing teams time and fees.</p>
+          <div class="work-item__tags">
+            <span class="tag">Product</span>
+            <span class="tag">Research</span>
+            <span class="tag">Design</span>
+          </div>
+        </div>
+        <div class="work-item__meta">
+          <svg class="work-item__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Work item 3: GemPages Dashboard -->
+      <a href="works/gempages-dashboard.html" class="work-item fade-up" data-tags="webapp product design">
+        <span class="work-item__year">2019</span>
+        <div class="work-item__content">
+          <p class="work-item__company">EcomSolid</p>
+          <h3 class="work-item__title">Redesigning GemPages to reduce editor friction for 5,000+ Shopify merchants</h3>
+          <p class="work-item__desc">Restructured navigation, streamlined key workflows, and shipped a full dark mode — all based on user research, in 90 days.</p>
+          <div class="work-item__tags">
+            <span class="tag">Product</span>
+            <span class="tag">Design</span>
+            <span class="tag">Research</span>
+          </div>
+        </div>
+        <div class="work-item__meta">
+          <svg class="work-item__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Work item 4: Delivery App -->
+      <a href="works/delivery-app.html" class="work-item fade-up" data-tags="mobileapp product research">
+        <span class="work-item__year">2024</span>
+        <div class="work-item__content">
+          <p class="work-item__company">Freelance · South Korea</p>
+          <h3 class="work-item__title">Replacing manual temperature logs with real-time monitoring for cold storage operators</h3>
+          <p class="work-item__desc">Designed a mobile platform from research to handoff — replacing fragmented manual processes with real-time monitoring, camera-based scanning, and automatic compliance documentation.</p>
+          <div class="work-item__tags">
+            <span class="tag">Mobile</span>
+            <span class="tag">UX Research</span>
+            <span class="tag">Design</span>
+          </div>
+        </div>
+        <div class="work-item__meta">
+          <svg class="work-item__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ─── Experience ────────────────────────────────────────────── -->
+  <section class="experience-section" aria-labelledby="exp-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div>
+          <p class="section-header__index">02 / Experience</p>
+          <h2 class="display-md" id="exp-heading">Where I've worked</h2>
+        </div>
+        <a href="now.html" class="view-all">
+          Full story
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="exp-list">
+        <a href="company/tsc-ai.html" class="exp-item fade-up">
+          <div class="exp-item__period">2023 — Present</div>
+          <div>
+            <h3 class="exp-item__company">TSC.ai</h3>
+            <p class="exp-item__role">Lead UX/UI Designer</p>
+            <p class="exp-item__desc">Designed Genie — TSC's enterprise AI platform — from zero to production. Built the design system, scaled the team, and embedded AI agents into the daily design workflow.</p>
+          </div>
+          <svg class="exp-item__caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+        <a href="company/tiki.html" class="exp-item fade-up">
+          <div class="exp-item__period">2021 — 2023</div>
+          <div>
+            <h3 class="exp-item__company">Tiki</h3>
+            <p class="exp-item__role">Product Design Manager → Senior Product Designer</p>
+            <p class="exp-item__desc">Led the Seller Center team through hyper-growth. Shipped My Balance, e-Contract, and BPOR redesign — features reaching millions of daily active users.</p>
+          </div>
+          <svg class="exp-item__caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+        <a href="company/onemount.html" class="exp-item fade-up">
+          <div class="exp-item__period">2020 — 2021</div>
+          <div>
+            <h3 class="exp-item__company">Onemount Group</h3>
+            <p class="exp-item__role">Senior UX/UI Designer</p>
+            <p class="exp-item__desc">Designed for a super app platform. Translated user research into UX requirements and shipped across multiple product streams in a complex cross-functional environment.</p>
+          </div>
+          <svg class="exp-item__caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+        <a href="company/seal-commerce.html" class="exp-item fade-up">
+          <div class="exp-item__period">2019 — 2020</div>
+          <div>
+            <h3 class="exp-item__company">Seal Commerce Asia</h3>
+            <p class="exp-item__role">Product Design Manager</p>
+            <p class="exp-item__desc">Mentored a team of 4–5 designers. Redesigned Ecomsolid and Gempages — two major Shopify ecosystem products — and built a unified component library from scratch.</p>
+          </div>
+          <svg class="exp-item__caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+        <a href="company/freelance.html" class="exp-item fade-up">
+          <div class="exp-item__period">Dec 2010 — Present</div>
+          <div>
+            <h3 class="exp-item__company">Samo Media · The End · Asiasoft</h3>
+            <p class="exp-item__role">Head of Design · Freelance Designer</p>
+            <p class="exp-item__desc">UI/UX, branding, and consulting for 100+ clients globally — across fintech, e-commerce, SaaS, and branding. Clients in AU, UK, and VN. Delivered everything on time.</p>
+          </div>
+          <svg class="exp-item__caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ─── Archive / Community ───────────────────────────────────── -->
+  <section class="archive-section" aria-labelledby="archive-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div>
+          <p class="section-header__index">03 / Community</p>
+          <h2 class="display-md" id="archive-heading">Beyond the day job</h2>
+        </div>
+      </div>
+
+      <div class="archive-grid">
+        <div class="archive-card fade-up">
+          <div class="archive-card__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="archive-card__title">AI-Augmented Workflow</h3>
+          <p class="archive-card__period">2024 — Present</p>
+          <p class="archive-card__desc">I don't just use AI tools — I build them into how I work. Custom agentic pipelines that pull Slack feedback, surface Jira tickets, and query Confluence knowledge bases autonomously. Cursor to prototype independently. Figmake to turn design system components into testable flows in minutes.</p>
+        </div>
+        <div class="archive-card fade-up">
+          <div class="archive-card__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="archive-card__title">Mentoring</h3>
+          <p class="archive-card__period">2019 — Present</p>
+          <p class="archive-card__desc">Mentored designers one-on-one. I care a lot about helping people grow in this craft.</p>
+        </div>
+        <div class="archive-card fade-up">
+          <div class="archive-card__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="archive-card__title">Community</h3>
+          <p class="archive-card__period">2018 — Present</p>
+          <p class="archive-card__desc">I build free apps for people who need them. A tool for kidney disease patients to track their health. A flashcard app for kids learning English — free for children and parents alike. No monetization, no agenda. Just problems worth solving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__brand-name">Phuong Tran</p>
+          <p class="footer__tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-group">
+            <p class="footer__nav-title">Navigation</p>
+            <ul class="footer__nav-links" role="list">
+              <li><a href="works.html">Works</a></li>
+              <li><a href="now.html">Now</a></li>
+              <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <p class="footer__nav-title">Contact</p>
+            <ul class="footer__nav-links" role="list">
+              <li><a href="mailto:jay.tran@kreebox.com">Email</a></li>
+              <li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Phuong Tran. Built with care.</p>
+        <div class="footer__socials">
+          <a href="mailto:jay.tran@kreebox.com">Email</a>
+          <a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

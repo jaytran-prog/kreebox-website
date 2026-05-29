@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dose Diary — Phuong Tran</title>
+  <meta name="description" content="Designing and building a privacy-first iOS app for kidney patients and complex medication schedules — from personal need to App Store." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Reading progress"></div>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" style="display:flex;align-items:center;gap:9px;"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>Phuong Tran</a>
+      <ul class="nav__links" role="list">
+        <li><a href="../works.html">Works</a></li>
+        <li><a href="../now.html">Now</a></li>
+        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
+        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta">Have a chat</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__hamburger" aria-expanded="false" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="cs-hero">
+    <div class="container">
+      <a href="../works.html" class="cs-hero__back hero-stagger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        See all works
+      </a>
+      <div class="cs-hero__tags hero-stagger">
+        <span class="tag">iOS App</span>
+        <span class="tag">0→1 Product</span>
+        <span class="tag">Design &amp; Code</span>
+        <span class="tag">Health Tech</span>
+        <span class="tag">SwiftUI</span>
+      </div>
+      <h1 class="display-xl cs-hero__title hero-stagger">Designing and building a medication tracker for kidney patients — because nothing on the App Store came close</h1>
+      <p class="cs-hero__subtitle hero-stagger">Dose Diary started as a weekend project born from real necessity — managing my wife's post-transplant immunosuppressant schedule and my own hormone therapy. When I couldn't find an app that handled complex schedules, lab tracking, and dialysis sessions without demanding cloud accounts or subscriptions, I designed and built one myself.</p>
+      <div class="cs-meta hero-stagger">
+        <div class="cs-meta__item"><p class="cs-meta__label">My Role</p><p class="cs-meta__value">Designer &amp; Developer</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Website</p><p class="cs-meta__value"><a href="https://jaytran-prog.github.io/" target="_blank" rel="noopener">jaytran-prog.github.io ↗</a></p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Year</p><p class="cs-meta__value">2026</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Stack</p><p class="cs-meta__value">SwiftUI · SwiftData · iOS</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Live</p><p class="cs-meta__value"><a href="https://apps.apple.com/app/id6763815560" target="_blank" rel="noopener">App Store ↗</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0;">
+    <div class="container">
+      <div class="cs-phone-gallery">
+        <img src="https://jaytran-prog.github.io/img/screen-lab-results.png" alt="Dose Diary — Kidney Health screen with eGFR trend chart and lab results" loading="eager" />
+        <img src="https://jaytran-prog.github.io/img/screen-period-report.png" alt="Dose Diary — Period Report comparing two exam dates with color-coded lab trends" loading="eager" />
+        <img src="https://jaytran-prog.github.io/img/screen-pdf-report.png" alt="Dose Diary — PDF Kidney Health Report formatted for physician review" loading="eager" />
+      </div>
+      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:1.5rem;text-align:center;letter-spacing:0.04em;">Kidney Mode — eGFR trend tracking, period report comparison, and PDF export for physician review</p>
+      <div style="text-align:center;margin-top:1.5rem;">
+        <a href="https://apps.apple.com/app/id6763815560" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--ink);color:var(--bg);padding:0.65rem 1.25rem;border-radius:var(--radius-md);font-family:var(--f-mono);font-size:0.72rem;letter-spacing:0.06em;text-decoration:none;font-weight:600;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on App Store
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-layout">
+    <aside class="cs-toc" aria-label="Table of contents">
+      <p class="cs-toc__label">Contents</p>
+      <ul class="cs-toc__list" role="list">
+        <li><a href="#origin" class="cs-toc__link">I — Origin</a></li>
+        <li><a href="#problem" class="cs-toc__link">II — The problem</a></li>
+        <li><a href="#principles" class="cs-toc__link">III — Design principles</a></li>
+        <li><a href="#system" class="cs-toc__link">IV — What I built</a></li>
+        <li><a href="#kidney" class="cs-toc__link">V — Kidney Mode</a></li>
+        <li><a href="#reflection" class="cs-toc__link">VI — Reflection</a></li>
+      </ul>
+    </aside>
+
+    <main class="cs-content">
+
+      <section class="cs-section fade-up" id="origin">
+        <div class="cs-section__header"><span class="cs-section__number">Section I</span><h2 class="cs-section__title">This app exists because I needed it</h2></div>
+        <div class="cs-body">
+          <p>My wife is a kidney transplant recipient. Her daily medication schedule involves immunosuppressants that must be taken at precise times, at precise doses, and tracked against lab results — eGFR, creatinine, tacrolimus trough levels — that shift the clinical picture every few weeks. I'm managing hormone therapy myself, which adds its own set of weekly and bi-weekly schedules.</p>
+          <p>Every medication app I tried made the same assumptions: daily doses, single user, maybe a reminder. None of them handled weekly, bi-weekly, or monthly intervals without workarounds. None of them connected medication logs to lab results. And almost all of them required a cloud account — which, for sensitive health data, felt like a trust trade I wasn't willing to make.</p>
+          <p>So I built Dose Diary on weekends. The design decisions came directly from lived experience, not from user personas.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><p class="cs-metric__value">2</p><p class="cs-metric__label">Real users who shaped every design decision — my wife and myself</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">≥85%</p><p class="cs-metric__label">Adherence rate Dose Diary tracks — clinical standard for kidney patients</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">0</p><p class="cs-metric__label">Cloud accounts required — all data stays on device</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="problem">
+        <div class="cs-section__header"><span class="cs-section__number">Section II</span><h2 class="cs-section__title">The App Store has hundreds of medication trackers. None of them are for patients managing serious illness.</h2></div>
+        <div class="cs-body">
+          <p>Most medication apps are designed for the general population: once-daily pills, simple reminders, maybe a refill alert. They're fine for the majority of users. But kidney transplant recipients, dialysis patients, and people on complex hormone therapy protocols exist at a different level of complexity — multiple drugs with different intervals, vitals that need logging before and after dialysis sessions, lab panels that need to be compared across months, not days.</p>
+          <p>The existing solutions forced these users to either use an app that was too simple to be useful, or a clinical system that was too complex and cold to be sustainable in daily life. There was no middle ground: an app with consumer-quality UX built specifically for the clinical depth these patients needed.</p>
+        </div>
+        <div class="cs-visual cs-visual--half-grid fade-up" style="background:var(--bg-alt);padding:2rem;gap:0;border-radius:var(--radius-md);">
+          <div style="padding:1rem;border-right:1px solid var(--border);">
+            <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1rem;">Generic apps</p>
+            <ul class="cs-goal-list">
+              <li>Daily-only scheduling — no weekly or bi-weekly intervals</li>
+              <li>No lab result tracking or trend analysis</li>
+              <li>No dialysis session management</li>
+              <li>Cloud-first — health data leaves the device</li>
+              <li>No adherence rate calculation</li>
+              <li>One-size UX for a highly varied patient population</li>
+            </ul>
+          </div>
+          <div style="padding:1rem;">
+            <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;">Dose Diary</p>
+            <ul class="cs-goal-list">
+              <li>Flexible intervals: daily through monthly, fully configurable</li>
+              <li>Lab tracking with 30/60/90-day trend analysis</li>
+              <li>Dialysis session scheduling with pre/post vitals logging</li>
+              <li>Local-only storage — SwiftData, no account required</li>
+              <li>≥85% adherence tracking — clinical standard for CKD</li>
+              <li>Separate modes for medication, kidney, and HRT workflows</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="principles">
+        <div class="cs-section__header"><span class="cs-section__number">Section III</span><h2 class="cs-section__title">Three non-negotiable principles before writing a single line of code</h2></div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Privacy is not a feature — it's the architecture</h3>
+          <div class="cs-body"><p>Health data is among the most sensitive data a person generates. I made the decision early that Dose Diary would never send data to a server. Everything uses Apple's SwiftData framework and stays on device. No account creation, no sync, no telemetry tied to health behaviour. Ad support through Google AdMob is transparent and opt-outable. This wasn't a compromise — it was the founding constraint that shaped everything else.</p></div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Design for the worst day, not the average day</h3>
+          <div class="cs-body"><p>Patients managing kidney disease or post-transplant recovery have hard days. The UI needs to work when someone is fatigued, stressed, or in a clinical environment. That means large touch targets, clear hierarchy, no cognitive load for the logging interaction — the most frequent action in the app. One tap to log. Confirmation visible immediately. No buried menus for the daily workflow.</p></div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Bilingual from day one, not as an afterthought</h3>
+          <div class="cs-body"><p>My wife reads Vietnamese more comfortably than English in medical contexts. Language switching had to be instant, complete, and available at the system level — not buried in settings. Dose Diary supports English and Vietnamese with a single toggle in the app settings, with all clinical terminology translated accurately, not just approximated.</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="system">
+        <div class="cs-section__header"><span class="cs-section__number">Section IV</span><h2 class="cs-section__title">Two modes, one system — medication management built for clinical complexity</h2></div>
+        <div class="cs-body">
+          <p>The core medication system supports scheduling at any interval from daily to monthly. Each medication has its own timing rules, meal-time relationships, and stock tracking. Reminders are tied to meal times rather than arbitrary clock times — which matters clinically, because most immunosuppressants are taken at consistent meal-relative intervals rather than strict hours.</p>
+        </div>
+        <div class="cs-segments">
+          <div class="cs-segment"><span class="cs-segment__tag">Core</span><p class="cs-segment__name">Flexible Scheduling</p><p class="cs-segment__desc">Daily, weekly, bi-weekly, monthly intervals — fully configurable per medication, not a fixed preset list</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Core</span><p class="cs-segment__name">One-tap Logging</p><p class="cs-segment__desc">Log a dose in one tap with automatic timestamp; confirmation visible immediately on the today screen</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Core</span><p class="cs-segment__name">Camera Scanning</p><p class="cs-segment__desc">Scan a prescription label to auto-populate medication name, dosage, and schedule — reducing setup friction</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Core</span><p class="cs-segment__name">Stock &amp; Refill Alerts</p><p class="cs-segment__desc">Track remaining supply; automatic notification when stock falls below a user-set threshold</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Core</span><p class="cs-segment__name">Home Screen Widget</p><p class="cs-segment__desc">Today's medications visible on the home screen; tap to log without opening the app</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Core</span><p class="cs-segment__name">Adherence Analytics</p><p class="cs-segment__desc">Per-medication adherence rate calculated against the ≥85% clinical standard for chronic kidney disease</p></div>
+        </div>
+        <div class="cs-pullquote"><p>The design goal for the daily logging screen was zero hesitation. If a patient wakes up, opens the app, and has to think about what to tap — the design has failed.</p></div>
+      </section>
+
+      <section class="cs-section fade-up" id="kidney">
+        <div class="cs-section__header"><span class="cs-section__number">Section V</span><h2 class="cs-section__title">Kidney Mode — the feature that makes Dose Diary different</h2></div>
+        <div class="cs-body">
+          <p>Kidney Mode is a dedicated layer built for dialysis patients, transplant recipients, and anyone managing CKD. It extends the base medication system with clinical workflows that no general medication app attempts. The design challenge was making these features feel like a natural part of the same app — not a bolt-on clinical tool that broke the experience.</p>
+        </div>
+        <div class="cs-segments">
+          <div class="cs-segment"><span class="cs-segment__tag">Kidney</span><p class="cs-segment__name">Dialysis Scheduling</p><p class="cs-segment__desc">Three-times-weekly session scheduling with automatic reminders; tracks session start, end, and duration</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Kidney</span><p class="cs-segment__name">Pre/Post Vitals</p><p class="cs-segment__desc">Blood pressure and weight logged before and after each session; automatically attached to session records</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Kidney</span><p class="cs-segment__name">Lab Panel Tracking</p><p class="cs-segment__desc">eGFR, creatinine, potassium, hemoglobin, phosphorus, bicarbonate — logged per exam date and trended over time</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Kidney</span><p class="cs-segment__name">Period Reports</p><p class="cs-segment__desc">Side-by-side comparison of two exam dates with color-coded trend indicators; exportable as PDF for physician sharing</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Kidney</span><p class="cs-segment__name">Schedule Scanning</p><p class="cs-segment__desc">Photograph a printed dialysis schedule from a clinic and auto-populate the session calendar</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Kidney</span><p class="cs-segment__name">Post-session Wellness</p><p class="cs-segment__desc">5-point emoji-based wellbeing rating logged after each session — simple enough to complete while still fatigued</p></div>
+        </div>
+        <div class="cs-body">
+          <p>The HRT Reference Library sits alongside Kidney Mode as a separate informational layer: medically-cited guidance on hormone therapies drawn from WPATH, UCSF, and Endocrine Society sources. It's not a feature for tracking — it's a place for patients to access reliable clinical information without leaving the app or opening a browser.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><p class="cs-metric__value">6</p><p class="cs-metric__label">Lab markers tracked with 30/60/90-day trend analysis</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">PDF</p><p class="cs-metric__label">Exportable kidney reports formatted for physician review</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">EN · VI</p><p class="cs-metric__label">Full bilingual support with instant language switching</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="reflection">
+        <div class="cs-section__header"><span class="cs-section__number">Section VI</span><h2 class="cs-section__title">What I learned building something for people I love</h2></div>
+        <div class="cs-body">
+          <p>Building an app where you are also the primary user changes every decision. There's no ambiguity about whether a feature is needed — you know, because you've felt the absence of it. And there's no tolerance for friction in the daily logging flow, because you experience that friction every morning.</p>
+          <p>What surprised me was how much the privacy constraint simplified the architecture. Removing cloud sync eliminated an entire class of problems: sync conflicts, latency, authentication flows, data breach liability. The SwiftData model is clean and fast. The app launches instantly. There's no onboarding because there's nothing to sign in to.</p>
+          <p>The other thing I learned: <strong>designing for edge cases first produces better general design</strong>. Every interaction pattern I designed for a fatigued dialysis patient — large targets, minimal steps, immediate confirmation — made the app better for everyone. The clinical context was a forcing function for the kind of design rigour that consumer apps often skip.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:2rem 0;">
+          <span class="tag" style="padding:0.3rem 0.8rem;">SwiftUI · SwiftData</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">Privacy-first architecture</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">Clinical UX design</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">Bilingual (EN · VI)</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">End-to-end: design to App Store</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;">Health analytics</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="container">
+    <section style="padding:4rem 0;border-top:1px solid var(--border);">
+      <p style="font-family:var(--f-mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2rem;">Other mobile projects</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <a href="wordpopi.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Personal · iOS</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">WordPopi — Vocabulary Learning App</p>
+        </a>
+        <a href="delivery-app.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Freelance · iOS · Android</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Cold Storage Logistics App</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p></div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-group"><p class="footer__nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html">Works</a></li><li><a href="../now.html">Now</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:jay.tran@kreebox.com">Email</a></li><li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
+        </nav>
+      </div>
+      <div class="footer__bottom"><p class="footer__copy">© 2026 Phuong Tran. Built with care.</p></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    const bar = document.getElementById('progressBar');
+    if (bar) window.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%'; }, { passive: true });
+    const secs = document.querySelectorAll('.cs-section[id]'), tocLinks = document.querySelectorAll('.cs-toc__link');
+    if (secs.length && tocLinks.length) { const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { tocLinks.forEach(l => l.classList.remove('active')); const a = document.querySelector('.cs-toc__link[href="#' + e.target.id + '"]'); if (a) a.classList.add('active'); } }); }, { rootMargin: '-20% 0px -70% 0px' }); secs.forEach(s => io.observe(s)); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#C2F542" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#3B0D9E" media="(prefers-color-scheme: light)" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title One — Phuong Tran</title>
+  <meta name="description" content="How I drove design strategy through research and data integration to personalize experiences at scale." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Reading progress -->
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Reading progress"></div>
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" style="display:flex;align-items:center;gap:9px;"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>Phuong Tran</a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="../works.html">Works</a></li>
+        <li><a href="../now.html">Now</a></li>
+        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
+        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta">Have a chat</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__hamburger" aria-expanded="false" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────────────────── -->
+  <section class="cs-hero">
+    <div class="container">
+      <a href="../works.html" class="cs-hero__back hero-stagger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        See all works
+      </a>
+
+      <div class="cs-hero__tags hero-stagger">
+        <span class="tag">Leadership</span>
+        <span class="tag">Research</span>
+        <span class="tag">Design Strategy</span>
+        <span class="tag">Product</span>
+      </div>
+
+      <h1 class="display-xl cs-hero__title hero-stagger">
+        Personalizing experiences based on user segmentation
+      </h1>
+
+      <p class="cs-hero__subtitle hero-stagger">
+        Driving design strategy through mixed-methods research and behavioral data to increase order frequency while reducing dependency on promotions.
+      </p>
+
+      <!-- Metadata -->
+      <div class="cs-meta hero-stagger">
+        <div class="cs-meta__item">
+          <p class="cs-meta__label">Role</p>
+          <p class="cs-meta__value">Product Design Lead</p>
+        </div>
+        <div class="cs-meta__item">
+          <p class="cs-meta__label">Year</p>
+          <p class="cs-meta__value">2023</p>
+        </div>
+        <div class="cs-meta__item">
+          <p class="cs-meta__label">Company</p>
+          <p class="cs-meta__value"><a href="#">[Company Name]</a></p>
+        </div>
+        <div class="cs-meta__item">
+          <p class="cs-meta__label">Timeline</p>
+          <p class="cs-meta__value">6 months</p>
+        </div>
+        <div class="cs-meta__item">
+          <p class="cs-meta__label">Team</p>
+          <p class="cs-meta__value">4 designers, 2 researchers, 1 data scientist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Main layout: TOC + Content ────────────────────────────── -->
+  <div class="cs-layout">
+
+    <!-- Table of Contents -->
+    <aside class="cs-toc" aria-label="Table of contents">
+      <p class="cs-toc__label">Contents</p>
+      <ul class="cs-toc__list" role="list">
+        <li class="cs-toc__item">
+          <a href="#background" class="cs-toc__link">I — Background</a>
+        </li>
+        <li class="cs-toc__item">
+          <a href="#goals" class="cs-toc__link">II — Design Goals</a>
+        </li>
+        <li class="cs-toc__item">
+          <a href="#problem" class="cs-toc__link">III — Problem Analysis</a>
+        </li>
+        <li class="cs-toc__item">
+          <a href="#approach" class="cs-toc__link">IV — Design Approach</a>
+        </li>
+        <li class="cs-toc__item">
+          <a href="#solutions" class="cs-toc__link">V — Solutions</a>
+        </li>
+        <li class="cs-toc__item">
+          <a href="#results" class="cs-toc__link">VI — Results</a>
+        </li>
+        <li class="cs-toc__item">
+          <a href="#acknowledgements" class="cs-toc__link">Acknowledgements</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="cs-content" id="cs-main">
+
+      <!-- ── Section I: Background ──────────────────────────────── -->
+      <section class="cs-section fade-up" id="background">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section I</span>
+          <h2 class="cs-section__title">Background</h2>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">My Role</h3>
+          <div class="cs-body">
+            <p>As <strong>Product Design Lead</strong>, I was responsible for setting the design direction and collaborating with leadership, product managers, engineering, and research to balance user experience with business constraints. I led a team of [N] designers and drove the process from discovery through delivery.</p>
+            <p>My involvement spanned defining the research strategy, synthesizing findings into actionable design opportunities, and aligning stakeholders around a coherent product vision.</p>
+          </div>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">About [Company]</h3>
+          <div class="cs-body">
+            <p>[Company] is a [description — e.g., fast-growing food delivery platform] operating across [markets]. Known for its [distinctive quality], the company built a reputation for [key differentiator] while competing in a heavily-contested market.</p>
+            <p>At its peak, [Company] served [X] million users with [key metric] orders per day.</p>
+          </div>
+        </div>
+
+        <!-- Visual placeholder -->
+        <div class="cs-visual cs-visual--full fade-up">
+          <div class="cs-visual__placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Market context diagram / brand visual</span>
+          </div>
+          <p class="cs-visual__caption">Market share and competitive landscape — [Source, Year]</p>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">The Problem</h3>
+          <div class="cs-body">
+            <p>The business faced a structural tension: <strong>growth driven by promotional spend was unsustainable</strong>. As funding conditions tightened, the cost-per-order ceiling became a hard constraint. The challenge was to maintain conversion and order frequency while dramatically reducing the promotional subsidy.</p>
+          </div>
+
+          <div class="cs-pullquote">
+            <p>"How do we increase orders with fewer promotions — without losing the users who came for the deals?"</p>
+          </div>
+
+          <div class="cs-body">
+            <p>The underlying issue: the product was trained to serve promotional behavior, making it difficult for users with genuine intent to find what they actually wanted without relying on discounts.</p>
+          </div>
+        </div>
+
+        <!-- Ecosystem map -->
+        <div class="cs-visual cs-visual--full fade-up">
+          <div class="cs-visual__placeholder cs-visual__placeholder--tall">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            <span>Business ecosystem map</span>
+          </div>
+          <p class="cs-visual__caption">Business ecosystem and opportunity mapping</p>
+        </div>
+      </section>
+
+      <!-- ── Section II: Design Goals ───────────────────────────── -->
+      <section class="cs-section fade-up" id="goals">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section II</span>
+          <h2 class="cs-section__title">Design Goals</h2>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Primary Goals</h3>
+          <ul class="cs-goal-list">
+            <li>Increase order frequency without increasing promotional investment</li>
+            <li>Reduce cost-per-order below [X] VND threshold</li>
+            <li>Maintain conversion rates at or above baseline throughout the transition</li>
+          </ul>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Success Metrics</h3>
+          <div class="cs-metrics">
+            <div class="cs-metric">
+              <p class="cs-metric__value">+[X]%</p>
+              <p class="cs-metric__label">Order frequency target</p>
+              <p class="cs-metric__sublabel">Primary metric</p>
+            </div>
+            <div class="cs-metric">
+              <p class="cs-metric__value">−[X]%</p>
+              <p class="cs-metric__label">Cost-per-order reduction</p>
+              <p class="cs-metric__sublabel">Primary metric</p>
+            </div>
+            <div class="cs-metric">
+              <p class="cs-metric__value">~[X]%</p>
+              <p class="cs-metric__label">Conversion maintained</p>
+              <p class="cs-metric__sublabel">Guard metric</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Secondary Goals</h3>
+          <ul class="cs-goal-list">
+            <li>Improve consistency across user segments — reduce segment drift</li>
+            <li>Increase daily active visits among high-value users</li>
+            <li>Raise average order value among quality-seeking segments</li>
+            <li>Reduce time-to-conversion for returning users</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── Section III: Problem Analysis ─────────────────────── -->
+      <section class="cs-section fade-up" id="problem">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section III</span>
+          <h2 class="cs-section__title">Problem Analysis</h2>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Insights from User Feedback</h3>
+          <div class="cs-body">
+            <p>Analysis of NPS and CSAT data surfaced a recurring tension: <strong>users with genuine intent felt overwhelmed</strong> by the promotion-first experience. Key findings:</p>
+            <ul>
+              <li>Users who were in a hurry skipped promotions entirely and went straight to search</li>
+              <li>Repeated promotional messaging caused "offer fatigue" — reducing click-through rates over time</li>
+              <li>High-frequency users (3+ orders/week) were more likely to churn when their preferred restaurants were buried beneath promo content</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-visual cs-visual--full fade-up">
+          <div class="cs-visual__placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>User feedback analysis / NPS breakdown</span>
+          </div>
+          <p class="cs-visual__caption">NPS and CSAT signal synthesis — key pain points by user type</p>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Insights from Product Analytics</h3>
+          <div class="cs-body">
+            <p>Usage data revealed that the majority of sessions began with one of three behaviors: <strong>search</strong>, <strong>category browsing</strong>, or <strong>nearby restaurant filtering</strong>. The home screen — heavily invested in promotional real estate — was largely skipped.</p>
+          </div>
+        </div>
+
+        <!-- Half grid: two visuals side by side -->
+        <div class="cs-visual cs-visual--half-grid fade-up">
+          <div class="cs-visual__placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Home screen heatmap</span>
+          </div>
+          <div class="cs-visual__placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <span>Session entry-point breakdown</span>
+          </div>
+        </div>
+        <p class="cs-visual__caption" style="margin-top: -1.5rem; padding: 0.75rem 1rem; border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius-md) var(--radius-md); background: var(--bg-alt); font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-3);">Left: functional heatmap showing underused homepage regions. Right: session entry-point distribution.</p>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Heuristic Review</h3>
+          <div class="cs-body">
+            <p>A structured heuristic evaluation identified four core design failures:</p>
+            <ul>
+              <li><strong>Overloaded home screen</strong> — too many competing priorities with no clear hierarchy</li>
+              <li><strong>Promotion-first IA</strong> — the information architecture trained users to expect discounts, penalizing non-promotional sessions</li>
+              <li><strong>Hidden utility categories</strong> — everyday use cases (reorder, favorites, nearby) were buried 2–3 taps deep</li>
+              <li><strong>No guidance for habit-forming</strong> — no onboarding or progressive disclosure for building regular ordering patterns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Competitive Analysis</h3>
+          <div class="cs-body">
+            <p>Direct competitors had doubled down on aggressive discounting, creating a race-to-the-bottom dynamic. This opened a differentiation opportunity: <strong>personalization as an alternative value proposition</strong> to price competition.</p>
+            <p>Users who valued convenience, reliability, or diet-specific options were underserved by every player in the market.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Section IV: Design Approach ───────────────────────── -->
+      <section class="cs-section fade-up" id="approach">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section IV</span>
+          <h2 class="cs-section__title">Design Approach</h2>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Research Methodology</h3>
+          <div class="cs-body">
+            <p>We used a <strong>mixed-methods approach</strong> combining qualitative depth with quantitative validation. The progression moved from hypothesis formation through behavioral data confirmation:</p>
+          </div>
+
+          <!-- Research flow diagram -->
+          <div class="cs-visual cs-visual--full fade-up">
+            <div class="cs-visual__placeholder cs-visual__placeholder--short">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              <span>Research flow diagram</span>
+            </div>
+            <p class="cs-visual__caption">Mixed-method research progression: interviews → survey validation → behavioral data confirmation</p>
+          </div>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Six User Segments Identified</h3>
+          <div class="cs-body">
+            <p>Through 24 in-depth interviews, a 400-participant survey, and behavioral data analysis, we identified six distinct ordering personas:</p>
+          </div>
+
+          <div class="cs-segments">
+            <div class="cs-segment">
+              <span class="cs-segment__tag">Segment 01</span>
+              <p class="cs-segment__name">The Foodie</p>
+              <p class="cs-segment__desc">Exploratory, mood-driven. Loves discovering new cuisines and restaurants. Values variety over consistency.</p>
+            </div>
+            <div class="cs-segment">
+              <span class="cs-segment__tag">Segment 02</span>
+              <p class="cs-segment__name">The Bargain Hunter</p>
+              <p class="cs-segment__desc">Promo-focused. Largest segment by volume. Will not order without a discount. High churn risk without incentives.</p>
+            </div>
+            <div class="cs-segment">
+              <span class="cs-segment__tag">Segment 03</span>
+              <p class="cs-segment__name">The Quality Seeker</p>
+              <p class="cs-segment__desc">Values reliability and consistency over price. Orders from a trusted set of restaurants. High LTV potential.</p>
+            </div>
+            <div class="cs-segment">
+              <span class="cs-segment__tag">Segment 04</span>
+              <p class="cs-segment__name">The Health Enthusiast</p>
+              <p class="cs-segment__desc">Diet-conscious. Filters extensively. Underserved by the current product. High willingness to pay.</p>
+            </div>
+            <div class="cs-segment">
+              <span class="cs-segment__tag">Segment 05</span>
+              <p class="cs-segment__name">The Convenience Seeker</p>
+              <p class="cs-segment__desc">Speed-oriented. Wants the fastest path to food. Highly repeat-order behavior. Values reliability over novelty.</p>
+            </div>
+            <div class="cs-segment">
+              <span class="cs-segment__tag">Segment 06</span>
+              <p class="cs-segment__name">The Safe Player</p>
+              <p class="cs-segment__desc">Sticks to familiar preferences. Low discovery intent. Steady, predictable behavior with moderate order frequency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Quantifying Insights</h3>
+          <div class="cs-body">
+            <p>Survey data revealed the Bargain Hunter was the largest segment by count but the <strong>Quality Seeker and Health Enthusiast showed the highest order value and lowest churn</strong> — making them the strategic priority for profitability.</p>
+          </div>
+
+          <div class="cs-visual cs-visual--half-grid fade-up">
+            <div class="cs-visual__placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <span>Segment size distribution</span>
+            </div>
+            <div class="cs-visual__placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Order value × frequency correlation</span>
+            </div>
+          </div>
+          <p class="cs-visual__caption" style="padding: 0.75rem 1rem; border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius-md) var(--radius-md); background: var(--bg-alt); font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-3); margin-top: -0.5rem;">Left: segment size distribution. Right: average spending vs. order frequency by segment.</p>
+        </div>
+      </section>
+
+      <!-- ── Section V: Solutions ───────────────────────────────── -->
+      <section class="cs-section fade-up" id="solutions">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section V</span>
+          <h2 class="cs-section__title">Solutions</h2>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Problem Hypotheses</h3>
+          <div class="cs-body">
+            <p>We framed three design challenges as hypotheses to test:</p>
+          </div>
+          <ul class="cs-goal-list">
+            <li>If we simplify promo discovery, Bargain Hunters will convert faster with less friction</li>
+            <li>If we surface curated restaurant lists by need state, Quality Seekers and Health Enthusiasts will find their ideal experience without relying on search</li>
+            <li>If we add intelligent filters and quality signals, Convenience Seekers will reorder faster and with higher confidence</li>
+          </ul>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Toward a New Home Experience</h3>
+          <div class="cs-body">
+            <p>The redesign restructured the home screen around <strong>need-state navigation</strong> rather than promotional hierarchy. Key structural changes:</p>
+            <ul>
+              <li><strong>Compact promo module</strong> — consolidates all promotional content into a single scannable row, reducing visual noise without hiding value</li>
+              <li><strong>Curated sub-homes</strong> — personalized landing experiences per segment, surfacing contextually relevant content based on ordering history</li>
+              <li><strong>Reorder module</strong> — prominent placement for repeat-order behavior, dramatically reducing time-to-conversion for Convenience Seekers</li>
+              <li><strong>Utility filters</strong> — quality signals (ratings, prep time, dietary tags) surfaced at the browse layer, not buried in restaurant detail pages</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Full-width mockup -->
+        <div class="cs-visual cs-visual--full fade-up">
+          <div class="cs-visual__placeholder" style="aspect-ratio: 9/16; max-height: 560px;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+            <span>Redesigned home screen — final mockup</span>
+          </div>
+          <p class="cs-visual__caption">New home experience: personalized sub-home with segmented content hierarchy</p>
+        </div>
+
+        <!-- Second mockup grid -->
+        <div class="cs-visual cs-visual--half-grid fade-up">
+          <div class="cs-visual__placeholder cs-visual__placeholder--tall">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/></svg>
+            <span>Before: promo-first home</span>
+          </div>
+          <div class="cs-visual__placeholder cs-visual__placeholder--tall">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>After: needs-based home</span>
+          </div>
+        </div>
+        <p class="cs-visual__caption" style="padding: 0.75rem 1rem; border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius-md) var(--radius-md); background: var(--bg-alt); font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-3); margin-top: -0.5rem;">Before/after comparison: promotional hierarchy vs. needs-based architecture</p>
+
+        <!-- Prototype link -->
+        <a href="#" target="_blank" rel="noopener" class="cs-prototype-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          View prototype in Figma ↗
+        </a>
+      </section>
+
+      <!-- ── Section VI: Results ─────────────────────────────────── -->
+      <section class="cs-section fade-up" id="results">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section VI</span>
+          <h2 class="cs-section__title">Results</h2>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">What We Learned</h3>
+          <div class="cs-body">
+            <p>Post-launch data showed the redesign <strong>maintained conversion rates despite reduced promotional traffic</strong> — validating the core hypothesis that need-state personalization could substitute for discount-driven engagement.</p>
+          </div>
+
+          <div class="cs-metrics">
+            <div class="cs-metric">
+              <p class="cs-metric__value">~[X]%</p>
+              <p class="cs-metric__label">Conversion rate maintained</p>
+              <p class="cs-metric__sublabel">vs. baseline</p>
+            </div>
+            <div class="cs-metric">
+              <p class="cs-metric__value">+[X]%</p>
+              <p class="cs-metric__label">Reorder rate increase</p>
+              <p class="cs-metric__sublabel">Convenience Seekers</p>
+            </div>
+            <div class="cs-metric">
+              <p class="cs-metric__value">−[X]%</p>
+              <p class="cs-metric__label">Time-to-order reduction</p>
+              <p class="cs-metric__sublabel">Returning users</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-visual cs-visual--full fade-up">
+          <div class="cs-visual__placeholder cs-visual__placeholder--short">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span>Funnel metrics — pre vs. post launch</span>
+          </div>
+          <p class="cs-visual__caption">Conversion funnel comparison: pre-launch vs. 4 weeks post-launch</p>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Final Thoughts</h3>
+          <div class="cs-body">
+            <p>The project validated the personalization thesis — that users with non-promotional intent could be served effectively through need-state architecture. However, the broader strategic shift required a [1.5–2 year] timeline to reach profitability, which [company] did not have runway to reach.</p>
+            <p>The core lesson: <strong>design can solve the product problem, but it cannot overcome a structural business constraint</strong>. The work demonstrated what was possible; the market timing determined what would happen.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Acknowledgements ───────────────────────────────────── -->
+      <section class="cs-section fade-up" id="acknowledgements">
+        <div class="cs-section__header">
+          <span class="cs-section__number"></span>
+          <h2 class="cs-section__title">Acknowledgements</h2>
+        </div>
+        <div class="cs-body" style="margin-bottom: 1.25rem;">
+          <p>This work was shaped by an incredible cross-functional team. Thank you to everyone who contributed their expertise, time, and care.</p>
+        </div>
+        <div class="cs-ack">
+          <p class="cs-ack__title">Team &amp; Collaborators</p>
+          <div class="cs-ack__names">
+            <a href="#" class="cs-ack__name">Researcher Name</a>
+            <a href="#" class="cs-ack__name">Designer Name</a>
+            <a href="#" class="cs-ack__name">Data Scientist</a>
+            <a href="#" class="cs-ack__name">PM Name</a>
+            <a href="#" class="cs-ack__name">Engineer Name</a>
+            <a href="#" class="cs-ack__name">Engineer Name 2</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ─── Related works ─────────────────────────────────────────── -->
+  <div class="container">
+    <section class="cs-related fade-up">
+      <p class="cs-related__title">Related works</p>
+      <div class="cs-related__grid">
+        <a href="project-two.html" class="cs-related__card">
+          <p class="cs-related__card-company">[Company]</p>
+          <h3 class="cs-related__card-title">Project Title Two — Another featured project</h3>
+          <div class="cs-related__card-tags">
+            <span class="tag">Product</span>
+            <span class="tag">Design</span>
+          </div>
+        </a>
+        <a href="project-three.html" class="cs-related__card">
+          <p class="cs-related__card-company">[Company]</p>
+          <h3 class="cs-related__card-title">Project Title Three — Onboarding redesign</h3>
+          <div class="cs-related__card-tags">
+            <span class="tag">Research</span>
+            <span class="tag">Design Strategy</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__brand-name">Phuong Tran</p>
+          <p class="footer__tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-group">
+            <p class="footer__nav-title">Navigation</p>
+            <ul class="footer__nav-links" role="list">
+              <li><a href="../works.html">Works</a></li>
+              <li><a href="../now.html">Now</a></li>
+              <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <p class="footer__nav-title">Contact</p>
+            <ul class="footer__nav-links" role="list">
+              <li><a href="mailto:jay.tran@kreebox.com">Email</a></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Phuong Tran. Built with care.</p>
+        <div class="footer__socials">
+          <a href="mailto:jay.tran@kreebox.com">Email</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Reading progress bar
+    const bar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      bar.style.width = pct + '%';
+    }, { passive: true });
+
+    // TOC active section highlight
+    const sections = document.querySelectorAll('.cs-section[id]');
+    const tocLinks = document.querySelectorAll('.cs-toc__link');
+    const tocObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.cs-toc__link[href="#${e.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px' }
+    );
+    sections.forEach(s => tocObserver.observe(s));
+  </script>
+</body>
+</html>

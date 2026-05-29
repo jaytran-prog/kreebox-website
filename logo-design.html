@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logo Design — Phuong Tran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lime: #C2F542;
+      --violet: #3B0D9E;
+      --ink: #0A0A0A;
+      --paper: #F7F7F4;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: #0A0A0A;
+      color: #EFEFEF;
+      line-height: 1.6;
+    }
+
+    /* ── Layout ─────────────────────────────────── */
+    .page { max-width: 1040px; margin: 0 auto; padding: 64px 40px; }
+    .section { margin-bottom: 80px; }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #484848;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #222;
+    }
+
+    /* ── Stage panels ────────────────────────────── */
+    .stage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .stage { padding: 56px 48px; display: flex; align-items: center; justify-content: center; }
+    .stage--dark  { background: #080808; }
+    .stage--mid   { background: #111111; }
+    .stage--light { background: #F7F7F4; }
+    .stage--lime  { background: #C2F542; }
+    .stage--full  { grid-column: 1 / -1; }
+    .stage--tall  { padding: 80px 48px; }
+
+    /* ── Comparison row ──────────────────────────── */
+    .compare-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .compare-cell {
+      background: #111;
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .compare-cell--light { background: #F7F7F4; }
+    .compare-cell--lime  { background: #C2F542; }
+    .compare-cell-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #484848;
+      margin-top: 4px;
+    }
+    .compare-cell--light .compare-cell-label { color: #AAAAAA; }
+    .compare-cell--lime  .compare-cell-label { color: rgba(8,8,8,0.45); }
+
+    /* ── Size row ────────────────────────────────── */
+    .size-row {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      background: #111;
+      border-radius: 12px;
+      padding: 40px 48px;
+    }
+    .size-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .size-item-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: #484848;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Code panel ──────────────────────────────── */
+    .code-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .code-block {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+    .code-block-title {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 12px;
+    }
+    .code-block pre {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: #888;
+      white-space: pre-wrap;
+      line-height: 1.7;
+      overflow-x: auto;
+    }
+    .code-block pre .hl { color: var(--lime); }
+
+    /* ── Favicon grid ────────────────────────────── */
+    .favicon-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 32px;
+      flex-wrap: wrap;
+      background: #111;
+      border-radius: 12px;
+      padding: 40px 48px;
+    }
+    .favicon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .favicon-item-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: #484848;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── Direction card ──────────────────────────── */
+    .direction-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .direction-card {
+      background: #111;
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .direction-title {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #484848;
+      text-align: center;
+    }
+
+    /* ── Page header ─────────────────────────────── */
+    .page-header { margin-bottom: 80px; }
+    .page-header h1 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #484848;
+      margin-bottom: 12px;
+    }
+    .page-header p {
+      font-family: 'Archivo', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #EFEFEF;
+      line-height: 1.1;
+    }
+    .page-header p span { color: var(--lime); }
+
+    /* ── Nav preview ──────────────────────────────── */
+    .nav-preview {
+      background: rgba(8,8,8,0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin-bottom: 4px;
+    }
+    .nav-preview-links {
+      display: flex;
+      gap: 28px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+    }
+    .nav-preview-cta {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: #EFEFEF;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 6px 16px;
+      border-radius: 4px;
+    }
+    .nav-preview-light {
+      background: rgba(247,247,244,0.9);
+      border-bottom: 1px solid rgba(10,10,10,0.09);
+    }
+    .nav-preview-light .nav-preview-links { color: rgba(10,10,10,0.4); }
+    .nav-preview-light .nav-preview-cta {
+      color: #0A0A0A;
+      border-color: rgba(10,10,10,0.18);
+    }
+
+    /* ── Horizontal rule ─────────────────────────── */
+    hr { border: none; border-top: 1px solid #1A1A1A; margin: 0 0 80px; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <h1>Logo Design System</h1>
+    <p>Phuong Tran<br/><span>Brand Identity</span></p>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SECTION 1: Three logo directions          -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">01 · Three Directions</div>
+
+    <div class="direction-grid">
+
+      <!-- Direction A: Wordmark with dot -->
+      <div class="direction-card">
+        <!-- LOGO A: Wordmark -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="220" height="28" viewBox="0 0 220 28">
+          <text y="22" font-family="Archivo, sans-serif" font-weight="700" font-size="20" fill="#EFEFEF" letter-spacing="-0.01em">Phuong</text>
+          <circle cx="115" cy="14" r="3" fill="#C2F542"/>
+          <text x="124" y="22" font-family="Archivo, sans-serif" font-weight="700" font-size="20" fill="#EFEFEF" letter-spacing="-0.01em">Tran</text>
+        </svg>
+        <div class="direction-title">A · Wordmark + dot</div>
+      </div>
+
+      <!-- Direction B: Stacked / editorial -->
+      <div class="direction-card">
+        <!-- LOGO B: Stacked wordmark -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="52" viewBox="0 0 160 52">
+          <!-- Top rule -->
+          <line x1="0" y1="1" x2="160" y2="1" stroke="#C2F542" stroke-width="1.5"/>
+          <text y="22" font-family="Archivo, sans-serif" font-weight="900" font-size="18" fill="#EFEFEF" letter-spacing="0.12em">PHUONG</text>
+          <!-- Thin divider line -->
+          <line x1="0" y1="28" x2="160" y2="28" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+          <text y="48" font-family="Archivo, sans-serif" font-weight="300" font-size="18" fill="#888" letter-spacing="0.22em">TRAN</text>
+        </svg>
+        <div class="direction-title">B · Stacked editorial</div>
+      </div>
+
+      <!-- Direction C: Monogram mark + name -->
+      <div class="direction-card">
+        <!-- LOGO C: Icon mark + wordmark -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="36" viewBox="0 0 200 36">
+          <!-- P monogram mark (geometric) -->
+          <path d="M6 4 L6 32 M6 4 L18 4 Q28 4 28 14 Q28 24 18 24 L6 24"
+                stroke="#C2F542" stroke-width="3" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Thin separator -->
+          <line x1="38" y1="6" x2="38" y2="30" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <!-- Name -->
+          <text x="48" y="24" font-family="Archivo, sans-serif" font-weight="600" font-size="17" fill="#EFEFEF" letter-spacing="-0.01em">Phuong Tran</text>
+        </svg>
+        <div class="direction-title">C · Mark + wordmark</div>
+      </div>
+
+    </div>
+
+    <!-- Recommendation note -->
+    <div style="background:#111; border-left:3px solid #C2F542; padding:20px 24px; border-radius:0 8px 8px 0; font-size:0.85rem; color:#888; line-height:1.65;">
+      <strong style="color:#EFEFEF;">Recommendation:</strong> Direction C — the geometric P mark combined with the full name.
+      The mark (left) works independently as icon/favicon; the full lockup works for nav/header.
+      The angular P bowl references design grids and product thinking.
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SECTION 2: Primary logo — dark & light    -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">02 · Primary Logo — Dark &amp; Light</div>
+
+    <div class="stage-grid" style="margin-bottom:4px;">
+      <!-- Dark background (primary) -->
+      <div class="stage stage--dark stage--tall">
+        <svg xmlns="http://www.w3.org/2000/svg" width="240" height="44" viewBox="0 0 240 44">
+          <!-- Geometric P mark -->
+          <path d="M6 4 L6 40 M6 4 L20 4 Q33 4 33 16 Q33 28 20 28 L6 28"
+                stroke="#C2F542" stroke-width="3.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Separator line -->
+          <line x1="46" y1="6" x2="46" y2="38" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <!-- Name -->
+          <text x="58" y="28" font-family="Archivo, sans-serif" font-weight="700" font-size="21" fill="#EFEFEF" letter-spacing="-0.02em">Phuong Tran</text>
+          <!-- Designer label -->
+          <text x="59" y="42" font-family="Archivo, sans-serif" font-weight="400" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="0.12em">PRODUCT DESIGNER</text>
+        </svg>
+      </div>
+      <!-- Dark alt (no tagline) -->
+      <div class="stage stage--mid stage--tall">
+        <svg xmlns="http://www.w3.org/2000/svg" width="220" height="36" viewBox="0 0 220 36">
+          <path d="M5 4 L5 32 M5 4 L17 4 Q28 4 28 14 Q28 24 17 24 L5 24"
+                stroke="#C2F542" stroke-width="3" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="40" y1="5" x2="40" y2="31" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <text x="52" y="24" font-family="Archivo, sans-serif" font-weight="700" font-size="19" fill="#EFEFEF" letter-spacing="-0.02em">Phuong Tran</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="stage-grid">
+      <!-- Light background -->
+      <div class="stage stage--light stage--tall">
+        <svg xmlns="http://www.w3.org/2000/svg" width="240" height="44" viewBox="0 0 240 44">
+          <path d="M6 4 L6 40 M6 4 L20 4 Q33 4 33 16 Q33 28 20 28 L6 28"
+                stroke="#3B0D9E" stroke-width="3.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="46" y1="6" x2="46" y2="38" stroke="rgba(10,10,10,0.12)" stroke-width="1"/>
+          <text x="58" y="28" font-family="Archivo, sans-serif" font-weight="700" font-size="21" fill="#0A0A0A" letter-spacing="-0.02em">Phuong Tran</text>
+          <text x="59" y="42" font-family="Archivo, sans-serif" font-weight="400" font-size="10" fill="rgba(10,10,10,0.3)" letter-spacing="0.12em">PRODUCT DESIGNER</text>
+        </svg>
+      </div>
+      <!-- Light alt -->
+      <div class="stage stage--light stage--tall" style="background:#EEEEE8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="220" height="36" viewBox="0 0 220 36">
+          <path d="M5 4 L5 32 M5 4 L17 4 Q28 4 28 14 Q28 24 17 24 L5 24"
+                stroke="#3B0D9E" stroke-width="3" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="40" y1="5" x2="40" y2="31" stroke="rgba(10,10,10,0.12)" stroke-width="1"/>
+          <text x="52" y="24" font-family="Archivo, sans-serif" font-weight="700" font-size="19" fill="#0A0A0A" letter-spacing="-0.02em">Phuong Tran</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SECTION 3: Icon mark                      -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">03 · Icon Mark — Standalone</div>
+
+    <div class="compare-row">
+      <!-- On dark -->
+      <div class="compare-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="compare-cell-label">On dark</div>
+      </div>
+      <!-- On light -->
+      <div class="compare-cell compare-cell--light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#3B0D9E" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="compare-cell-label">On light</div>
+      </div>
+      <!-- On lime -->
+      <div class="compare-cell compare-cell--lime">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#080808" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="compare-cell-label">On lime</div>
+      </div>
+    </div>
+
+    <!-- Size spectrum -->
+    <div class="size-row">
+      <!-- 96px -->
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="108" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="size-item-label">96px</div>
+      </div>
+      <!-- 64px -->
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="size-item-label">64px</div>
+      </div>
+      <!-- 48px -->
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="size-item-label">48px</div>
+      </div>
+      <!-- 32px -->
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="size-item-label">32px</div>
+      </div>
+      <!-- 24px -->
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="size-item-label">24px</div>
+      </div>
+      <!-- 16px -->
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="size-item-label">16px</div>
+      </div>
+
+      <!-- Spacer -->
+      <div style="flex:1;"></div>
+
+      <!-- Note -->
+      <div style="font-size:0.78rem; color:#484848; max-width:200px; line-height:1.6; font-family:var(--mono);">
+        The geometric P mark reads clearly down to 16px.
+        Angular bowl references product design grids.
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SECTION 4: Favicon                        -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">04 · Favicon</div>
+
+    <div class="favicon-row">
+      <!-- 256px -->
+      <div class="favicon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="7" fill="#C2F542"/>
+          <path d="M7 5 L7 27 M7 5 L17 5 Q24 5 24 12 Q24 19 17 19 L7 19"
+                stroke="#080808" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="favicon-item-label">256px</div>
+      </div>
+
+      <!-- 128px -->
+      <div class="favicon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="7" fill="#C2F542"/>
+          <path d="M7 5 L7 27 M7 5 L17 5 Q24 5 24 12 Q24 19 17 19 L7 19"
+                stroke="#080808" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="favicon-item-label">128px</div>
+      </div>
+
+      <!-- 64px -->
+      <div class="favicon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="7" fill="#C2F542"/>
+          <path d="M7 5 L7 27 M7 5 L17 5 Q24 5 24 12 Q24 19 17 19 L7 19"
+                stroke="#080808" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="favicon-item-label">64px</div>
+      </div>
+
+      <!-- 32px -->
+      <div class="favicon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="7" fill="#C2F542"/>
+          <path d="M7 5 L7 27 M7 5 L17 5 Q24 5 24 12 Q24 19 17 19 L7 19"
+                stroke="#080808" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="favicon-item-label">32px ← favicon</div>
+      </div>
+
+      <!-- 16px -->
+      <div class="favicon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="7" fill="#C2F542"/>
+          <path d="M7 5 L7 27 M7 5 L17 5 Q24 5 24 12 Q24 19 17 19 L7 19"
+                stroke="#080808" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="favicon-item-label">16px</div>
+      </div>
+
+      <!-- Dark variant -->
+      <div style="width:1px; background:#222; height:80px; align-self:center;"></div>
+
+      <!-- Dark mode favicon -->
+      <div class="favicon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="7" fill="#111111"/>
+          <path d="M7 5 L7 27 M7 5 L17 5 Q24 5 24 12 Q24 19 17 19 L7 19"
+                stroke="#C2F542" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="favicon-item-label">Alt — dark bg</div>
+      </div>
+
+      <!-- Violet variant -->
+      <div class="favicon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="7" fill="#3B0D9E"/>
+          <path d="M7 5 L7 27 M7 5 L17 5 Q24 5 24 12 Q24 19 17 19 L7 19"
+                stroke="#FFFFFF" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="favicon-item-label">Alt — violet bg</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SECTION 5: Nav preview in context         -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">05 · In Context — Nav Preview</div>
+
+    <!-- Dark nav -->
+    <div class="nav-preview" style="margin-bottom:4px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <!-- Inline P mark -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#C2F542" stroke-width="6" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#EFEFEF;">Phuong Tran</span>
+      </div>
+      <div class="nav-preview-links">
+        <span>Works</span>
+        <span>Now</span>
+        <span>Writings ↗</span>
+      </div>
+      <div class="nav-preview-cta">Have a chat</div>
+    </div>
+
+    <!-- Light nav -->
+    <div class="nav-preview nav-preview-light" style="margin-bottom:4px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 64 72">
+          <path d="M12 8 L12 64 M12 8 L36 8 Q54 8 54 26 Q54 44 36 44 L12 44"
+                stroke="#3B0D9E" stroke-width="6" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0A0A0A;">Phuong Tran</span>
+      </div>
+      <div class="nav-preview-links">
+        <span>Works</span>
+        <span>Now</span>
+        <span>Writings ↗</span>
+      </div>
+      <div class="nav-preview-cta">Have a chat</div>
+    </div>
+
+    <!-- Name only (no icon) -->
+    <div class="nav-preview" style="background: rgba(8,8,8,0.94);">
+      <span style="font-family:Archivo,sans-serif;font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#EFEFEF;">Phuong<span style="color:#C2F542;">.</span>Tran</span>
+      <div class="nav-preview-links">
+        <span>Works</span>
+        <span>Now</span>
+        <span>Writings ↗</span>
+      </div>
+      <div class="nav-preview-cta">Have a chat</div>
+    </div>
+    <p style="font-family:var(--mono);font-size:0.62rem;color:#484848;margin-top:8px;letter-spacing:0.08em;">↑ Minimal variant: dot accent on name, no separate icon mark</p>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SECTION 6: SVG code for copy-paste        -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">06 · SVG Code — Ready to Use</div>
+
+    <div class="code-grid">
+      <!-- Nav logo (dark) -->
+      <div class="code-block">
+        <div class="code-block-title">Nav Logo — Dark Mode</div>
+        <pre><span class="hl">&lt;!-- Nav logo: P mark + name --&gt;</span>
+&lt;a href="index.html" class="nav__logo"
+   style="display:flex;align-items:center;gap:10px;"&gt;
+  &lt;svg width="18" height="20"
+       viewBox="0 0 64 72"&gt;
+    &lt;path d="M12 8 L12 64
+             M12 8 L36 8
+             Q54 8 54 26
+             Q54 44 36 44
+             L12 44"
+      stroke="<span class="hl">#C2F542</span>"
+      stroke-width="6" fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"/&gt;
+  &lt;/svg&gt;
+  Phuong Tran
+&lt;/a&gt;</pre>
+      </div>
+
+      <!-- Nav logo (light) -->
+      <div class="code-block">
+        <div class="code-block-title">Nav Logo — Light Mode</div>
+        <pre><span class="hl">&lt;!-- Same SVG, different stroke --&gt;</span>
+&lt;a href="index.html" class="nav__logo"
+   style="display:flex;align-items:center;gap:10px;"&gt;
+  &lt;svg width="18" height="20"
+       viewBox="0 0 64 72"&gt;
+    &lt;path d="M12 8 L12 64
+             M12 8 L36 8
+             Q54 8 54 26
+             Q54 44 36 44
+             L12 44"
+      stroke="<span class="hl">var(--accent)</span>"
+      stroke-width="6" fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"/&gt;
+  &lt;/svg&gt;
+  Phuong Tran
+&lt;/a&gt;</pre>
+      </div>
+
+      <!-- Favicon SVG -->
+      <div class="code-block">
+        <div class="code-block-title">favicon.svg (32×32)</div>
+        <pre><span class="hl">&lt;!-- Save as assets/favicon.svg --&gt;</span>
+&lt;svg xmlns="http://www.w3.org/2000/svg"
+     width="32" height="32"
+     viewBox="0 0 32 32"&gt;
+  &lt;rect width="32" height="32"
+        rx="7" fill="<span class="hl">#C2F542</span>"/&gt;
+  &lt;path d="M7 5 L7 27
+           M7 5 L17 5
+           Q24 5 24 12
+           Q24 19 17 19
+           L7 19"
+    stroke="<span class="hl">#080808</span>"
+    stroke-width="2.5" fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"/&gt;
+&lt;/svg&gt;</pre>
+      </div>
+
+      <!-- HTML head -->
+      <div class="code-block">
+        <div class="code-block-title">&lt;head&gt; — Favicon link tags</div>
+        <pre><span class="hl">&lt;!-- Add to &lt;head&gt; in all HTML files --&gt;</span>
+&lt;link rel="icon"
+      href="assets/favicon.svg"
+      type="image/svg+xml"/&gt;
+
+&lt;link rel="apple-touch-icon"
+      href="assets/favicon-180.png"/&gt;
+
+&lt;meta name="theme-color"
+      content="<span class="hl">#C2F542</span>"
+      media="(prefers-color-scheme: dark)"/&gt;
+
+&lt;meta name="theme-color"
+      content="<span class="hl">#3B0D9E</span>"
+      media="(prefers-color-scheme: light)"/&gt;</pre>
+      </div>
+
+      <!-- CSS nav logo -->
+      <div class="code-block" style="grid-column: 1 / -1;">
+        <div class="code-block-title">CSS — Nav logo icon adaptive color</div>
+        <pre><span class="hl">/* Add to style.css — icon inherits accent token */</span>
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.nav__logo svg path {
+  stroke: <span class="hl">var(--accent)</span>; /* adapts to dark/light automatically */
+  transition: stroke var(--dur) var(--ease);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

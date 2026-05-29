@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GemPages Dashboard — Phuong Tran</title>
+  <meta name="description" content="Leading the redesign and dark mode launch for GemPages Editor — a no-code Shopify page builder serving 5,000+ merchants." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" style="display:flex;align-items:center;gap:9px;">
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>
+        Phuong Tran
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../works.html">Works</a></li>
+        <li><a href="../now.html">Now</a></li>
+        <li><a href="https://medium.com" target="_blank" rel="noopener">Writings ↗</a></li>
+        <li><a href="mailto:hello@yoursite.com" class="nav__cta">Have a chat</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__hamburger" aria-expanded="false" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="container">
+      <a href="../works.html" class="cs-hero__back hero-stagger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        See all works
+      </a>
+      <div class="cs-hero__tags hero-stagger">
+        <span class="tag">Product Design</span>
+        <span class="tag">UX Research</span>
+        <span class="tag">Dark Mode</span>
+        <span class="tag">Web App</span>
+      </div>
+      <h1 class="display-xl cs-hero__title hero-stagger">Redesigning GemPages to reduce editor friction for 5,000+ Shopify merchants</h1>
+      <p class="cs-hero__subtitle hero-stagger">
+        Leading the end-to-end redesign of GemPages Editor for 5,000+ Shopify merchants — restructuring navigation, streamlining key workflows, and shipping a long-requested dark mode in 90 days.
+      </p>
+      <div class="cs-meta hero-stagger">
+        <div class="cs-meta__item"><p class="cs-meta__label">Role</p><p class="cs-meta__value">Product Designer</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Company</p><p class="cs-meta__value">EcomSolid</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Year</p><p class="cs-meta__value">2017 — 2019</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Duration</p><p class="cs-meta__value">90 days</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label">Platform</p><p class="cs-meta__value">Shopify App (Web)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero visual -->
+  <div style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2rem 0;">
+    <div class="container">
+      <div style="border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-card);border:1px solid var(--border);">
+        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c68a99ae85e0556b7de88_mange%206.png"
+             alt="GemPages Dashboard redesign — dark and light mode overview"
+             style="width:100%;display:block;"
+             loading="lazy" />
+      </div>
+      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:0.75rem;text-align:center;letter-spacing:0.04em;">GemPages Editor — redesigned dashboard with dark mode</p>
+    </div>
+  </div>
+
+  <div class="cs-layout">
+    <aside class="cs-toc" aria-label="Table of contents">
+      <p class="cs-toc__label">Contents</p>
+      <ul class="cs-toc__list" role="list">
+        <li><a href="#context" class="cs-toc__link">I — Context</a></li>
+        <li><a href="#problem" class="cs-toc__link">II — Problem</a></li>
+        <li><a href="#process" class="cs-toc__link">III — Process</a></li>
+        <li><a href="#features" class="cs-toc__link">IV — Features</a></li>
+        <li><a href="#outcomes" class="cs-toc__link">V — Outcomes</a></li>
+      </ul>
+    </aside>
+
+    <main class="cs-content">
+
+      <section class="cs-section fade-up" id="context">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section I</span>
+          <h2 class="cs-section__title">Context</h2>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">About GemPages</h3>
+          <div class="cs-body">
+            <p>GemPages is a Shopify page builder — a no-code editor that lets online store owners design high-converting landing pages, product pages, and collection pages without writing a single line of code. At the time of this project, it served over 5,000 active merchants, ranging from solo entrepreneurs to mid-size e-commerce brands.</p>
+            <p>As product designer at EcomSolid, I was responsible for the complete redesign of the GemPages Editor interface — the core workspace where users spend the majority of their time. The brief covered both a structural overhaul of the dashboard and the introduction of dark mode as a first-class feature.</p>
+          </div>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><p class="cs-metric__value">5,000+</p><p class="cs-metric__label">Active Shopify merchants</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">90 days</p><p class="cs-metric__label">Discover to ship</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">2</p><p class="cs-metric__label">Major launches: redesign + dark mode</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="problem">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section II</span>
+          <h2 class="cs-section__title">The Problem</h2>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">A Dashboard That Had Outgrown Itself</h3>
+          <div class="cs-body">
+            <p>GemPages had grown organically over time, and the editor dashboard showed it. Features had been added without a coherent structural principle — navigation was inconsistent, key actions were buried, and the workspace felt cluttered rather than focused. Merchants spending hours in the editor every day were dealing with friction that accumulated over every session.</p>
+            <p>The feedback from user surveys was consistent: the layout was confusing for new users, and experienced users had developed workarounds for common tasks that should have been straightforward. There was also a persistent request for dark mode — not just a preference, but a genuine usability issue for people editing at night or in dim environments.</p>
+          </div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Design Goals</h3>
+          <ul class="cs-goal-list">
+            <li>Restructure the dashboard layout so key features are immediately accessible</li>
+            <li>Simplify the user flow for the most common editing tasks</li>
+            <li>Design and ship dark mode as a first-class experience (not an afterthought)</li>
+            <li>Maintain platform compatibility with Shopify and its existing merchant expectations</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="process">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section III</span>
+          <h2 class="cs-section__title">Process</h2>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">User Research &amp; Feedback</h3>
+          <div class="cs-body">
+            <p>I started with surveys and interviews with existing GemPages users — a mix of new merchants (under 3 months) and power users (over a year). The goal was to map the specific friction points in their daily editing workflow and understand how they mentally modelled the editor's structure.</p>
+            <p>Key findings: new users consistently got lost trying to find element settings; experienced users had memorized workarounds for tasks that shouldn't require them; and virtually every interviewed merchant mentioned wanting dark mode within the first 5 minutes.</p>
+          </div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Wireframing &amp; Prototyping</h3>
+          <div class="cs-body">
+            <p>I moved through several rounds of wireframes — focusing first on the information architecture of the sidebar and toolbar, before designing individual components. Each round was tested with a small group of merchants before moving to higher fidelity.</p>
+            <p>For dark mode, I designed the color system from scratch rather than simply inverting the light palette. Every component had to be verified against contrast requirements in both modes before being approved for development.</p>
+          </div>
+        </div>
+
+        <!-- Before / After visual -->
+        <div class="cs-visual cs-visual--half-grid fade-up">
+          <div style="background:var(--bg-alt);padding:1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
+            <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);">Before — Old interface</p>
+            <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6596a2fbc644ac74fca6_616026d2c3c36c81a65587d7_eaf946127920603.614b8e8aa31bb(1).jpeg"
+                 alt="GemPages old dashboard interface" style="width:100%;border-radius:6px;" loading="lazy" />
+          </div>
+          <div style="background:var(--bg-alt);padding:1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
+            <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);">After — Redesigned dashboard</p>
+            <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6596a2fbc644ac74fcb5_64f17cda72eb3ced2c55796c_5f490d71be5d5438ff06a2b8_Frame%25201083-p-500.png"
+                 alt="GemPages redesigned dashboard" style="width:100%;border-radius:6px;" loading="lazy" />
+          </div>
+        </div>
+        <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);text-align:center;margin-top:-1rem;">Before vs. after — navigation structure and workspace clarity</p>
+      </section>
+
+      <section class="cs-section fade-up" id="features">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section IV</span>
+          <h2 class="cs-section__title">What Shipped</h2>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Redesigned Dashboard</h3>
+          <div class="cs-body">
+            <p>A restructured editor layout prioritising the most-used features at the top level of navigation, with a cleaner workspace that reduced visual clutter without removing functionality. Key editing tools moved from nested menus to the primary toolbar, cutting the average number of clicks for common tasks.</p>
+          </div>
+        </div>
+
+        <!-- Feature visual -->
+        <div class="cs-visual cs-visual--full fade-up">
+          <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6596a2fbc644ac74fcc7_616026e9fbd7f0497f24036f_aac929127920603.614b8e8aa489d.gif"
+               alt="GemPages dashboard interaction demo" style="width:100%;display:block;" loading="lazy" />
+          <p class="cs-visual__caption">Redesigned editor — streamlined element controls and workspace navigation</p>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Dark Mode</h3>
+          <div class="cs-body">
+            <p>A full dark theme designed from the ground up — not a CSS inversion, but a purpose-built alternative color system with verified contrast ratios across every component. Dark mode became one of the most-mentioned improvements in post-launch reviews, with merchants citing reduced eye strain during extended editing sessions.</p>
+          </div>
+        </div>
+
+        <div class="cs-visual cs-visual--full fade-up">
+          <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6596a2fbc644ac74fcc3_61602700ada76c6960c8e7e0_e0cfc9127920603.614b8e8aa1a7e.gif"
+               alt="GemPages dark mode demonstration" style="width:100%;display:block;" loading="lazy" />
+          <p class="cs-visual__caption">Dark mode — full color system redesign, not an inversion</p>
+        </div>
+
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title">Platform Integration</h3>
+          <div class="cs-body">
+            <p>Both the redesign and dark mode maintained full compatibility with Shopify's design conventions and merchant expectations — an important constraint that shaped many interaction decisions throughout the project.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="outcomes">
+        <div class="cs-section__header">
+          <span class="cs-section__number">Section V</span>
+          <h2 class="cs-section__title">Outcomes</h2>
+        </div>
+        <div class="cs-body">
+          <p>Both features shipped within the 90-day timeline. Post-launch feedback from merchants highlighted the improved navigation clarity and dark mode as the two most impactful changes. User engagement rates increased after launch, with merchants spending more time actively editing rather than navigating the interface.</p>
+          <p>GemPages became, as described by its user community, "the go-to tool for online store owners seeking a user-friendly and high-converting solution" — a positioning that the redesigned dashboard directly supported.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><p class="cs-metric__value">↑</p><p class="cs-metric__label">User engagement post-launch</p><p class="cs-metric__sublabel">Measured by session depth</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">↑</p><p class="cs-metric__label">Conversion rates</p><p class="cs-metric__sublabel">Page builder outputs</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">90 days</p><p class="cs-metric__label">Research to shipped product</p><p class="cs-metric__sublabel">Both redesign + dark mode</p></div>
+        </div>
+
+        <div class="cs-visual cs-visual--full fade-up" style="margin-top:2rem;">
+          <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6596a2fbc644ac74fcb9_616026065ceb354db234dfda_Screen%2520Shot%25202021-10-08%2520at%252018.05.32.png"
+               alt="GemPages final UI overview" style="width:100%;display:block;" loading="lazy" />
+          <p class="cs-visual__caption">Final UI — GemPages Editor post-redesign</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="container">
+    <section style="padding: 4rem 0; border-top: 1px solid var(--border);">
+      <p style="font-family:var(--f-mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2rem;">Related work</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <a href="my-balance.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Tiki</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">My Balance — Unified Financial Hub</p>
+        </a>
+        <a href="opinew-rebranding.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Opinew · Freelance</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Opinew — Brand Identity Redesign</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline">Product Design Manager with 12+ years turning complex problems into simple, scalable solutions.</p></div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-group"><p class="footer__nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html">Works</a></li><li><a href="../now.html">Now</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:hello@yoursite.com">Email</a></li><li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
+        </nav>
+      </div>
+      <div class="footer__bottom"><p class="footer__copy">© 2026 Phuong Tran. Built with care.</p></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    const bar = document.getElementById('progressBar');
+    if (bar) window.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%'; }, { passive: true });
+  </script>
+</body>
+</html>
