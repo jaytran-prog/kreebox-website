@@ -475,7 +475,7 @@ body::after {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 2.5rem;
-  padding: 2.25rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid var(--border);
   position: relative;
 }
@@ -573,7 +573,7 @@ body::after {
 .filter-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
 .filter-btn.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .works-company-group { margin-bottom: 3.5rem; }
-.works-company-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.works-company-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; padding-top: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
 .works-company-name { font-family: var(--f-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; }
 .works-company-period { font-family: var(--f-mono); font-size: 0.68rem; color: var(--ink-3); margin-left: auto; letter-spacing: 0.05em; }
 
@@ -659,7 +659,7 @@ body::after {
 .cs-toc__link.active { color: var(--accent); font-weight: 500; }
 .cs-content { min-width: 0; }
 .cs-section { margin-bottom: 5rem; }
-.cs-section__header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.cs-section__header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; padding-top: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
 .cs-section__number { display: none; }
 .cs-section__title { font-family: var(--f-display); font-size: 1.65rem; font-weight: 700; letter-spacing: -0.025em; }
 .cs-subsection { margin-bottom: 3rem; }
