@@ -1,7 +1,7 @@
 // ─── Theme ──────────────────────────────────────────────────────────────────
 const html = document.documentElement;
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-const stored = localStorage.getItem('theme') || systemTheme;
+const stored = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', stored);
 
 document.querySelectorAll('.theme-toggle').forEach(btn => {
