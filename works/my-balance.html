@@ -6,7 +6,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Balance — Tiki Fintech App UX Design | Phuong Tran</title>
+  <title>My Balance Tiki Fintech App UX Design | Phuong Tran</title>
   <meta name="description" content="UX/UI design of My Balance, a fintech feature reaching millions of daily active users at Tiki. Mobile app design case study by Phuong Tran." />
   <meta name="keywords" content="fintech UX design, mobile app design Vietnam, e-wallet design, Tiki product design" />
   <!-- SEO -->
@@ -14,11 +14,11 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Phuong Tran" />
   <meta property="og:url" content="https://phuongtran.kreebox.com/works/my-balance" />
-  <meta property="og:title" content="My Balance — Tiki Fintech App UX Design | Phuong Tran" />
+  <meta property="og:title" content="My Balance Tiki Fintech App UX Design | Phuong Tran" />
   <meta property="og:description" content="UX/UI design of My Balance, a fintech feature reaching millions of daily active users at Tiki. Mobile app design case study by Phuong Tran." />
   <meta property="og:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="My Balance — Tiki Fintech App UX Design | Phuong Tran" />
+  <meta name="twitter:title" content="My Balance Tiki Fintech App UX Design | Phuong Tran" />
   <meta name="twitter:description" content="UX/UI design of My Balance, a fintech feature reaching millions of daily active users at Tiki. Mobile app design case study by Phuong Tran." />
   <meta name="twitter:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,12 +37,13 @@
         Phuong Tran
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="../works.html">Works</a></li>
-        <li><a href="../now.html">Now</a></li>
-        <li><a href="https://medium.com" target="_blank" rel="noopener">Writings ↗</a></li>
-        <li><a href="mailto:hello@yoursite.com" class="nav__cta">Have a chat</a></li>
+        <li><a href="../works.html" data-i18n="nav.works">Works</a></li>
+        <li><a href="../now.html" data-i18n="nav.now">Now</a></li>
+        <li><a href="https://medium.com" target="_blank" rel="noopener" data-i18n="nav.writings">Writings ↗</a></li>
+        <li><a href="mailto:hello@yoursite.com" class="nav__cta" data-i18n="nav.cta">Have a chat</a></li>
       </ul>
       <div class="nav__right">
+        <button class="lang-toggle" aria-label="Chuyển sang tiếng Việt">VI</button>
         <button class="theme-toggle" aria-label="Toggle dark/light mode">
           <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -59,7 +60,7 @@
     <div class="container">
       <a href="../works.html" class="cs-hero__back hero-stagger">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        See all works
+        <span data-i18n="back.works">See all works</span>
       </a>
       <div class="cs-hero__tags hero-stagger">
         <span class="tag">Product</span>
@@ -67,14 +68,14 @@
         <span class="tag">Design</span>
         <span class="tag">Web App</span>
       </div>
-      <h1 class="display-xl cs-hero__title hero-stagger">Cutting seller payout time from 7 days to instant on Vietnam's largest e-commerce platform</h1>
-      <p class="cs-hero__subtitle hero-stagger">
-        Redesigning the financial management experience for sellers on Tiki, one of Vietnam's largest e-commerce platforms — unifying fragmented balances, enabling instant withdrawals, and eliminating a 7-day manual process.
+      <h1 class="display-xl cs-hero__title hero-stagger" data-i18n="work.my-balance.title">Cutting seller payout time from 7 days to instant on Vietnam's largest e-commerce platform</h1>
+      <p class="cs-hero__subtitle hero-stagger" data-i18n-html="work.my-balance.subtitle">
+        Redesigning the financial management experience for sellers on Tiki, one of Vietnam's largest e-commerce platforms unifying fragmented balances, enabling instant withdrawals, and eliminating a 7-day manual process.
       </p>
       <div class="cs-meta hero-stagger">
-        <div class="cs-meta__item"><p class="cs-meta__label">Role</p><p class="cs-meta__value">Senior Product Designer</p></div>
-        <div class="cs-meta__item"><p class="cs-meta__label">Company</p><p class="cs-meta__value"><a href="https://tiki.vn" target="_blank" rel="noopener">Tiki</a></p></div>
-        <div class="cs-meta__item"><p class="cs-meta__label">Year</p><p class="cs-meta__value">2019 — 2021</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.role">Role</p><p class="cs-meta__value">Senior Product Designer</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.company">Company</p><p class="cs-meta__value"><a href="https://tiki.vn" target="_blank" rel="noopener">Tiki</a></p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.year">Year</p><p class="cs-meta__value">2019 2021</p></div>
         <div class="cs-meta__item"><p class="cs-meta__label">Duration</p><p class="cs-meta__value">2 months</p></div>
         <div class="cs-meta__item"><p class="cs-meta__label">Platform</p><p class="cs-meta__value">Tiki Seller Center (Web)</p></div>
       </div>
@@ -83,13 +84,13 @@
 
   <div class="cs-layout">
     <aside class="cs-toc" aria-label="Table of contents">
-      <p class="cs-toc__label">Contents</p>
+      <p class="cs-toc__label" data-i18n="toc.label">Contents</p>
       <ul class="cs-toc__list" role="list">
-        <li><a href="#context" class="cs-toc__link">I — Context</a></li>
-        <li><a href="#problem" class="cs-toc__link">II — The Problem</a></li>
-        <li><a href="#process" class="cs-toc__link">III — Design Process</a></li>
-        <li><a href="#features" class="cs-toc__link">IV — Key Features</a></li>
-        <li><a href="#outcomes" class="cs-toc__link">V — Outcomes</a></li>
+        <li><a href="#context" class="cs-toc__link"><span data-i18n="work.my-balance.toc.1">I Context</span></a></li>
+        <li><a href="#problem" class="cs-toc__link"><span data-i18n="work.my-balance.toc.2">II The Problem</span></a></li>
+        <li><a href="#process" class="cs-toc__link"><span data-i18n="work.my-balance.toc.3">III Design Process</span></a></li>
+        <li><a href="#features" class="cs-toc__link"><span data-i18n="work.my-balance.toc.4">IV Key Features</span></a></li>
+        <li><a href="#outcomes" class="cs-toc__link"><span data-i18n="work.my-balance.toc.5">V Outcomes</span></a></li>
       </ul>
     </aside>
 
@@ -97,19 +98,19 @@
 
       <section class="cs-section fade-up" id="context">
         <div class="cs-section__header">
-          <span class="cs-section__number">Section I</span>
-          <h2 class="cs-section__title">Context</h2>
+          <span class="cs-section__number" data-i18n="work.my-balance.section.1.num">Section I</span>
+          <h2 class="cs-section__title" data-i18n="work.my-balance.section.1.title">Context</h2>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">About Tiki</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.1">About Tiki</h3>
           <div class="cs-body">
-            <p>Tiki is one of Vietnam's largest e-commerce platforms, operating a multi-sided marketplace connecting millions of buyers with thousands of sellers, suppliers, and business partners. The platform manages a complex financial ecosystem where a single partner may simultaneously operate as a supplier, a seller, and a customer — each role carrying its own balance, transactions, and reporting requirements.</p>
+            <p data-i18n-html="work.my-balance.body.1">Tiki is one of Vietnam's largest e-commerce platforms, operating a multi-sided marketplace connecting millions of buyers with thousands of sellers, suppliers, and business partners. The platform manages a complex financial ecosystem where a single partner may simultaneously operate as a supplier, a seller, and a customer each role carrying its own balance, transactions, and reporting requirements.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">My Role</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.2">My Role</h3>
           <div class="cs-body">
-            <p>As <strong>Senior Product Designer</strong> on the Seller Center team, I owned the end-to-end design of the My Balance feature — from initial discovery through to final developer handoff. I collaborated directly with product managers, engineers, and the financial operations team to understand constraints and define the right scope.</p>
+            <p data-i18n-html="work.my-balance.body.2">As <strong>Senior Product Designer</strong> on the Seller Center team, I owned the end-to-end design of the My Balance feature from initial discovery through to final developer handoff. I collaborated directly with product managers, engineers, and the financial operations team to understand constraints and define the right scope.</p>
           </div>
         </div>
         <div class="cs-metrics">
@@ -121,114 +122,114 @@
 
       <section class="cs-section fade-up" id="problem">
         <div class="cs-section__header">
-          <span class="cs-section__number">Section II</span>
-          <h2 class="cs-section__title">The Problem</h2>
+          <span class="cs-section__number" data-i18n="work.my-balance.section.2.num">Section II</span>
+          <h2 class="cs-section__title" data-i18n="work.my-balance.section.2.title">The Problem</h2>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Financial Fragmentation Across Roles</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.3">Financial Fragmentation Across Roles</h3>
           <div class="cs-body">
-            <p>Partners operating across multiple roles on Tiki — supplier, seller, customer — had to navigate separate systems to understand their total financial position. There was no unified view. Each role lived in its own dashboard, with no way to see a consolidated balance or move funds between them without going through the bank.</p>
-            <p>The fund transfer process was particularly broken. Moving money between roles required converting balances to cash via bank transfer, then re-depositing — a process that took up to <strong>7 working days</strong> and incurred transaction fees on both ends. For negative revenue cases, partners had to manually trigger updates themselves.</p>
+            <p data-i18n-html="work.my-balance.body.3">Partners operating across multiple roles on Tiki supplier, seller, customer had to navigate separate systems to understand their total financial position. There was no unified view. Each role lived in its own dashboard, with no way to see a consolidated balance or move funds between them without going through the bank.</p>
+            <p data-i18n-html="work.my-balance.body.4">The fund transfer process was particularly broken. Moving money between roles required converting balances to cash via bank transfer, then re-depositing a process that took up to <strong>7 working days</strong> and incurred transaction fees on both ends. For negative revenue cases, partners had to manually trigger updates themselves.</p>
           </div>
         </div>
         <div class="cs-pullquote">
-          <p>"For each transaction via bank, either Tiki or the partner has to bear transaction costs. And the process can take up to 7 days — during which sellers have no visibility on where their money is."</p>
+          <p data-i18n-html="work.my-balance.body.5">"For each transaction via bank, either Tiki or the partner has to bear transaction costs. And the process can take up to 7 days during which sellers have no visibility on where their money is."</p>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Three Core Pain Points</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.4">Three Core Pain Points</h3>
           <ul class="cs-goal-list">
-            <li><strong>Tracking difficulty</strong> — no unified view across supplier, seller, and customer balances</li>
-            <li><strong>Slow transfers</strong> — fund movement required bank-level processing: up to 7 days, with fees</li>
-            <li><strong>Cost burden</strong> — every bank transaction cost either Tiki or the partner money</li>
+            <li><strong>Tracking difficulty</strong> no unified view across supplier, seller, and customer balances</li>
+            <li><strong>Slow transfers</strong> fund movement required bank-level processing: up to 7 days, with fees</li>
+            <li><strong>Cost burden</strong> every bank transaction cost either Tiki or the partner money</li>
           </ul>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="process">
         <div class="cs-section__header">
-          <span class="cs-section__number">Section III</span>
-          <h2 class="cs-section__title">Design Process</h2>
+          <span class="cs-section__number" data-i18n="work.my-balance.section.3.num">Section III</span>
+          <h2 class="cs-section__title" data-i18n="work.my-balance.section.3.title">Design Process</h2>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Principles We Designed By</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.5">Principles We Designed By</h3>
           <ul class="cs-goal-list">
-            <li>Put people first — understand the seller's mental model of their own money</li>
-            <li>Communicate visually and inclusively — financial data should feel clear, not intimidating</li>
-            <li>Collaborate and co-create — sync continuously with finance, product, and engineering</li>
-            <li>Iterate, iterate, iterate — paper sketches before pixels, low-fi before high-fi</li>
+            <li>Put people first understand the seller's mental model of their own money</li>
+            <li>Communicate visually and inclusively financial data should feel clear, not intimidating</li>
+            <li>Collaborate and co-create sync continuously with finance, product, and engineering</li>
+            <li>Iterate, iterate, iterate paper sketches before pixels, low-fi before high-fi</li>
           </ul>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Discover Phase</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.6">Discover Phase</h3>
           <div class="cs-body">
-            <p>We mapped how competitors handled seller-side finance — Shopee, Lazada, TikTok Shop — to understand what patterns sellers already knew, and where Tiki could differentiate. We also interviewed sellers directly to surface the specific moments in their workflow where the current system broke down.</p>
+            <p data-i18n-html="work.my-balance.body.6">We mapped how competitors handled seller-side finance Shopee, Lazada, TikTok Shop to understand what patterns sellers already knew, and where Tiki could differentiate. We also interviewed sellers directly to surface the specific moments in their workflow where the current system broke down.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Define Phase</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.7">Define Phase</h3>
           <div class="cs-body">
-            <p>We mapped the full payment information flow across roles, defined withdrawal strategies (immediate and periodic), and specified the e-invoice system requirements. This phase produced the functional spec that aligned engineering on scope before any visual design started.</p>
+            <p data-i18n-html="work.my-balance.body.7">We mapped the full payment information flow across roles, defined withdrawal strategies (immediate and periodic), and specified the e-invoice system requirements. This phase produced the functional spec that aligned engineering on scope before any visual design started.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Develop Phase</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.8">Develop Phase</h3>
           <div class="cs-body">
-            <p>I moved from paper sketches to low-fidelity wireframes with 3+ variations for key flows like payment requests and withdrawal. Each variation was shared with product and finance stakeholders for feedback before we committed to the high-fidelity direction.</p>
+            <p data-i18n-html="work.my-balance.body.8">I moved from paper sketches to low-fidelity wireframes with 3+ variations for key flows like payment requests and withdrawal. Each variation was shared with product and finance stakeholders for feedback before we committed to the high-fidelity direction.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Usability Testing</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.9">Usability Testing</h3>
           <div class="cs-body">
-            <p>We tested with high-revenue sellers (top performers over 3 months) and settlement section operators — people who use the balance system daily and have the most to gain or lose from a redesign. Testing tasks covered statement viewing, balance summary interpretation, transaction navigation, and the full withdrawal flow.</p>
+            <p data-i18n-html="work.my-balance.body.9">We tested with high-revenue sellers (top performers over 3 months) and settlement section operators people who use the balance system daily and have the most to gain or lose from a redesign. Testing tasks covered statement viewing, balance summary interpretation, transaction navigation, and the full withdrawal flow.</p>
           </div>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="features">
         <div class="cs-section__header">
-          <span class="cs-section__number">Section IV</span>
-          <h2 class="cs-section__title">Key Features</h2>
+          <span class="cs-section__number" data-i18n="work.my-balance.section.4.num">Section IV</span>
+          <h2 class="cs-section__title" data-i18n="work.my-balance.section.4.title">Key Features</h2>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">My Balance Dashboard</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.10">My Balance Dashboard</h3>
           <div class="cs-body">
-            <p>A unified balance view that consolidated a seller's position across all their roles — supplier balance, seller balance, and any platform credits — in a single overview. For the first time, partners could see their total financial position at a glance without navigating across multiple systems.</p>
+            <p data-i18n-html="work.my-balance.body.10">A unified balance view that consolidated a seller's position across all their roles supplier balance, seller balance, and any platform credits in a single overview. For the first time, partners could see their total financial position at a glance without navigating across multiple systems.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Withdraw Now</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.11">Withdraw Now</h3>
           <div class="cs-body">
-            <p>The feature that replaced the 7-day bank process. Sellers could request immediate withdrawal directly from the dashboard, with the system handling verification and fund routing internally. This eliminated both the waiting time and the per-transaction bank fees.</p>
+            <p data-i18n-html="work.my-balance.body.11">The feature that replaced the 7-day bank process. Sellers could request immediate withdrawal directly from the dashboard, with the system handling verification and fund routing internally. This eliminated both the waiting time and the per-transaction bank fees.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Transaction History &amp; Filters</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.12">Transaction History &amp; Filters</h3>
           <div class="cs-body">
-            <p>A searchable, filterable transaction list with detailed drill-down for each entry. Sellers could filter by date range, transaction type, and role — making it easy to reconcile monthly statements without manual spreadsheet work.</p>
+            <p data-i18n-html="work.my-balance.body.12">A searchable, filterable transaction list with detailed drill-down for each entry. Sellers could filter by date range, transaction type, and role making it easy to reconcile monthly statements without manual spreadsheet work.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">E-Invoice Management</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.13">E-Invoice Management</h3>
           <div class="cs-body">
-            <p>Monthly invoice generation and tracking built directly into the balance dashboard. This replaced a manual request process and gave sellers a structured audit trail that aligned with Vietnamese tax requirements.</p>
+            <p data-i18n-html="work.my-balance.body.13">Monthly invoice generation and tracking built directly into the balance dashboard. This replaced a manual request process and gave sellers a structured audit trail that aligned with Vietnamese tax requirements.</p>
           </div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Edge Case Handling</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.my-balance.sub.14">Edge Case Handling</h3>
           <div class="cs-body">
-            <p>We designed explicit flows for insufficient balance situations — rather than silent failures, the system guided users through their options. This was one of the most-tested paths in usability sessions and one of the most impactful final design decisions.</p>
+            <p data-i18n-html="work.my-balance.body.14">We designed explicit flows for insufficient balance situations rather than silent failures, the system guided users through their options. This was one of the most-tested paths in usability sessions and one of the most impactful final design decisions.</p>
           </div>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="outcomes">
         <div class="cs-section__header">
-          <span class="cs-section__number">Section V</span>
-          <h2 class="cs-section__title">Outcomes</h2>
+          <span class="cs-section__number" data-i18n="work.my-balance.section.5.num">Section V</span>
+          <h2 class="cs-section__title" data-i18n="work.my-balance.section.5.title">Outcomes</h2>
         </div>
         <div class="cs-body">
-          <p>The My Balance feature shipped as part of the Tiki Seller Center and became the primary financial management interface for the platform's seller base. The core improvement — eliminating the 7-day bank transfer cycle — fundamentally changed how sellers managed their working capital on the platform.</p>
-          <p>The unified balance view reduced the number of support tickets related to "where is my money" queries by simplifying the view of fund positions across roles. The e-invoice system removed a previously manual touchpoint that the finance operations team handled manually for every seller each month.</p>
+          <p data-i18n-html="work.my-balance.body.15">The My Balance feature shipped as part of the Tiki Seller Center and became the primary financial management interface for the platform's seller base. The core improvement eliminating the 7-day bank transfer cycle fundamentally changed how sellers managed their working capital on the platform.</p>
+          <p data-i18n-html="work.my-balance.body.16">The unified balance view reduced the number of support tickets related to "where is my money" queries by simplifying the view of fund positions across roles. The e-invoice system removed a previously manual touchpoint that the finance operations team handled manually for every seller each month.</p>
         </div>
         <div class="cs-metrics">
           <div class="cs-metric"><p class="cs-metric__value">7→0</p><p class="cs-metric__label">Days wait for fund transfer (near-instant)</p><p class="cs-metric__sublabel">Core improvement</p></div>
@@ -236,7 +237,7 @@
           <div class="cs-metric"><p class="cs-metric__value">Auto</p><p class="cs-metric__label">E-invoice generation (was manual)</p><p class="cs-metric__sublabel">Monthly billing</p></div>
         </div>
         <div class="cs-pullquote">
-          <p>"Some project details remain confidential per Tiki's NDA policy. Full case study available on request."</p>
+          <p data-i18n-html="work.my-balance.body.17">"Some project details remain confidential per Tiki's NDA policy. Full case study available on request."</p>
         </div>
       </section>
 
@@ -249,7 +250,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
         <a href="genie-platform.html" class="cs-related__card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;transition:border-color 0.25s,transform 0.25s;">
           <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">TSC.ai</p>
-          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Genie — AI-native Stakeholder Intelligence Platform</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Genie AI-native Stakeholder Intelligence Platform</p>
         </a>
         <a href="delivery-app.html" class="cs-related__card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;transition:border-color 0.25s,transform 0.25s;">
           <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Freelance · South Korea</p>
@@ -262,16 +263,17 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline">Product Design Manager with 12+ years turning complex problems into simple, scalable solutions.</p></div>
+        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline" data-i18n="footer.tagline">Product Design Manager with 12+ years turning complex problems into simple, scalable solutions.</p></div>
         <nav class="footer__nav" aria-label="Footer navigation">
-          <div class="footer__nav-group"><p class="footer__nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html">Works</a></li><li><a href="../now.html">Now</a></li></ul></div>
-          <div class="footer__nav-group"><p class="footer__nav-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:hello@yoursite.com">Email</a></li><li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html" data-i18n="nav.works">Works</a></li><li><a href="../now.html" data-i18n="nav.now">Now</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.contact-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:hello@yoursite.com">Email</a></li><li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
         </nav>
       </div>
-      <div class="footer__bottom"><p class="footer__copy">© 2026 Phuong Tran. Built with care.</p></div>
+      <div class="footer__bottom"><p class="footer__copy" data-i18n="footer.copy">© 2026 Phuong Tran. Built with care.</p></div>
     </div>
   </footer>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
   <script>
     const bar = document.getElementById('progressBar');

@@ -6,7 +6,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WordPopi — Language Learning App UX | Phuong Tran</title>
+  <title>WordPopi Language Learning App UX | Phuong Tran</title>
   <meta name="description" content="UX/UI design of a vocabulary learning iOS app with multiplayer battles and OCR. Mobile app design case study by Phuong Tran, freelance designer." />
   <meta name="keywords" content="language app design, iOS UX design, gamification UX, mobile app Vietnam" />
   <!-- SEO -->
@@ -14,11 +14,11 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Phuong Tran" />
   <meta property="og:url" content="https://phuongtran.kreebox.com/works/wordpopi" />
-  <meta property="og:title" content="WordPopi — Language Learning App UX | Phuong Tran" />
+  <meta property="og:title" content="WordPopi Language Learning App UX | Phuong Tran" />
   <meta property="og:description" content="UX/UI design of a vocabulary learning iOS app with multiplayer battles and OCR. Mobile app design case study by Phuong Tran, freelance designer." />
   <meta property="og:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="WordPopi — Language Learning App UX | Phuong Tran" />
+  <meta name="twitter:title" content="WordPopi Language Learning App UX | Phuong Tran" />
   <meta name="twitter:description" content="UX/UI design of a vocabulary learning iOS app with multiplayer battles and OCR. Mobile app design case study by Phuong Tran, freelance designer." />
   <meta name="twitter:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,12 +32,13 @@
     <div class="nav__inner">
       <a href="../index.html" class="nav__logo" style="display:flex;align-items:center;gap:9px;"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>Phuong Tran</a>
       <ul class="nav__links" role="list">
-        <li><a href="../works.html">Works</a></li>
-        <li><a href="../now.html">Now</a></li>
-        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
-        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta">Have a chat</a></li>
+        <li><a href="../works.html" data-i18n="nav.works">Works</a></li>
+        <li><a href="../now.html" data-i18n="nav.now">Now</a></li>
+        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener" data-i18n="nav.writings">Writings ↗</a></li>
+        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta" data-i18n="nav.cta">Have a chat</a></li>
       </ul>
       <div class="nav__right">
+        <button class="lang-toggle" aria-label="Chuyển sang tiếng Việt">VI</button>
         <button class="theme-toggle" aria-label="Toggle dark/light mode">
           <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -53,7 +54,7 @@
     <div class="container">
       <a href="../works.html" class="cs-hero__back hero-stagger">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        See all works
+        <span data-i18n="back.works">See all works</span>
       </a>
       <div class="cs-hero__tags hero-stagger">
         <span class="tag">iOS App</span>
@@ -62,12 +63,12 @@
         <span class="tag">EdTech</span>
         <span class="tag">Multiplayer</span>
       </div>
-      <h1 class="display-xl cs-hero__title hero-stagger">Building a vocabulary app that makes learning Korean and Thai feel more like a game than a grind</h1>
-      <p class="cs-hero__subtitle hero-stagger">WordPopi is an iOS vocabulary learning app I designed and built end-to-end — supporting English, Korean, and Thai with four distinct study modes, real-time Wi-Fi multiplayer battles, OCR-based deck creation, and fully offline operation. The goal: make serious language study sustainable through variety, competition, and zero friction.</p>
+      <h1 class="display-xl cs-hero__title hero-stagger" data-i18n="work.wordpopi.title">Building a vocabulary app that makes learning Korean and Thai feel more like a game than a grind</h1>
+      <p class="cs-hero__subtitle hero-stagger" data-i18n-html="work.wordpopi.subtitle">WordPopi is an iOS vocabulary learning app I designed and built end-to-end supporting English, Korean, and Thai with four distinct study modes, real-time Wi-Fi multiplayer battles, OCR-based deck creation, and fully offline operation. The goal: make serious language study sustainable through variety, competition, and zero friction.</p>
       <div class="cs-meta hero-stagger">
-        <div class="cs-meta__item"><p class="cs-meta__label">My Role</p><p class="cs-meta__value">Designer &amp; Developer</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.myRole">My Role</p><p class="cs-meta__value">Designer &amp; Developer</p></div>
         <div class="cs-meta__item"><p class="cs-meta__label">Website</p><p class="cs-meta__value"><a href="https://wordpopi.netlify.app/" target="_blank" rel="noopener">wordpopi.netlify.app ↗</a></p></div>
-        <div class="cs-meta__item"><p class="cs-meta__label">Year</p><p class="cs-meta__value">2026</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.year">Year</p><p class="cs-meta__value">2026</p></div>
         <div class="cs-meta__item"><p class="cs-meta__label">Stack</p><p class="cs-meta__value">SwiftUI · iOS · MultipeerConnectivity</p></div>
         <div class="cs-meta__item"><p class="cs-meta__label">Live</p><p class="cs-meta__value"><a href="https://apps.apple.com/app/wordpop/id6767889575" target="_blank" rel="noopener">App Store ↗</a></p></div>
       </div>
@@ -77,13 +78,13 @@
   <div style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0;">
     <div class="container">
       <div class="cs-phone-gallery">
-        <img src="https://wordpopi.netlify.app/screen1-home.png" alt="WordPopi — Home screen with Multiplayer and Word Decks" loading="eager" />
-        <img src="https://wordpopi.netlify.app/screen2-deck.png" alt="WordPopi — Vocabulary deck with word list and practice modes" loading="eager" />
-        <img src="https://wordpopi.netlify.app/screen3-flashcard-front.png" alt="WordPopi — Flashcard front showing word to learn" loading="eager" />
-        <img src="https://wordpopi.netlify.app/screen4-flashcard-back.png" alt="WordPopi — Flashcard back with definition and example sentence" loading="eager" />
-        <img src="https://wordpopi.netlify.app/screen5-pronunciation.png" alt="WordPopi — Pronunciation mode with audio recognition" loading="eager" />
+        <img src="https://wordpopi.netlify.app/screen1-home.png" alt="WordPopi Home screen with Multiplayer and Word Decks" loading="eager" />
+        <img src="https://wordpopi.netlify.app/screen2-deck.png" alt="WordPopi Vocabulary deck with word list and practice modes" loading="eager" />
+        <img src="https://wordpopi.netlify.app/screen3-flashcard-front.png" alt="WordPopi Flashcard front showing word to learn" loading="eager" />
+        <img src="https://wordpopi.netlify.app/screen4-flashcard-back.png" alt="WordPopi Flashcard back with definition and example sentence" loading="eager" />
+        <img src="https://wordpopi.netlify.app/screen5-pronunciation.png" alt="WordPopi Pronunciation mode with audio recognition" loading="eager" />
       </div>
-      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:1.5rem;text-align:center;letter-spacing:0.04em;">Home · Deck · Flashcard front &amp; back · Pronunciation — all five study surfaces in one app</p>
+      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:1.5rem;text-align:center;letter-spacing:0.04em;">Home · Deck · Flashcard front &amp; back · Pronunciation all five study surfaces in one app</p>
       <div style="text-align:center;margin-top:1.5rem;">
         <a href="https://apps.apple.com/app/wordpop/id6767889575" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--ink);color:var(--bg);padding:0.65rem 1.25rem;border-radius:var(--radius-md);font-family:var(--f-mono);font-size:0.72rem;letter-spacing:0.06em;text-decoration:none;font-weight:600;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -95,115 +96,115 @@
 
   <div class="cs-layout">
     <aside class="cs-toc" aria-label="Table of contents">
-      <p class="cs-toc__label">Contents</p>
+      <p class="cs-toc__label" data-i18n="toc.label">Contents</p>
       <ul class="cs-toc__list" role="list">
-        <li><a href="#context" class="cs-toc__link">I — Context</a></li>
-        <li><a href="#problem" class="cs-toc__link">II — The problem</a></li>
-        <li><a href="#approach" class="cs-toc__link">III — Design approach</a></li>
-        <li><a href="#modes" class="cs-toc__link">IV — Study modes</a></li>
-        <li><a href="#multiplayer" class="cs-toc__link">V — Multiplayer</a></li>
-        <li><a href="#delivery" class="cs-toc__link">VI — What shipped</a></li>
+        <li><a href="#context" class="cs-toc__link"><span data-i18n="work.wordpopi.toc.1">I Context</span></a></li>
+        <li><a href="#problem" class="cs-toc__link"><span data-i18n="work.wordpopi.toc.2">II The problem</span></a></li>
+        <li><a href="#approach" class="cs-toc__link"><span data-i18n="work.wordpopi.toc.3">III Design approach</span></a></li>
+        <li><a href="#modes" class="cs-toc__link"><span data-i18n="work.wordpopi.toc.4">IV Study modes</span></a></li>
+        <li><a href="#multiplayer" class="cs-toc__link"><span data-i18n="work.wordpopi.toc.5">V Multiplayer</span></a></li>
+        <li><a href="#delivery" class="cs-toc__link"><span data-i18n="work.wordpopi.toc.6">VI What shipped</span></a></li>
       </ul>
     </aside>
 
     <main class="cs-content">
 
       <section class="cs-section fade-up" id="context">
-        <div class="cs-section__header"><span class="cs-section__number">Section I</span><h2 class="cs-section__title">Learning vocabulary is solved. Staying consistent with it is not.</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.wordpopi.section.1.num">Section I</span><h2 class="cs-section__title" data-i18n="work.wordpopi.section.1.title">Learning vocabulary is solved. Staying consistent with it is not.</h2></div>
         <div class="cs-body">
-          <p>Vocabulary acquisition is one of the best-understood areas of language learning. Spaced repetition works. Active recall works. Multi-modal exposure — reading, hearing, producing — works. The problem isn't that we don't know how to learn vocabulary. The problem is that most apps implementing these methods are either too academic to sustain daily use, or too gamified to build real competence.</p>
-          <p>I was studying Korean and wanted an app that took multiple study modes seriously — one that would let me switch between flashcards when I wanted passive review, quizzes when I wanted active retrieval, and spelling drills when I wanted production practice — all from the same deck, without creating separate study sessions for each mode.</p>
-          <p>I also wanted to build vocabulary battles with friends studying the same language, because competitive learning is genuinely fun and fun is what makes practice sustainable. Nothing on the App Store did all of this offline, without a subscription, for Korean and Thai alongside English.</p>
+          <p data-i18n-html="work.wordpopi.body.1">Vocabulary acquisition is one of the best-understood areas of language learning. Spaced repetition works. Active recall works. Multi-modal exposure reading, hearing, producing works. The problem isn't that we don't know how to learn vocabulary. The problem is that most apps implementing these methods are either too academic to sustain daily use, or too gamified to build real competence.</p>
+          <p data-i18n-html="work.wordpopi.body.2">I was studying Korean and wanted an app that took multiple study modes seriously one that would let me switch between flashcards when I wanted passive review, quizzes when I wanted active retrieval, and spelling drills when I wanted production practice all from the same deck, without creating separate study sessions for each mode.</p>
+          <p data-i18n-html="work.wordpopi.body.3">I also wanted to build vocabulary battles with friends studying the same language, because competitive learning is genuinely fun and fun is what makes practice sustainable. Nothing on the App Store did all of this offline, without a subscription, for Korean and Thai alongside English.</p>
         </div>
         <div class="cs-metrics">
-          <div class="cs-metric"><p class="cs-metric__value">4</p><p class="cs-metric__label">Study modes — each targeting a different cognitive depth</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">4</p><p class="cs-metric__label">Study modes each targeting a different cognitive depth</p></div>
           <div class="cs-metric"><p class="cs-metric__value">1,000+</p><p class="cs-metric__label">Curated vocabulary words across 20 topic decks</p></div>
           <div class="cs-metric"><p class="cs-metric__value">12</p><p class="cs-metric__label">Languages for definition display including Vietnamese, Japanese, and Chinese</p></div>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="problem">
-        <div class="cs-section__header"><span class="cs-section__number">Section II</span><h2 class="cs-section__title">Four design problems to solve before building anything</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.wordpopi.section.2.num">Section II</span><h2 class="cs-section__title" data-i18n="work.wordpopi.section.2.title">Four design problems to solve before building anything</h2></div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Deck creation is too slow in every other app</h3>
-          <div class="cs-body"><p>Creating custom vocabulary decks by typing words one at a time is a significant friction point — especially for students studying from printed textbook lists or handwritten notes. I wanted OCR-based deck creation: photograph a vocabulary list, and the app parses and imports the words automatically. The friction between "I have a list" and "I can study from it" needed to collapse to seconds, not minutes.</p></div>
+          <h3 class="cs-subsection__title" data-i18n="work.wordpopi.sub.1">Deck creation is too slow in every other app</h3>
+          <div class="cs-body"><p data-i18n-html="work.wordpopi.body.4">Creating custom vocabulary decks by typing words one at a time is a significant friction point especially for students studying from printed textbook lists or handwritten notes. I wanted OCR-based deck creation: photograph a vocabulary list, and the app parses and imports the words automatically. The friction between "I have a list" and "I can study from it" needed to collapse to seconds, not minutes.</p></div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Subscriptions break the habit for casual learners</h3>
-          <div class="cs-body"><p>The apps with the best study mechanics are almost universally subscription-gated. For students or casual learners who want to study in bursts — intensive for a few weeks before a trip, then dormant — a monthly subscription creates psychological friction even before the cost. WordPopi is free with no paywall. The core learning experience is complete and unlimited.</p></div>
+          <h3 class="cs-subsection__title" data-i18n="work.wordpopi.sub.2">Subscriptions break the habit for casual learners</h3>
+          <div class="cs-body"><p data-i18n-html="work.wordpopi.body.5">The apps with the best study mechanics are almost universally subscription-gated. For students or casual learners who want to study in bursts intensive for a few weeks before a trip, then dormant a monthly subscription creates psychological friction even before the cost. WordPopi is free with no paywall. The core learning experience is complete and unlimited.</p></div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Offline is not optional for real study conditions</h3>
-          <div class="cs-body"><p>Vocabulary study happens on commutes, in cafes, in transit — environments where connectivity is unreliable. Every feature in WordPopi works fully offline. Decks, audio, definitions, and multiplayer (over local Wi-Fi) all function without an internet connection. This is an architectural decision, not a feature flag.</p></div>
+          <h3 class="cs-subsection__title" data-i18n="work.wordpopi.sub.3">Offline is not optional for real study conditions</h3>
+          <div class="cs-body"><p data-i18n-html="work.wordpopi.body.6">Vocabulary study happens on commutes, in cafes, in transit environments where connectivity is unreliable. Every feature in WordPopi works fully offline. Decks, audio, definitions, and multiplayer (over local Wi-Fi) all function without an internet connection. This is an architectural decision, not a feature flag.</p></div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Single-mode apps don't serve different learning stages</h3>
-          <div class="cs-body"><p>New vocabulary requires different cognitive engagement at different learning stages: initial exposure needs passive recognition, early consolidation needs retrieval practice, and durable retention needs production. An app that only offers flashcards handles the first stage. One that only offers quizzes skips the first. The design challenge was making four modes feel like one coherent app rather than four bolted-together features.</p></div>
+          <h3 class="cs-subsection__title" data-i18n="work.wordpopi.sub.4">Single-mode apps don't serve different learning stages</h3>
+          <div class="cs-body"><p data-i18n-html="work.wordpopi.body.7">New vocabulary requires different cognitive engagement at different learning stages: initial exposure needs passive recognition, early consolidation needs retrieval practice, and durable retention needs production. An app that only offers flashcards handles the first stage. One that only offers quizzes skips the first. The design challenge was making four modes feel like one coherent app rather than four bolted-together features.</p></div>
         </div>
-        <div class="cs-pullquote"><p>The goal wasn't to build the most gamified vocabulary app — it was to build the most complete one. Gamification is one tool, not the whole system.</p></div>
+        <div class="cs-pullquote"><p data-i18n-html="work.wordpopi.body.8">The goal wasn't to build the most gamified vocabulary app it was to build the most complete one. Gamification is one tool, not the whole system.</p></div>
       </section>
 
       <section class="cs-section fade-up" id="approach">
-        <div class="cs-section__header"><span class="cs-section__number">Section III</span><h2 class="cs-section__title">Deck-first architecture — one deck, every mode</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.wordpopi.section.3.num">Section III</span><h2 class="cs-section__title" data-i18n="work.wordpopi.section.3.title">Deck-first architecture one deck, every mode</h2></div>
         <div class="cs-body">
-          <p>The core architectural decision was making decks the primary object, not study sessions. Every piece of functionality — flashcards, quizzes, pronunciation, spelling, multiplayer — operates on the same deck without any re-configuration. You browse your decks, choose a mode, and start. The session picks up where the adaptive algorithm thinks you need it most.</p>
-          <p>Adaptive repetition runs underneath every mode. The spaced repetition algorithm tracks performance per word per mode — so a word you recognise easily on flashcards but struggle with on spelling gets surfaced more in spelling practice, not across all modes equally. This is a more granular model than most vocabulary apps implement.</p>
+          <p data-i18n-html="work.wordpopi.body.9">The core architectural decision was making decks the primary object, not study sessions. Every piece of functionality flashcards, quizzes, pronunciation, spelling, multiplayer operates on the same deck without any re-configuration. You browse your decks, choose a mode, and start. The session picks up where the adaptive algorithm thinks you need it most.</p>
+          <p data-i18n-html="work.wordpopi.body.10">Adaptive repetition runs underneath every mode. The spaced repetition algorithm tracks performance per word per mode so a word you recognise easily on flashcards but struggle with on spelling gets surfaced more in spelling practice, not across all modes equally. This is a more granular model than most vocabulary apps implement.</p>
         </div>
         <div class="cs-segments">
-          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">Unified Deck Model</p><p class="cs-segment__desc">One deck works across all four study modes — no duplication or mode-specific setup required</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">Per-mode Spaced Repetition</p><p class="cs-segment__desc">Adaptive algorithm tracks difficulty per word per mode — not a single average across all study types</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">Offline-first Storage</p><p class="cs-segment__desc">All deck data, audio, and progress stored locally — no sync, no account, no connectivity required</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">OCR Import</p><p class="cs-segment__desc">Photograph a printed vocabulary list to auto-create a deck — Vision framework parses words and queries definitions automatically</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">Unified Deck Model</p><p class="cs-segment__desc">One deck works across all four study modes no duplication or mode-specific setup required</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">Per-mode Spaced Repetition</p><p class="cs-segment__desc">Adaptive algorithm tracks difficulty per word per mode not a single average across all study types</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">Offline-first Storage</p><p class="cs-segment__desc">All deck data, audio, and progress stored locally no sync, no account, no connectivity required</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Architecture</span><p class="cs-segment__name">OCR Import</p><p class="cs-segment__desc">Photograph a printed vocabulary list to auto-create a deck Vision framework parses words and queries definitions automatically</p></div>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="modes">
-        <div class="cs-section__header"><span class="cs-section__number">Section IV</span><h2 class="cs-section__title">Four modes — each designed for a different cognitive depth</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.wordpopi.section.4.num">Section IV</span><h2 class="cs-section__title" data-i18n="work.wordpopi.section.4.title">Four modes each designed for a different cognitive depth</h2></div>
         <div class="cs-body">
-          <p>Each study mode targets a specific type of memory engagement. The design challenge was making four distinct interaction patterns feel like variations of the same system rather than separate features stitched together.</p>
+          <p data-i18n-html="work.wordpopi.body.11">Each study mode targets a specific type of memory engagement. The design challenge was making four distinct interaction patterns feel like variations of the same system rather than separate features stitched together.</p>
         </div>
         <div class="cs-segments">
           <div class="cs-segment"><span class="cs-segment__tag">Mode 1</span><p class="cs-segment__name">Flashcards</p><p class="cs-segment__desc">Self-paced front/back flip with explicit difficulty rating (Again / Hard / Good / Easy). IPA phonetics, example sentences, and native audio on every card. Adaptive scheduling based on rated difficulty.</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Mode 2</span><p class="cs-segment__name">Multiple Choice</p><p class="cs-segment__desc">Four-option questions with "smart distractors" — wrong answers are semantically related to the target word, not random. Forces discrimination between words that share context.</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Mode 2</span><p class="cs-segment__name">Multiple Choice</p><p class="cs-segment__desc">Four-option questions with "smart distractors" wrong answers are semantically related to the target word, not random. Forces discrimination between words that share context.</p></div>
           <div class="cs-segment"><span class="cs-segment__tag">Mode 3</span><p class="cs-segment__name">Pronunciation</p><p class="cs-segment__desc">Hear the word, identify it from options. Trains audio recognition independently from reading. Uses native-quality text-to-speech with language-appropriate phonology for Korean and Thai.</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Mode 4</span><p class="cs-segment__name">Spelling</p><p class="cs-segment__desc">Type the word from its definition — the deepest recall task. Most valuable for production fluency. Adaptive algorithm weights spelling practice more heavily for words flagged as weak in other modes.</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Mode 4</span><p class="cs-segment__name">Spelling</p><p class="cs-segment__desc">Type the word from its definition the deepest recall task. Most valuable for production fluency. Adaptive algorithm weights spelling practice more heavily for words flagged as weak in other modes.</p></div>
         </div>
         <div class="cs-body">
-          <p>The progression system — XP, streaks, Beginner to Advanced levels — is designed to reward consistent practice rather than raw score. A user who does twenty minutes of spelling practice at 60% accuracy earns more than one who does five minutes of easy flashcards at 100%. The metric is time-on-task quality, not vanity correctness.</p>
+          <p data-i18n-html="work.wordpopi.body.12">The progression system XP, streaks, Beginner to Advanced levels is designed to reward consistent practice rather than raw score. A user who does twenty minutes of spelling practice at 60% accuracy earns more than one who does five minutes of easy flashcards at 100%. The metric is time-on-task quality, not vanity correctness.</p>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="multiplayer">
-        <div class="cs-section__header"><span class="cs-section__number">Section V</span><h2 class="cs-section__title">Real-time multiplayer — over Wi-Fi, fully offline, no server required</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.wordpopi.section.5.num">Section V</span><h2 class="cs-section__title" data-i18n="work.wordpopi.section.5.title">Real-time multiplayer over Wi-Fi, fully offline, no server required</h2></div>
         <div class="cs-body">
-          <p>Multiplayer was the feature I was most uncertain about shipping — not because of the UX, but because of the infrastructure. Real-time synchronised sessions typically require a backend. I wanted to avoid a backend entirely, because a backend means recurring costs, maintenance burden, and — most importantly — a dependency that kills the feature if the service ever goes down or the project becomes dormant.</p>
-          <p>The solution was Apple's MultipeerConnectivity framework: peer-to-peer networking over local Wi-Fi or Bluetooth, with no internet connection and no server. Two players on the same network connect directly. The session host broadcasts questions; both devices render answers simultaneously; results are synced at end-of-round.</p>
+          <p data-i18n-html="work.wordpopi.body.13">Multiplayer was the feature I was most uncertain about shipping not because of the UX, but because of the infrastructure. Real-time synchronised sessions typically require a backend. I wanted to avoid a backend entirely, because a backend means recurring costs, maintenance burden, and most importantly a dependency that kills the feature if the service ever goes down or the project becomes dormant.</p>
+          <p data-i18n-html="work.wordpopi.body.14">The solution was Apple's MultipeerConnectivity framework: peer-to-peer networking over local Wi-Fi or Bluetooth, with no internet connection and no server. Two players on the same network connect directly. The session host broadcasts questions; both devices render answers simultaneously; results are synced at end-of-round.</p>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">What multiplayer battles look like</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.wordpopi.sub.5">What multiplayer battles look like</h3>
           <div class="cs-body">
-            <p>One player creates a battle room and shares a four-digit code. The second player joins. Both choose from the same three battle formats — flashcards, quizzes, or spelling — applied to a shared deck. Questions are presented simultaneously; the first correct answer wins the round. Final score shows correct answers, speed, and streak. Rematches start with one tap.</p>
-            <p>The design goal for the multiplayer UI was tension. The competitive format only works if the interface communicates that the other player is present and responding in real time. Animations, opponent status indicators, and round-end reveals were all designed to make the peer-to-peer connection feel live, not latent.</p>
+            <p data-i18n-html="work.wordpopi.body.15">One player creates a battle room and shares a four-digit code. The second player joins. Both choose from the same three battle formats flashcards, quizzes, or spelling applied to a shared deck. Questions are presented simultaneously; the first correct answer wins the round. Final score shows correct answers, speed, and streak. Rematches start with one tap.</p>
+            <p data-i18n-html="work.wordpopi.body.16">The design goal for the multiplayer UI was tension. The competitive format only works if the interface communicates that the other player is present and responding in real time. Animations, opponent status indicators, and round-end reveals were all designed to make the peer-to-peer connection feel live, not latent.</p>
           </div>
         </div>
         <div class="cs-metrics">
-          <div class="cs-metric"><p class="cs-metric__value">P2P</p><p class="cs-metric__label">No server required — MultipeerConnectivity over local Wi-Fi</p></div>
-          <div class="cs-metric"><p class="cs-metric__value">3</p><p class="cs-metric__label">Battle formats — flashcards, quizzes, spelling</p></div>
-          <div class="cs-metric"><p class="cs-metric__value">100%</p><p class="cs-metric__label">Offline — multiplayer works without internet connection</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">P2P</p><p class="cs-metric__label">No server required MultipeerConnectivity over local Wi-Fi</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">3</p><p class="cs-metric__label">Battle formats flashcards, quizzes, spelling</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">100%</p><p class="cs-metric__label">Offline multiplayer works without internet connection</p></div>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="delivery">
-        <div class="cs-section__header"><span class="cs-section__number">Section VI</span><h2 class="cs-section__title">What shipped</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.wordpopi.section.6.num">Section VI</span><h2 class="cs-section__title" data-i18n="work.wordpopi.section.6.title">What shipped</h2></div>
         <div class="cs-segments">
-          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Four Study Modes</p><p class="cs-segment__desc">Flashcards, multiple choice, pronunciation recognition, spelling — all adaptive, all on the same deck</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">1,000+ Curated Words</p><p class="cs-segment__desc">20 topic decks across Business, Travel, Science, Psychology, Law, and more — ready to study from install</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Four Study Modes</p><p class="cs-segment__desc">Flashcards, multiple choice, pronunciation recognition, spelling all adaptive, all on the same deck</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">1,000+ Curated Words</p><p class="cs-segment__desc">20 topic decks across Business, Travel, Science, Psychology, Law, and more ready to study from install</p></div>
           <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">OCR Deck Import</p><p class="cs-segment__desc">Photograph a printed vocabulary list to create a custom deck; Vision framework handles parsing and definition lookup</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Wi-Fi Multiplayer</p><p class="cs-segment__desc">Real-time battles via MultipeerConnectivity — no server, no internet required, no ongoing infrastructure cost</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Wi-Fi Multiplayer</p><p class="cs-segment__desc">Real-time battles via MultipeerConnectivity no server, no internet required, no ongoing infrastructure cost</p></div>
           <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">12-language Definitions</p><p class="cs-segment__desc">Definitions displayable in Vietnamese, Japanese, Chinese, Arabic, Spanish, Portuguese, French, German, Italian, Hindi, and more</p></div>
           <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">XP &amp; Streaks</p><p class="cs-segment__desc">Progression system rewarding consistent study quality, not just session completion</p></div>
         </div>
-        <div class="cs-pullquote"><p>The most important design decision in WordPopi wasn't any individual screen — it was the commitment to making every feature work offline, without accounts, and without a backend. That constraint made the product simpler, faster, and more durable.</p></div>
+        <div class="cs-pullquote"><p data-i18n-html="work.wordpopi.body.17">The most important design decision in WordPopi wasn't any individual screen it was the commitment to making every feature work offline, without accounts, and without a backend. That constraint made the product simpler, faster, and more durable.</p></div>
         <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:2rem 0;">
           <span class="tag" style="padding:0.3rem 0.8rem;">SwiftUI · iOS</span>
           <span class="tag" style="padding:0.3rem 0.8rem;">MultipeerConnectivity</span>
@@ -223,7 +224,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
         <a href="dose-diary.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
           <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Personal · iOS</p>
-          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Dose Diary — Medication &amp; Kidney Tracker</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Dose Diary Medication &amp; Kidney Tracker</p>
         </a>
         <a href="delivery-app.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
           <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Freelance · iOS · Android</p>
@@ -236,16 +237,17 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p></div>
+        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline" data-i18n="footer.tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p></div>
         <nav class="footer__nav" aria-label="Footer navigation">
-          <div class="footer__nav-group"><p class="footer__nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html">Works</a></li><li><a href="../now.html">Now</a></li></ul></div>
-          <div class="footer__nav-group"><p class="footer__nav-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:jay.tran@kreebox.com">Email</a></li><li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html" data-i18n="nav.works">Works</a></li><li><a href="../now.html" data-i18n="nav.now">Now</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.contact-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:jay.tran@kreebox.com">Email</a></li><li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
         </nav>
       </div>
-      <div class="footer__bottom"><p class="footer__copy">© 2026 Phuong Tran. Built with care.</p></div>
+      <div class="footer__bottom"><p class="footer__copy" data-i18n="footer.copy">© 2026 Phuong Tran. Built with care.</p></div>
     </div>
   </footer>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
   <script>
     const bar = document.getElementById('progressBar');

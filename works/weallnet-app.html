@@ -6,20 +6,20 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weallnet App Redesign — Social App UX | Phuong Tran</title>
-  <meta name="description" content="UX/UI redesign of the Weallnet social networking app — streamlining navigation and key user flows. Mobile app design case study." />
+  <title>Weallnet App Redesign Social App UX | Phuong Tran</title>
+  <meta name="description" content="UX/UI redesign of the Weallnet social networking app streamlining navigation and key user flows. Mobile app design case study." />
   <meta name="keywords" content="social app redesign, mobile UX redesign, app design Vietnam, UX case study" />
   <!-- SEO -->
   <link rel="canonical" href="https://phuongtran.kreebox.com/works/weallnet-app" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Phuong Tran" />
   <meta property="og:url" content="https://phuongtran.kreebox.com/works/weallnet-app" />
-  <meta property="og:title" content="Weallnet App Redesign — Social App UX | Phuong Tran" />
-  <meta property="og:description" content="UX/UI redesign of the Weallnet social networking app — streamlining navigation and key user flows. Mobile app design case study." />
+  <meta property="og:title" content="Weallnet App Redesign Social App UX | Phuong Tran" />
+  <meta property="og:description" content="UX/UI redesign of the Weallnet social networking app streamlining navigation and key user flows. Mobile app design case study." />
   <meta property="og:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Weallnet App Redesign — Social App UX | Phuong Tran" />
-  <meta name="twitter:description" content="UX/UI redesign of the Weallnet social networking app — streamlining navigation and key user flows. Mobile app design case study." />
+  <meta name="twitter:title" content="Weallnet App Redesign Social App UX | Phuong Tran" />
+  <meta name="twitter:description" content="UX/UI redesign of the Weallnet social networking app streamlining navigation and key user flows. Mobile app design case study." />
   <meta name="twitter:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,12 +32,13 @@
     <div class="nav__inner">
       <a href="../index.html" class="nav__logo" style="display:flex;align-items:center;gap:9px;"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>Phuong Tran</a>
       <ul class="nav__links" role="list">
-        <li><a href="../works.html">Works</a></li>
-        <li><a href="../now.html">Now</a></li>
-        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener">Writings ↗</a></li>
-        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta">Have a chat</a></li>
+        <li><a href="../works.html" data-i18n="nav.works">Works</a></li>
+        <li><a href="../now.html" data-i18n="nav.now">Now</a></li>
+        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener" data-i18n="nav.writings">Writings ↗</a></li>
+        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta" data-i18n="nav.cta">Have a chat</a></li>
       </ul>
       <div class="nav__right">
+        <button class="lang-toggle" aria-label="Chuyển sang tiếng Việt">VI</button>
         <button class="theme-toggle" aria-label="Toggle dark/light mode">
           <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -53,7 +54,7 @@
     <div class="container">
       <a href="../works.html" class="cs-hero__back hero-stagger">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        See all works
+        <span data-i18n="back.works">See all works</span>
       </a>
       <div class="cs-hero__tags hero-stagger">
         <span class="tag">Mobile App</span>
@@ -62,13 +63,13 @@
         <span class="tag">Personalisation</span>
         <span class="tag">Redesign</span>
       </div>
-      <h1 class="display-xl cs-hero__title hero-stagger">Redesigning a Vietnamese media app's content experience — reducing overload without reducing depth</h1>
-      <p class="cs-hero__subtitle hero-stagger">Weallnet is a Vietnamese platform combining news, entertainment, chat, and promotional content. When I joined for a 3-month engagement, the app was losing users to content overload and navigation confusion. I redesigned the information architecture and content experience from the ground up — keeping the editorial depth while making it navigable.</p>
+      <h1 class="display-xl cs-hero__title hero-stagger" data-i18n="work.weallnet.title">Redesigning a Vietnamese media app's content experience reducing overload without reducing depth</h1>
+      <p class="cs-hero__subtitle hero-stagger" data-i18n-html="work.weallnet.subtitle">Weallnet is a Vietnamese platform combining news, entertainment, chat, and promotional content. When I joined for a 3-month engagement, the app was losing users to content overload and navigation confusion. I redesigned the information architecture and content experience from the ground up keeping the editorial depth while making it navigable.</p>
       <div class="cs-meta hero-stagger">
-        <div class="cs-meta__item"><p class="cs-meta__label">My Role</p><p class="cs-meta__value">Product Designer</p></div>
-        <div class="cs-meta__item"><p class="cs-meta__label">Company</p><p class="cs-meta__value">Weallnet · Vietnam</p></div>
-        <div class="cs-meta__item"><p class="cs-meta__label">Year</p><p class="cs-meta__value">2024</p></div>
-        <div class="cs-meta__item"><p class="cs-meta__label">Type</p><p class="cs-meta__value">App redesign · UX research</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.myRole">My Role</p><p class="cs-meta__value">Product Designer</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.company">Company</p><p class="cs-meta__value">Weallnet · Vietnam</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.year">Year</p><p class="cs-meta__value">2024</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.type">Type</p><p class="cs-meta__value">App redesign · UX research</p></div>
         <div class="cs-meta__item"><p class="cs-meta__label">Duration</p><p class="cs-meta__value">3 months · Full-time</p></div>
       </div>
     </div>
@@ -77,34 +78,34 @@
   <div style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0;">
     <div class="container">
       <div class="cs-phone-gallery">
-        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6598d4cf01c072399a1a_648c1eaedfbfa21a1a351d8e_mobile_mockup_5.png" alt="Weallnet — home screen redesign" loading="eager" />
-        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6598d4cf01c072399a27_648c1eb5f1be7acd85a1e946_mobile_mockup_4.png" alt="Weallnet — personalised content feed" loading="eager" />
-        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6598d4cf01c072399a1d_648c1ecad9fa498a8b596ff1_mobile_mockup_2.png" alt="Weallnet — navigation redesign" loading="eager" />
+        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6598d4cf01c072399a1a_648c1eaedfbfa21a1a351d8e_mobile_mockup_5.png" alt="Weallnet home screen redesign" loading="eager" />
+        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6598d4cf01c072399a27_648c1eb5f1be7acd85a1e946_mobile_mockup_4.png" alt="Weallnet personalised content feed" loading="eager" />
+        <img src="https://cdn.prod.website-files.com/6675200a16d55bafd814adfa/667c6598d4cf01c072399a1d_648c1ecad9fa498a8b596ff1_mobile_mockup_2.png" alt="Weallnet navigation redesign" loading="eager" />
       </div>
-      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:1.25rem;text-align:center;letter-spacing:0.04em;">Weallnet — redesigned home, personalised feed, and streamlined navigation</p>
+      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:1.25rem;text-align:center;letter-spacing:0.04em;">Weallnet redesigned home, personalised feed, and streamlined navigation</p>
     </div>
   </div>
 
   <div class="cs-layout">
     <aside class="cs-toc" aria-label="Table of contents">
-      <p class="cs-toc__label">Contents</p>
+      <p class="cs-toc__label" data-i18n="toc.label">Contents</p>
       <ul class="cs-toc__list" role="list">
-        <li><a href="#context" class="cs-toc__link">I — Context</a></li>
-        <li><a href="#problem" class="cs-toc__link">II — What wasn't working</a></li>
-        <li><a href="#research" class="cs-toc__link">III — Research findings</a></li>
-        <li><a href="#approach" class="cs-toc__link">IV — Design approach</a></li>
-        <li><a href="#delivery" class="cs-toc__link">V — What shipped</a></li>
-        <li><a href="#outcomes" class="cs-toc__link">VI — Outcomes</a></li>
+        <li><a href="#context" class="cs-toc__link"><span data-i18n="work.weallnet.toc.1">I Context</span></a></li>
+        <li><a href="#problem" class="cs-toc__link"><span data-i18n="work.weallnet.toc.2">II What wasn't working</span></a></li>
+        <li><a href="#research" class="cs-toc__link"><span data-i18n="work.weallnet.toc.3">III Research findings</span></a></li>
+        <li><a href="#approach" class="cs-toc__link"><span data-i18n="work.weallnet.toc.4">IV Design approach</span></a></li>
+        <li><a href="#delivery" class="cs-toc__link"><span data-i18n="work.weallnet.toc.5">V What shipped</span></a></li>
+        <li><a href="#outcomes" class="cs-toc__link"><span data-i18n="work.weallnet.toc.6">VI Outcomes</span></a></li>
       </ul>
     </aside>
 
     <main class="cs-content">
 
       <section class="cs-section fade-up" id="context">
-        <div class="cs-section__header"><span class="cs-section__number">Section I</span><h2 class="cs-section__title">A platform with strong content and a poor system for surfacing it</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.weallnet.section.1.num">Section I</span><h2 class="cs-section__title" data-i18n="work.weallnet.section.1.title">A platform with strong content and a poor system for surfacing it</h2></div>
         <div class="cs-body">
-          <p>Weallnet is a Vietnamese media and content platform that combines news, entertainment video, chat messaging, and promotional content in a single app. It has real editorial investment and a meaningful user base — but the product had been built with speed as the priority, and UX as something to fix later.</p>
-          <p>By the time I joined, "later" had arrived. Engagement was declining. Users were spending less time per session. The product team knew the content was good; they didn't know why people weren't staying. My 3-month engagement was to find out and fix it.</p>
+          <p data-i18n-html="work.weallnet.body.1">Weallnet is a Vietnamese media and content platform that combines news, entertainment video, chat messaging, and promotional content in a single app. It has real editorial investment and a meaningful user base but the product had been built with speed as the priority, and UX as something to fix later.</p>
+          <p data-i18n-html="work.weallnet.body.2">By the time I joined, "later" had arrived. Engagement was declining. Users were spending less time per session. The product team knew the content was good; they didn't know why people weren't staying. My 3-month engagement was to find out and fix it.</p>
         </div>
         <div class="cs-metrics">
           <div class="cs-metric"><p class="cs-metric__value">4</p><p class="cs-metric__label">Content sections restructured: news, entertainment, chat, promotions</p></div>
@@ -114,63 +115,63 @@
       </section>
 
       <section class="cs-section fade-up" id="problem">
-        <div class="cs-section__header"><span class="cs-section__number">Section II</span><h2 class="cs-section__title">Content overload is a design failure, not a content problem</h2></div>
-        <div class="cs-body"><p>Auditing the existing app revealed a pattern I've seen before: every surface was trying to do too much at once. The home screen mixed news, entertainment, promotions, and chat entry points with no visual hierarchy between them. Primary and secondary content competed equally for attention. Navigation mixed high-frequency actions with rarely-used settings. The result was an app that felt exhausting to use — not because of bad content, but because there was no system for deciding what mattered most in any given moment.</p></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.weallnet.section.2.num">Section II</span><h2 class="cs-section__title" data-i18n="work.weallnet.section.2.title">Content overload is a design failure, not a content problem</h2></div>
+        <div class="cs-body"><p data-i18n-html="work.weallnet.body.3">Auditing the existing app revealed a pattern I've seen before: every surface was trying to do too much at once. The home screen mixed news, entertainment, promotions, and chat entry points with no visual hierarchy between them. Primary and secondary content competed equally for attention. Navigation mixed high-frequency actions with rarely-used settings. The result was an app that felt exhausting to use not because of bad content, but because there was no system for deciding what mattered most in any given moment.</p></div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Four specific problems</h3>
+          <h3 class="cs-subsection__title" data-i18n="work.weallnet.sub.1">Four specific problems</h3>
           <div class="cs-body">
             <ul class="cs-goal-list">
-              <li>No personalisation — every user saw the same content in the same order regardless of their behaviour</li>
+              <li>No personalisation every user saw the same content in the same order regardless of their behaviour</li>
               <li>Navigation mixed primary flows (news, video) with secondary actions (promotions, settings) at the same visual weight</li>
               <li>Chat was buried under media content, reducing the social layer to an afterthought</li>
-              <li>No clear information hierarchy on the home screen — everything competed for immediate attention</li>
+              <li>No clear information hierarchy on the home screen everything competed for immediate attention</li>
             </ul>
           </div>
         </div>
-        <div class="cs-pullquote"><p>The content wasn't the problem — the architecture was. Weallnet had good editorial and strong media. What it needed was a system for getting the right content to the right user at the right moment.</p></div>
+        <div class="cs-pullquote"><p data-i18n-html="work.weallnet.body.4">The content wasn't the problem the architecture was. Weallnet had good editorial and strong media. What it needed was a system for getting the right content to the right user at the right moment.</p></div>
       </section>
 
       <section class="cs-section fade-up" id="research">
-        <div class="cs-section__header"><span class="cs-section__number">Section III</span><h2 class="cs-section__title">Users wanted the depth — they couldn't navigate to it</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.weallnet.section.3.num">Section III</span><h2 class="cs-section__title" data-i18n="work.weallnet.section.3.title">Users wanted the depth they couldn't navigate to it</h2></div>
         <div class="cs-body">
-          <p>I ran user interviews, surveys, and usability testing sessions across the engagement. The dominant finding was consistent: users weren't leaving because the content was bad. They were leaving because finding the content they actually wanted required too much effort on every visit.</p>
-          <p>The secondary finding was about the social layer. Users who used the chat features were significantly more retained than those who didn't — but the chat entry point was so buried that many users didn't know it existed. This was a discovery and navigation problem, not a feature problem.</p>
-          <p>A third finding shaped the personalisation approach: users had strong preferences across content categories, but those preferences were invisible to the system. Two users opening the same home screen saw identical content despite having completely different interests. The data to power personalisation already existed in user behaviour — it just wasn't being used.</p>
+          <p data-i18n-html="work.weallnet.body.5">I ran user interviews, surveys, and usability testing sessions across the engagement. The dominant finding was consistent: users weren't leaving because the content was bad. They were leaving because finding the content they actually wanted required too much effort on every visit.</p>
+          <p data-i18n-html="work.weallnet.body.6">The secondary finding was about the social layer. Users who used the chat features were significantly more retained than those who didn't but the chat entry point was so buried that many users didn't know it existed. This was a discovery and navigation problem, not a feature problem.</p>
+          <p data-i18n-html="work.weallnet.body.7">A third finding shaped the personalisation approach: users had strong preferences across content categories, but those preferences were invisible to the system. Two users opening the same home screen saw identical content despite having completely different interests. The data to power personalisation already existed in user behaviour it just wasn't being used.</p>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="approach">
-        <div class="cs-section__header"><span class="cs-section__number">Section IV</span><h2 class="cs-section__title">Restructure first, personalise second, iterate continuously</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.weallnet.section.4.num">Section IV</span><h2 class="cs-section__title" data-i18n="work.weallnet.section.4.title">Restructure first, personalise second, iterate continuously</h2></div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Information architecture before any screen</h3>
-          <div class="cs-body"><p>I rebuilt the IA from scratch — separating news, entertainment, chat, and promotions into distinct, clear sections with dedicated navigation entries. The home screen became a curated surface (highlights + personalised recommendations) rather than a dump of everything. Secondary content types were moved out of the primary navigation into contextually appropriate locations.</p></div>
+          <h3 class="cs-subsection__title" data-i18n="work.weallnet.sub.2">Information architecture before any screen</h3>
+          <div class="cs-body"><p data-i18n-html="work.weallnet.body.8">I rebuilt the IA from scratch separating news, entertainment, chat, and promotions into distinct, clear sections with dedicated navigation entries. The home screen became a curated surface (highlights + personalised recommendations) rather than a dump of everything. Secondary content types were moved out of the primary navigation into contextually appropriate locations.</p></div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Personalisation layer</h3>
-          <div class="cs-body"><p>Collaborated with the data team to implement behaviour-based content recommendations. Users' reading history, category preferences, and engagement patterns informed what appeared in their feed — without requiring explicit preference settings. The system learned and adjusted silently, producing a feed that improved over time.</p></div>
+          <h3 class="cs-subsection__title" data-i18n="work.weallnet.sub.3">Personalisation layer</h3>
+          <div class="cs-body"><p data-i18n-html="work.weallnet.body.9">Collaborated with the data team to implement behaviour-based content recommendations. Users' reading history, category preferences, and engagement patterns informed what appeared in their feed without requiring explicit preference settings. The system learned and adjusted silently, producing a feed that improved over time.</p></div>
         </div>
         <div class="cs-subsection">
-          <h3 class="cs-subsection__title">Chat elevation</h3>
-          <div class="cs-body"><p>Chat was moved from a buried secondary tab to a persistent, clearly accessible primary navigation entry. This alone significantly increased chat engagement — and, predictably, overall session length, since social interactions extend time on platform.</p></div>
+          <h3 class="cs-subsection__title" data-i18n="work.weallnet.sub.4">Chat elevation</h3>
+          <div class="cs-body"><p data-i18n-html="work.weallnet.body.10">Chat was moved from a buried secondary tab to a persistent, clearly accessible primary navigation entry. This alone significantly increased chat engagement and, predictably, overall session length, since social interactions extend time on platform.</p></div>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="delivery">
-        <div class="cs-section__header"><span class="cs-section__number">Section V</span><h2 class="cs-section__title">What shipped</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.weallnet.section.5.num">Section V</span><h2 class="cs-section__title" data-i18n="work.weallnet.section.5.title">What shipped</h2></div>
         <div class="cs-segments">
-          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Personalised Feed</p><p class="cs-segment__desc">Behaviour-driven content recommendations adapting to each user's category preferences and reading history — no preference settings required</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Personalised Feed</p><p class="cs-segment__desc">Behaviour-driven content recommendations adapting to each user's category preferences and reading history no preference settings required</p></div>
           <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Restructured Navigation</p><p class="cs-segment__desc">Four content sections (news, entertainment, chat, promotions) clearly separated in primary navigation with distinct visual identity per section</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Immersive Media Player</p><p class="cs-segment__desc">Full-screen video and image experience with minimal UI chrome — designed for content consumption, not interface exploration</p></div>
-          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Elevated Chat</p><p class="cs-segment__desc">Chat moved to primary navigation with persistent access — end-to-end encrypted messaging integrated without breaking the content flow</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Immersive Media Player</p><p class="cs-segment__desc">Full-screen video and image experience with minimal UI chrome designed for content consumption, not interface exploration</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Elevated Chat</p><p class="cs-segment__desc">Chat moved to primary navigation with persistent access end-to-end encrypted messaging integrated without breaking the content flow</p></div>
           <div class="cs-segment"><span class="cs-segment__tag">Shipped</span><p class="cs-segment__name">Home Screen Hierarchy</p><p class="cs-segment__desc">Clear visual hierarchy separating featured editorial content from personalised recommendations and promotional content</p></div>
         </div>
       </section>
 
       <section class="cs-section fade-up" id="outcomes">
-        <div class="cs-section__header"><span class="cs-section__number">Section VI</span><h2 class="cs-section__title">Longer sessions, more content, better discovery</h2></div>
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.weallnet.section.6.num">Section VI</span><h2 class="cs-section__title" data-i18n="work.weallnet.section.6.title">Longer sessions, more content, better discovery</h2></div>
         <div class="cs-body">
-          <p>The redesign produced measurable improvement across the key engagement metrics. Session duration increased as users who previously bounced after a few screens now navigated deeper into content categories. Content consumption per session rose — a direct result of personalisation surfacing more relevant content early. Chat engagement increased significantly once it was visible and accessible.</p>
-          <p>User feedback after launch consistently highlighted the same things: the app felt easier to use, content felt more relevant, and finding specific categories was no longer confusing. None of these were aesthetic changes — they were structural ones.</p>
+          <p data-i18n-html="work.weallnet.body.11">The redesign produced measurable improvement across the key engagement metrics. Session duration increased as users who previously bounced after a few screens now navigated deeper into content categories. Content consumption per session rose a direct result of personalisation surfacing more relevant content early. Chat engagement increased significantly once it was visible and accessible.</p>
+          <p data-i18n-html="work.weallnet.body.12">User feedback after launch consistently highlighted the same things: the app felt easier to use, content felt more relevant, and finding specific categories was no longer confusing. None of these were aesthetic changes they were structural ones.</p>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:2rem 0;">
           <span class="tag" style="padding:0.3rem 0.8rem;">Information architecture</span>
@@ -190,7 +191,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
         <a href="dose-diary.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
           <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Personal · iOS</p>
-          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Dose Diary — Medication Tracker</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);">Dose Diary Medication Tracker</p>
         </a>
         <a href="delivery-app.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
           <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Freelance · iOS · Android</p>
@@ -203,15 +204,16 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p></div>
+        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline" data-i18n="footer.tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p></div>
         <nav class="footer__nav" aria-label="Footer navigation">
-          <div class="footer__nav-group"><p class="footer__nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html">Works</a></li><li><a href="../now.html">Now</a></li></ul></div>
-          <div class="footer__nav-group"><p class="footer__nav-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:jay.tran@kreebox.com">Email</a></li><li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html" data-i18n="nav.works">Works</a></li><li><a href="../now.html" data-i18n="nav.now">Now</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.contact-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:jay.tran@kreebox.com">Email</a></li><li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
         </nav>
       </div>
-      <div class="footer__bottom"><p class="footer__copy">© 2026 Phuong Tran. Built with care.</p></div>
+      <div class="footer__bottom"><p class="footer__copy" data-i18n="footer.copy">© 2026 Phuong Tran. Built with care.</p></div>
     </div>
   </footer>
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
   <script>
     const bar = document.getElementById('progressBar');

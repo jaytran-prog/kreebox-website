@@ -196,6 +196,27 @@ body::after {
 }
 .nav__right { display: flex; align-items: center; gap: 1.5rem; }
 
+/* Language Toggle */
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  color: var(--ink-2);
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--dur), background var(--dur), border-color var(--dur);
+}
+.lang-toggle:hover { color: var(--ink); background: var(--bg-alt); }
+
 /* Theme Toggle */
 .theme-toggle {
   background: none;
