@@ -225,5 +225,8 @@
     const secs = document.querySelectorAll('.cs-section[id]'), tocLinks = document.querySelectorAll('.cs-toc__link');
     if (secs.length && tocLinks.length) { const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { tocLinks.forEach(l => l.classList.remove('active')); const a = document.querySelector('.cs-toc__link[href="#' + e.target.id + '"]'); if (a) a.classList.add('active'); } }); }, { rootMargin: '-20% 0px -70% 0px' }); secs.forEach(s => io.observe(s)); }
   </script>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 </body>
 </html>
