@@ -1305,30 +1305,29 @@ html[data-theme="dark"] {
 .hero__inner .hero__title { max-width: none; }
 .hero__inner .hero__subtitle { max-width: 500px; }
 
-/* Wrap: entrance lift */
+/* Wrap: entrance lift — no stretch, centered */
 .hero__photo-wrap {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  align-self: stretch;
+  align-items: center;
   opacity: 0;
   animation: photo-enter 1s cubic-bezier(0.16,1,0.3,1) 0.55s forwards;
 }
 @keyframes photo-enter {
-  from { opacity: 0; transform: translateY(56px); }
+  from { opacity: 0; transform: translateY(48px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Ambient glow blob */
+/* Ambient glow blob — tied to float wrapper, not full wrap */
 .hero__photo-bg {
   position: absolute;
-  inset: -32px -20px;
+  inset: -40px;
   border-radius: 3rem;
-  background: radial-gradient(ellipse at 50% 50%, rgba(99,102,241,0.32) 0%, transparent 68%);
+  background: radial-gradient(ellipse at 50% 55%, rgba(99,102,241,0.35) 0%, transparent 65%);
   animation: blob-drift 8s ease-in-out infinite alternate;
   z-index: 0;
-  filter: blur(8px);
+  filter: blur(12px);
 }
 @keyframes blob-drift {
   0%   { transform: scale(1) rotate(-2deg); opacity: 0.8; }
@@ -1355,10 +1354,17 @@ html[data-theme="dark"] {
 }
 [data-theme="dark"] .hero__photo-dots { opacity: 0.18; }
 
-/* Corner brackets */
+/* Float wrapper — brackets, glow, and scene all live here */
+.hero__photo-float {
+  position: relative;
+  display: inline-block;
+  animation: hero-float 6s ease-in-out 1.8s infinite;
+}
+
+/* Corner brackets — anchored to float, tight around scene */
 .hero__photo-brackets {
   position: absolute;
-  inset: 0;
+  inset: -10px;
   z-index: 5;
   pointer-events: none;
 }
@@ -1375,17 +1381,10 @@ html[data-theme="dark"] {
 .bracket--bl { bottom: 0; left: 0;  border-width: 0 0 2px 2px; border-radius: 0 0 0 6px; animation: bracket-in 0.4s cubic-bezier(0.16,1,0.3,1) 1.35s forwards; }
 .bracket--br { bottom: 0; right: 0; border-width: 0 2px 2px 0; border-radius: 0 0 6px 0; animation: bracket-in 0.4s cubic-bezier(0.16,1,0.3,1) 1.45s forwards; }
 @keyframes bracket-in {
-  from { opacity: 0; transform: scale(0.4); }
-  to   { opacity: 0.55; transform: scale(1); }
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 0.6; transform: scale(1); }
 }
 [data-theme="dark"] .bracket { border-color: var(--accent-soft); }
-
-/* Float wrapper — isolated from 3D tilt */
-.hero__photo-float {
-  position: relative;
-  z-index: 1;
-  animation: hero-float 6s ease-in-out 1.8s infinite;
-}
 @keyframes hero-float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-14px); }
@@ -1413,7 +1412,7 @@ html[data-theme="dark"] {
 .hero__photo {
   display: block;
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   height: auto;
   border-radius: 2rem;
   /* dissolve cream bg in light mode */
