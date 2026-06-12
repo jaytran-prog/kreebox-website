@@ -1455,3 +1455,20 @@ html[data-theme="dark"] {
   .hero__inner { grid-template-columns: 1fr; }
   .hero__photo-wrap { display: none; }
 }
+
+/* ─── Content Protection ─────────────────────────────────────────── */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+input, textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}

@@ -1,3 +1,19 @@
+// ─── Content protection ──────────────────────────────────────────────────────
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('dragstart',   e => e.preventDefault());
+document.addEventListener('selectstart', e => {
+  // allow selection inside input/textarea for usability
+  if (!['INPUT','TEXTAREA'].includes(e.target.tagName)) e.preventDefault();
+});
+document.addEventListener('keydown', e => {
+  // block Ctrl/Cmd + C, Ctrl/Cmd + U (view source), Ctrl/Cmd + S (save)
+  if ((e.ctrlKey || e.metaKey) && ['c','u','s','a'].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+  }
+  // block F12 / DevTools shortcut
+  if (e.key === 'F12') e.preventDefault();
+});
+
 // ─── Theme ──────────────────────────────────────────────────────────────────
 const html = document.documentElement;
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
