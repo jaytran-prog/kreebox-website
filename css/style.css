@@ -1355,19 +1355,31 @@ html[data-theme="dark"] {
   height: auto;
   border-radius: 1.75rem;
   display: block;
-  /* dissolve cream background in light mode */
+  /* dissolve cream background in light mode — photo bg ≈ page bg so multiply removes it */
   mix-blend-mode: multiply;
-  /* fade bottom into page background */
-  mask-image: linear-gradient(to bottom, black 52%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 52%, transparent 100%);
+  /* fade bottom edge */
+  mask-image: linear-gradient(to bottom, black 58%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 58%, transparent 100%);
   /* continuous float */
   animation: hero-float 5s ease-in-out 1.6s infinite;
 }
+
+/* Dark mode: lean into the card look with accent border */
 [data-theme="dark"] .hero__photo {
   mix-blend-mode: normal;
-  filter: brightness(0.92) contrast(1.04);
-  mask-image: linear-gradient(to bottom, black 48%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 48%, transparent 100%);
+  filter: brightness(0.9) contrast(1.05) saturate(0.95);
+  border-radius: 1.75rem;
+  mask-image: linear-gradient(to bottom, black 38%, transparent 88%);
+  -webkit-mask-image: linear-gradient(to bottom, black 38%, transparent 88%);
+}
+[data-theme="dark"] .hero__photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.85rem;
+  border: 1px solid rgba(129,140,248,0.18);
+  z-index: 3;
+  pointer-events: none;
 }
 @keyframes hero-float {
   0%, 100% { transform: translateY(0px); }
