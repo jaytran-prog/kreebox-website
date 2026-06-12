@@ -152,6 +152,26 @@ if (!prefersReducedMotion) {
   });
 }
 
+// ─── Hero photo 3D tilt ───────────────────────────────────────────────────────
+if (!prefersReducedMotion) {
+  const photoScene = document.getElementById('photoScene');
+  const photoWrap  = photoScene?.closest('.hero__photo-wrap');
+  if (photoWrap && photoScene) {
+    const MAX_X = 10, MAX_Y = 8;
+    photoWrap.addEventListener('mousemove', e => {
+      const r  = photoWrap.getBoundingClientRect();
+      const x  = (e.clientX - r.left  - r.width  / 2) / (r.width  / 2);
+      const y  = (e.clientY - r.top   - r.height / 2) / (r.height / 2);
+      photoScene.style.transform =
+        `perspective(900px) rotateY(${x * MAX_X}deg) rotateX(${-y * MAX_Y}deg) scale3d(1.04,1.04,1.04)`;
+    }, { passive: true });
+    photoWrap.addEventListener('mouseleave', () => {
+      photoScene.style.transform =
+        'perspective(900px) rotateY(0deg) rotateX(0deg) scale3d(1,1,1)';
+    });
+  }
+}
+
 // ─── Subtle parallax on orbs ─────────────────────────────────────────────────
 if (!prefersReducedMotion) {
   const orbs = document.querySelectorAll('.hero__orb');
