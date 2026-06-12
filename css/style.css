@@ -1294,3 +1294,94 @@ html[data-theme="dark"] {
     border-radius: 1.25rem;
   }
 }
+
+/* ─── Hero Photo (two-column layout) ────────────────────────────── */
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  align-items: center;
+  gap: 5rem;
+}
+.hero__inner .hero__title { max-width: none; }
+.hero__inner .hero__subtitle { max-width: 480px; }
+
+.hero__photo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: photo-reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both;
+}
+@keyframes photo-reveal {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Accent glow behind photo */
+.hero__photo-bg {
+  position: absolute;
+  inset: -24px -16px;
+  border-radius: 3rem;
+  background: radial-gradient(ellipse at 55% 40%, rgba(99,102,241,0.28) 0%, transparent 65%);
+  animation: blob-drift 7s ease-in-out infinite alternate;
+  z-index: 0;
+}
+@keyframes blob-drift {
+  0%   { transform: scale(1) rotate(-1deg); }
+  100% { transform: scale(1.07) rotate(2deg); }
+}
+
+/* Dot grid decoration (top-right corner) */
+.hero__photo-dots {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 88px;
+  height: 88px;
+  background-image: radial-gradient(circle, var(--accent) 1.5px, transparent 1.5px);
+  background-size: 11px 11px;
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+}
+[data-theme="dark"] .hero__photo-dots { opacity: 0.2; }
+
+/* Photo itself */
+.hero__photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 1.75rem;
+  display: block;
+  /* dissolve cream background in light mode */
+  mix-blend-mode: multiply;
+  /* fade bottom into page background */
+  mask-image: linear-gradient(to bottom, black 52%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 52%, transparent 100%);
+  /* continuous float */
+  animation: hero-float 5s ease-in-out 1.6s infinite;
+}
+[data-theme="dark"] .hero__photo {
+  mix-blend-mode: normal;
+  filter: brightness(0.92) contrast(1.04);
+  mask-image: linear-gradient(to bottom, black 48%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 48%, transparent 100%);
+}
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__photo, .hero__photo-bg, .hero__photo-wrap { animation: none; opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero__inner { grid-template-columns: 1fr 260px; gap: 3.5rem; }
+}
+@media (max-width: 768px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__photo-wrap { display: none; }
+}
