@@ -1813,7 +1813,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink-3);
+  color: rgba(255,255,255,0.5);
   flex-shrink: 0;
   transition: color var(--dur) var(--ease);
   padding: 0;
