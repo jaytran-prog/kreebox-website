@@ -192,7 +192,7 @@ body::after {
   background: var(--accent) !important;
   border-color: var(--accent) !important;
   color: #fff !important;
-  box-shadow: 0 4px 16px rgba(99,102,241,0.35) !important;
+  box-shadow: 0 4px 16px rgba(58,102,0,0.35) !important;
 }
 .nav__right { display: flex; align-items: center; gap: 1.5rem; }
 
@@ -302,7 +302,7 @@ body::after {
   align-items: center;
   gap: 0.5rem;
   background: var(--accent-bg);
-  border: 1px solid rgba(99,102,241,0.25);
+  border: 1px solid rgba(58,102,0,0.25);
   padding: 0.3rem 0.9rem;
   border-radius: 100px;
 }
@@ -361,7 +361,7 @@ body::after {
   opacity: 0;
   transition: opacity var(--dur) var(--ease);
 }
-.btn-primary:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,102,241,0.3); }
+.btn-primary:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,102,0,0.28); }
 .btn-primary:hover::after { opacity: 1; }
 .btn-primary span, .btn-primary svg { position: relative; z-index: 1; }
 .btn-primary:active { transform: translateY(0); }
@@ -874,14 +874,14 @@ body::after {
   --ink-3:         #AAAAAA;
   --accent:        #3A6600;
   --accent-soft:   #5B9100;
-  --accent-bg:     rgba(194,245,66,0.07);
+  --accent-bg:     rgba(58,102,0,0.07);
   --border:        rgba(10,10,10,0.09);
   --border-strong: rgba(10,10,10,0.18);
   --nav-blur:      rgba(247,247,244,0.90);
   --shadow-sm:     0 1px 4px rgba(0,0,0,0.07);
   --shadow-md:     0 8px 32px rgba(0,0,0,0.09);
   --shadow-glow:   0 0 48px rgba(58,102,0,0.14);
-  --gradient-text: linear-gradient(135deg, #3A6600 0%, #5B9100 50%, #2D5500 100%);
+  --gradient-text: linear-gradient(135deg, #3A6600 0%, #6BAE00 50%, #1A7A50 100%);
 }
 
 /* ─── Dark: hero grid more visible ──────────────────────────────────*/
@@ -1324,7 +1324,7 @@ html[data-theme="dark"] {
   position: absolute;
   inset: -40px;
   border-radius: 3rem;
-  background: radial-gradient(ellipse at 50% 55%, rgba(99,102,241,0.35) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 50% 55%, rgba(58,102,0,0.3) 0%, transparent 65%);
   animation: blob-drift 8s ease-in-out infinite alternate;
   z-index: 0;
   filter: blur(12px);
@@ -1397,9 +1397,9 @@ html[data-theme="dark"] {
   transition: transform 0.22s cubic-bezier(0.16,1,0.3,1);
   border-radius: 2rem;
   box-shadow:
-    0 0 0 1px rgba(129,140,248,0.15),
-    0 24px 80px rgba(0,0,0,0.28),
-    0 0 60px rgba(99,102,241,0.15);
+    0 0 0 1px rgba(58,102,0,0.14),
+    0 24px 80px rgba(0,0,0,0.18),
+    0 0 60px rgba(58,102,0,0.12);
 }
 [data-theme="dark"] .hero__photo-scene {
   box-shadow:
