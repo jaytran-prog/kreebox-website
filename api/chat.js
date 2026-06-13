@@ -55,39 +55,43 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'API key not configured' });
   }
 
+  const MODELS = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-2.0-flash-lite'];
+
+  const body = JSON.stringify({
+    system_instruction: { parts: [{ text: systemPrompt }] },
+    contents: messages,
+    generationConfig: { maxOutputTokens: 1200, temperature: 0.8 }
+  });
+
   try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          system_instruction: {
-            parts: [{ text: systemPrompt }]
-          },
-          contents: messages,
-          generationConfig: {
-            maxOutputTokens: 1200,
-            temperature: 0.8,
-          }
-        })
+    let lastErr = null;
+    for (const model of MODELS) {
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body }
+      );
+
+      if (response.status === 429 || response.status === 503) {
+        lastErr = await response.text();
+        console.warn(`Model ${model} quota exceeded, trying next...`);
+        continue;
       }
-    );
 
-    if (!response.ok) {
-      const err = await response.text();
-      console.error('Gemini API error:', err);
-      return res.status(502).json({ error: 'AI service unavailable' });
+      if (!response.ok) {
+        const err = await response.text();
+        console.error('Gemini API error:', err);
+        return res.status(502).json({ error: 'AI service unavailable' });
+      }
+
+      const data = await response.json();
+      const reply = data.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!reply) return res.status(502).json({ error: 'Empty response from AI' });
+
+      return res.status(200).json({ reply });
     }
 
-    const data = await response.json();
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text;
-
-    if (!reply) {
-      return res.status(502).json({ error: 'Empty response from AI' });
-    }
-
-    res.status(200).json({ reply });
+    console.error('All models quota exceeded:', lastErr);
+    return res.status(429).json({ error: 'AI service unavailable' });
   } catch (err) {
     console.error('Handler error:', err);
     res.status(500).json({ error: 'Internal server error' });
