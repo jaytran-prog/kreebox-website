@@ -1690,6 +1690,34 @@ img {
   }
 }
 
+/* Mobile: full-screen panel */
+@media (max-width: 480px) {
+  .chatbot-panel.is-open {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    border: none;
+    transform: none;
+    z-index: 10001;
+  }
+  .chatbot-panel.is-open.is-expanded {
+    width: 100%;
+    max-height: 100%;
+  }
+  /* Hide FAB when panel is open on mobile */
+  .chatbot-wrap:has(.chatbot-panel.is-open) .chatbot-fab {
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* Hide expand button on mobile (already full screen) */
+  #chatbotExpand { display: none; }
+}
+
 /* Messages */
 .chatbot-messages {
   flex: 1;
