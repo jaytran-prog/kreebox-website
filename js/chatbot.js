@@ -87,22 +87,20 @@
               <circle cx="63" cy="4" r="3.2" fill="#4c4c62"/>
             </g>
 
-            <!-- Left arm — raised toward tooltip -->
+            <!-- Left arm — curved raise toward tooltip -->
             <g class="cat-arm cat-arm--left">
-              <line x1="18" y1="48" x2="-8" y2="14" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
-              <line x1="18" y1="48" x2="-8" y2="14" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
-              <circle cx="-11" cy="11" r="3.5" fill="#2e2e40"/>
-              <circle cx="-6" cy="7" r="3.5" fill="#2e2e40"/>
-              <circle cx="-2" cy="11" r="2.8" fill="#2e2e40"/>
+              <path d="M 16,44 C 2,36 -6,22 -4,10" stroke="#1e1e2a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 16,44 C 2,36 -6,22 -4,10" stroke="#363648" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="-4" cy="9" r="6" fill="#2e2e40"/>
+              <circle cx="-4" cy="9" r="4" fill="#383850"/>
             </g>
 
-            <!-- Right arm — raised toward tooltip -->
+            <!-- Right arm — curved raise toward tooltip -->
             <g class="cat-arm cat-arm--right">
-              <line x1="42" y1="48" x2="68" y2="14" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
-              <line x1="42" y1="48" x2="68" y2="14" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
-              <circle cx="71" cy="11" r="3.5" fill="#2e2e40"/>
-              <circle cx="66" cy="7" r="3.5" fill="#2e2e40"/>
-              <circle cx="62" cy="11" r="2.8" fill="#2e2e40"/>
+              <path d="M 44,44 C 58,36 66,22 64,10" stroke="#1e1e2a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 44,44 C 58,36 66,22 64,10" stroke="#363648" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="64" cy="9" r="6" fill="#2e2e40"/>
+              <circle cx="64" cy="9" r="4" fill="#383850"/>
             </g>
 
             <!-- Left ear -->
