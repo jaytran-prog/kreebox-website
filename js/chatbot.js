@@ -526,12 +526,29 @@
     const msgs = lang === 'vi' ? INVITE_MESSAGES_VI : INVITE_MESSAGES_EN;
     el.textContent = msgs[Math.floor(Math.random() * msgs.length)];
     el.classList.add('is-visible');
+    const fab = document.getElementById('chatbotFab');
+    if (fab) fab.classList.add('is-intro');
     setTimeout(hideInvite, 9000);
   }
 
   function hideInvite() {
     const el = document.getElementById('chatbotInvite');
     if (el) el.classList.remove('is-visible');
+    const fab = document.getElementById('chatbotFab');
+    if (fab && fab.classList.contains('is-intro')) {
+      if (isOpen) {
+        fab.classList.remove('is-intro');
+        return;
+      }
+      const currentTransform = getComputedStyle(fab).transform;
+      fab.style.transform = currentTransform;
+      fab.classList.remove('is-intro');
+      fab.classList.add('is-shrinking');
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        fab.style.transform = '';
+        setTimeout(() => fab.classList.remove('is-shrinking'), 700);
+      }));
+    }
   }
 
   // ── Init ──────────────────────────────────────────────────────────
