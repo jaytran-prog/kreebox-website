@@ -604,7 +604,7 @@ body::after {
 .now-intro__inner { display: grid; grid-template-columns: 1fr 400px; align-items: center; gap: 4rem; }
 .now-intro__lead { font-size: 1.15rem; color: var(--ink-2); line-height: 1.78; max-width: 540px; margin-top: 1.5rem; }
 .now-intro__lead strong { color: var(--ink); }
-.now-prose { font-size: 0.95rem; color: var(--ink-2); line-height: 1.78; max-width: 640px; }
+.now-prose { font-size: 0.95rem; color: var(--ink-2); line-height: 1.78; }
 .timeline { display: flex; flex-direction: column; padding-left: 1.5rem; border-left: 1px solid var(--border); margin-bottom: 5rem; }
 .timeline-item { position: relative; padding-bottom: 3rem; padding-left: 2rem; }
 .timeline-item::before {
