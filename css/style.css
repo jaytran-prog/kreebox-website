@@ -1568,25 +1568,34 @@ img {
   91%            { transform: scaleY(0.07); }
   95%            { transform: scaleY(1); }
 }
+.cat-arm, .cat-tail {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease);
+}
+.chatbot-fab.is-intro .cat-arm,
+.chatbot-fab.is-intro .cat-tail {
+  opacity: 1;
+}
 .cat-arm--left {
-  transform-origin: 22px 52px;
-  animation: cat-arm-sway-l 3s ease-in-out infinite;
+  transform-origin: 18px 48px;
+  animation: cat-arm-wave-l 1.8s ease-in-out infinite;
 }
 .cat-arm--right {
-  transform-origin: 38px 52px;
-  animation: cat-arm-sway-r 3.3s ease-in-out infinite 0.5s;
+  transform-origin: 42px 48px;
+  animation: cat-arm-wave-r 2s ease-in-out infinite 0.3s;
 }
 .cat-tail {
   transform-origin: 46px 42px;
   animation: cat-tail-swish 2.5s ease-in-out infinite;
 }
-@keyframes cat-arm-sway-l {
+@keyframes cat-arm-wave-l {
   0%, 100% { transform: rotate(0deg); }
-  50%       { transform: rotate(-13deg); }
+  50%       { transform: rotate(-10deg); }
 }
-@keyframes cat-arm-sway-r {
+@keyframes cat-arm-wave-r {
   0%, 100% { transform: rotate(0deg); }
-  50%       { transform: rotate(13deg); }
+  50%       { transform: rotate(10deg); }
 }
 @keyframes cat-tail-swish {
   0%, 100% { transform: rotate(0deg); }
