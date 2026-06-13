@@ -87,22 +87,22 @@
               <circle cx="63" cy="4" r="3.2" fill="#4c4c62"/>
             </g>
 
-            <!-- Left arm (drawn before head; head covers shoulder) -->
+            <!-- Left arm — raised toward tooltip -->
             <g class="cat-arm cat-arm--left">
-              <line x1="22" y1="52" x2="4" y2="67" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
-              <line x1="22" y1="52" x2="4" y2="67" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
-              <circle cx="2" cy="64" r="3.5" fill="#2e2e40"/>
-              <circle cx="6" cy="69" r="3.5" fill="#2e2e40"/>
-              <circle cx="1" cy="70" r="2.8" fill="#2e2e40"/>
+              <line x1="18" y1="48" x2="-8" y2="14" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
+              <line x1="18" y1="48" x2="-8" y2="14" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
+              <circle cx="-11" cy="11" r="3.5" fill="#2e2e40"/>
+              <circle cx="-6" cy="7" r="3.5" fill="#2e2e40"/>
+              <circle cx="-2" cy="11" r="2.8" fill="#2e2e40"/>
             </g>
 
-            <!-- Right arm -->
+            <!-- Right arm — raised toward tooltip -->
             <g class="cat-arm cat-arm--right">
-              <line x1="38" y1="52" x2="56" y2="67" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
-              <line x1="38" y1="52" x2="56" y2="67" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
-              <circle cx="58" cy="64" r="3.5" fill="#2e2e40"/>
-              <circle cx="54" cy="69" r="3.5" fill="#2e2e40"/>
-              <circle cx="59" cy="70" r="2.8" fill="#2e2e40"/>
+              <line x1="42" y1="48" x2="68" y2="14" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
+              <line x1="42" y1="48" x2="68" y2="14" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
+              <circle cx="71" cy="11" r="3.5" fill="#2e2e40"/>
+              <circle cx="66" cy="7" r="3.5" fill="#2e2e40"/>
+              <circle cx="62" cy="11" r="2.8" fill="#2e2e40"/>
             </g>
 
             <!-- Left ear -->
@@ -554,7 +554,7 @@
     const fab = document.getElementById('chatbotFab');
     if (fab) fab.classList.add('is-intro');
     el.classList.add('is-visible');
-    setTimeout(hideInvite, 9000);
+    setTimeout(hideInvite, 5000);
   }
 
   function hideInvite() {
