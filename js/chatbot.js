@@ -287,7 +287,9 @@
         ctaRow.className = 'chatbot-msg__ctas';
         ctas.forEach(({ label, url }) => {
           const a = document.createElement('a');
-          a.href = url;
+          const safeUrl = safeCTAUrl(url);
+          if (!safeUrl) return;
+          a.href = safeUrl;
           a.className = 'chatbot-msg__cta-btn';
           a.textContent = label + ' →';
           ctaRow.appendChild(a);
@@ -405,6 +407,11 @@
   }
   function escHtml(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  // Only allow safe relative portfolio paths — blocks javascript: data: and external URLs
+  function safeCTAUrl(url) {
+    const safe = /^\/[a-zA-Z0-9\-_/.]+\.html$/.test(url);
+    return safe ? url : null;
   }
 
   // ── Page context ──────────────────────────────────────────────────
