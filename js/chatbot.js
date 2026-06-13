@@ -474,6 +474,14 @@ The user is currently reading this page. You can help them explore or summarize 
       sendMessage(text);
     });
 
+    // Prevent scroll inside chat from bubbling to page
+    document.getElementById('chatbotMessages').addEventListener('wheel', e => {
+      const el = e.currentTarget;
+      const atTop = el.scrollTop === 0 && e.deltaY < 0;
+      const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight && e.deltaY > 0;
+      if (!atTop && !atBottom) e.stopPropagation();
+    }, { passive: true });
+
     document.getElementById('chatbotExpand').addEventListener('click', () => {
       isExpanded = !isExpanded;
       document.getElementById('chatbotPanel').classList.toggle('is-expanded', isExpanded);
