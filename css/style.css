@@ -1670,6 +1670,30 @@ img {
   91%            { transform: scaleY(0.07); }
   95%            { transform: scaleY(1); }
 }
+.cat-arm--left {
+  transform-origin: 22px 52px;
+  animation: cat-arm-sway-l 3s ease-in-out infinite;
+}
+.cat-arm--right {
+  transform-origin: 38px 52px;
+  animation: cat-arm-sway-r 3.3s ease-in-out infinite 0.5s;
+}
+.cat-tail {
+  transform-origin: 46px 42px;
+  animation: cat-tail-swish 2.5s ease-in-out infinite;
+}
+@keyframes cat-arm-sway-l {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(-13deg); }
+}
+@keyframes cat-arm-sway-r {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(13deg); }
+}
+@keyframes cat-tail-swish {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(-14deg); }
+}
 .cat-ear--left {
   transform-box: fill-box;
   transform-origin: 17px 31px;
@@ -2050,7 +2074,10 @@ img {
   opacity: 0;
   transform: translateY(6px) scale(0.95);
   transform-origin: bottom right;
-  transition: opacity 0.3s var(--ease), transform 0.35s var(--ease-spring);
+  transition: opacity 0.3s var(--ease), transform 0.35s var(--ease-spring), bottom 0.4s var(--ease);
+}
+.chatbot-fab.is-intro ~ .chatbot-invite {
+  bottom: calc(100% + 4.5rem);
 }
 .chatbot-invite.is-visible {
   opacity: 1;

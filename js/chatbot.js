@@ -59,7 +59,7 @@
     wrap.innerHTML = `
       <button class="chatbot-fab" id="chatbotFab" aria-label="Chat with Phuong Tran" aria-expanded="false">
         <span class="chatbot-fab__icon chatbot-fab__icon--chat" aria-hidden="true">
-          <svg class="cat-mascot" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="cat-mascot" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
             <defs>
               <radialGradient id="cgFace" cx="40%" cy="28%" r="70%">
                 <stop offset="0%" stop-color="#606272"/>
@@ -79,22 +79,48 @@
               </filter>
             </defs>
 
+            <!-- Tail (drawn first so head covers base) -->
+            <g class="cat-tail">
+              <path d="M 46,42 C 66,34 74,16 63,4" stroke="#1e1e2a" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path d="M 46,42 C 66,34 74,16 63,4" stroke="#3e3e52" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+              <circle cx="63" cy="4" r="5.5" fill="#3a3a4e"/>
+              <circle cx="63" cy="4" r="3.2" fill="#4c4c62"/>
+            </g>
+
+            <!-- Left arm (drawn before head; head covers shoulder) -->
+            <g class="cat-arm cat-arm--left">
+              <line x1="22" y1="52" x2="4" y2="67" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
+              <line x1="22" y1="52" x2="4" y2="67" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
+              <circle cx="2" cy="64" r="3.5" fill="#2e2e40"/>
+              <circle cx="6" cy="69" r="3.5" fill="#2e2e40"/>
+              <circle cx="1" cy="70" r="2.8" fill="#2e2e40"/>
+            </g>
+
+            <!-- Right arm -->
+            <g class="cat-arm cat-arm--right">
+              <line x1="38" y1="52" x2="56" y2="67" stroke="#1e1e2a" stroke-width="11" stroke-linecap="round"/>
+              <line x1="38" y1="52" x2="56" y2="67" stroke="#363648" stroke-width="7.5" stroke-linecap="round"/>
+              <circle cx="58" cy="64" r="3.5" fill="#2e2e40"/>
+              <circle cx="54" cy="69" r="3.5" fill="#2e2e40"/>
+              <circle cx="59" cy="70" r="2.8" fill="#2e2e40"/>
+            </g>
+
             <!-- Left ear -->
             <g class="cat-ear cat-ear--left">
               <polygon points="9,33 17,6 25,28" fill="url(#cgEarL)"/>
-              <polygon points="12,31 17,11 23,28" fill="#fca5a5" opacity="0.55"/>
+              <polygon points="12,31 17,11 23,28" fill="#fca5a5" opacity="0.45"/>
             </g>
             <!-- Right ear -->
             <g class="cat-ear cat-ear--right">
               <polygon points="35,28 43,6 51,33" fill="url(#cgEarR)"/>
-              <polygon points="37,28 43,11 48,31" fill="#fca5a5" opacity="0.55"/>
+              <polygon points="37,28 43,11 48,31" fill="#fca5a5" opacity="0.45"/>
             </g>
 
             <!-- Head sphere -->
             <circle cx="30" cy="38" r="20" fill="url(#cgFace)" filter="url(#cgDrop)"/>
 
-            <!-- Specular highlight (3D sphere illusion) -->
-            <ellipse cx="21" cy="28" rx="6.5" ry="4" fill="white" opacity="0.13" transform="rotate(-22 21 28)"/>
+            <!-- Specular highlight -->
+            <ellipse cx="21" cy="28" rx="6.5" ry="4" fill="white" opacity="0.07" transform="rotate(-22 21 28)"/>
 
             <!-- Left eye -->
             <g class="cat-eye cat-eye--left">
@@ -114,14 +140,14 @@
             <!-- Nose -->
             <path d="M28,42.5 L30,40 L32,42.5 Z" fill="#fda4af"/>
 
-            <!-- Mouth (gentle smile) -->
+            <!-- Mouth -->
             <path d="M25.5,44.5 Q30,49 34.5,44.5" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 
             <!-- Whiskers -->
-            <line x1="3" y1="41" x2="19" y2="42.5" stroke="white" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
-            <line x1="3" y1="44.5" x2="19" y2="44" stroke="white" stroke-width="0.85" opacity="0.3" stroke-linecap="round"/>
-            <line x1="41" y1="42.5" x2="57" y2="41" stroke="white" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
-            <line x1="41" y1="44" x2="57" y2="44.5" stroke="white" stroke-width="0.85" opacity="0.3" stroke-linecap="round"/>
+            <line x1="3" y1="41" x2="19" y2="42.5" stroke="white" stroke-width="0.9" opacity="0.55" stroke-linecap="round"/>
+            <line x1="3" y1="44.5" x2="19" y2="44" stroke="white" stroke-width="0.85" opacity="0.45" stroke-linecap="round"/>
+            <line x1="41" y1="42.5" x2="57" y2="41" stroke="white" stroke-width="0.9" opacity="0.55" stroke-linecap="round"/>
+            <line x1="41" y1="44" x2="57" y2="44.5" stroke="white" stroke-width="0.85" opacity="0.45" stroke-linecap="round"/>
           </svg>
         </span>
         <span class="chatbot-fab__icon chatbot-fab__icon--close" aria-hidden="true">
@@ -525,9 +551,9 @@
     const lang = getSiteLang();
     const msgs = lang === 'vi' ? INVITE_MESSAGES_VI : INVITE_MESSAGES_EN;
     el.textContent = msgs[Math.floor(Math.random() * msgs.length)];
-    el.classList.add('is-visible');
     const fab = document.getElementById('chatbotFab');
     if (fab) fab.classList.add('is-intro');
+    el.classList.add('is-visible');
     setTimeout(hideInvite, 9000);
   }
 
