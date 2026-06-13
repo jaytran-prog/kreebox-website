@@ -524,7 +524,7 @@
     const msgs = lang === 'vi' ? INVITE_MESSAGES_VI : INVITE_MESSAGES_EN;
     el.textContent = msgs[Math.floor(Math.random() * msgs.length)];
     el.classList.add('is-visible');
-    setTimeout(hideInvite, 5000);
+    setTimeout(hideInvite, 9000);
   }
 
   function hideInvite() {
