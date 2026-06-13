@@ -230,8 +230,13 @@
   function showQuickPrompts(lang, isContextPage = false) {
     const container = document.getElementById('chatbotQuick');
     if (!container) return;
+    const path = window.location.pathname;
     let prompts;
-    if (isContextPage) {
+    if (isContextPage && path.includes('/company/')) {
+      prompts = lang === 'vi'
+        ? ['Bạn đã làm gì tại đây?', 'Bạn dẫn dắt team như thế nào?', 'Thử thách lớn nhất ở vị trí này là gì?']
+        : ['What was your role here?', 'How did you lead the team?', 'What was the biggest challenge?'];
+    } else if (isContextPage) {
       prompts = lang === 'vi'
         ? ['Tóm tắt dự án này cho tôi', 'Quy trình thiết kế như thế nào?', 'Kết quả đạt được là gì?']
         : ['Summarize this project for me', 'Walk me through the design process', 'What were the outcomes?'];
