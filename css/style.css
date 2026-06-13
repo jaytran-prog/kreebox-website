@@ -601,13 +601,15 @@ body::after {
 /* ─── Now Page ───────────────────────────────────────────────────── */
 .now-content { padding: 9rem 0 6rem; }
 .now-intro { margin-bottom: 5rem; }
-.now-intro__lead { font-size: 1.15rem; color: var(--ink-2); line-height: 1.78; max-width: 640px; margin-top: 1.5rem; }
+.now-intro__inner { display: grid; grid-template-columns: 1fr 400px; align-items: center; gap: 4rem; }
+.now-intro__lead { font-size: 1.15rem; color: var(--ink-2); line-height: 1.78; max-width: 540px; margin-top: 1.5rem; }
 .now-intro__lead strong { color: var(--ink); }
+.now-prose { font-size: 0.95rem; color: var(--ink-2); line-height: 1.78; max-width: 640px; }
 .timeline { display: flex; flex-direction: column; padding-left: 1.5rem; border-left: 1px solid var(--border); margin-bottom: 5rem; }
 .timeline-item { position: relative; padding-bottom: 3rem; padding-left: 2rem; }
 .timeline-item::before {
   content: '';
-  position: absolute; left: -5px; top: 7px;
+  position: absolute; left: calc(-1.5rem - 4px); top: 7px;
   width: 9px; height: 9px; border-radius: 50%;
   background: var(--bg); border: 2px solid var(--border-strong);
   transition: border-color var(--dur), background var(--dur), box-shadow var(--dur);
@@ -616,7 +618,7 @@ body::after {
 .timeline-item__period { font-family: var(--f-mono); font-size: 0.7rem; color: var(--ink-3); margin-bottom: 0.4rem; }
 .timeline-item__company { font-family: var(--f-display); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.2rem; color: var(--ink); }
 .timeline-item__role { font-family: var(--f-mono); font-size: 0.68rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
-.timeline-item__body { font-size: 0.9rem; color: var(--ink-2); line-height: 1.72; max-width: 580px; }
+.timeline-item__body { font-size: 0.9rem; color: var(--ink-2); line-height: 1.72; }
 .community-section { margin-bottom: 5rem; }
 .community-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem; }
 .community-card {
@@ -1450,10 +1452,110 @@ html[data-theme="dark"] {
 @media (max-width: 1100px) {
   .hero__inner { grid-template-columns: 1fr 340px; gap: 3rem; }
   .hero__photo { max-width: 320px; }
+  .now-intro__inner { grid-template-columns: 1fr 320px; gap: 3rem; }
 }
 @media (max-width: 768px) {
   .hero__inner { grid-template-columns: 1fr; }
   .hero__photo-wrap { display: none; }
+  .now-intro__inner { grid-template-columns: 1fr; }
+  .now-intro__inner .hero__photo-wrap { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ANIMATION & INTERACTION ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── Custom Cursor (desktop / fine pointer only) ───────────────── */
+@media (pointer: fine) {
+  html, html * { cursor: none !important; }
+
+  .cursor-dot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: width 0.15s var(--ease), height 0.15s var(--ease),
+                opacity 0.2s var(--ease), background 0.2s var(--ease);
+    will-change: left, top;
+  }
+
+  .cursor-ring {
+    position: fixed;
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    opacity: 0.55;
+    transition: width 0.4s cubic-bezier(0.16,1,0.3,1),
+                height 0.4s cubic-bezier(0.16,1,0.3,1),
+                border-color 0.25s var(--ease),
+                opacity 0.25s var(--ease);
+    will-change: left, top;
+  }
+
+  .cursor-ring.is-hovering {
+    width: 44px;
+    height: 44px;
+    opacity: 0.3;
+  }
+
+  .cursor-ring.is-clicking {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+  }
+
+  .cursor-dot.is-hidden,
+  .cursor-ring.is-hidden { opacity: 0; }
+}
+
+/* ─── Section heading reveal ─────────────────────────────────────── */
+.reveal-heading {
+  overflow: hidden;
+}
+.reveal-heading .reveal-inner {
+  display: block;
+  transform: translateY(105%);
+  transition: transform 0.72s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-heading.visible .reveal-inner {
+  transform: translateY(0);
+}
+.reveal-heading:nth-child(2) .reveal-inner { transition-delay: 0.08s; }
+
+/* ─── Card 3D tilt ───────────────────────────────────────────────── */
+.archive-card,
+.community-card,
+.cs-related__card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ─── Work item slide-in from left ──────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+  }
+  .slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .slide-left:nth-child(2) { transition-delay: 0.07s; }
+  .slide-left:nth-child(3) { transition-delay: 0.14s; }
+  .slide-left:nth-child(4) { transition-delay: 0.21s; }
+  .slide-left:nth-child(5) { transition-delay: 0.28s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide-left { opacity: 1; transform: none; }
 }
 
 /* ─── Content Protection ─────────────────────────────────────────── */
