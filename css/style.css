@@ -1980,6 +1980,32 @@ img {
   color: #0a0a0a;
 }
 
+/* Project CTA buttons inside bot messages */
+.chatbot-msg__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.625rem;
+}
+.chatbot-msg__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-family: var(--f-body);
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 99px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.chatbot-msg__cta-btn:hover {
+  background: var(--accent);
+  color: #0a0a0a;
+}
+
 /* AI disclaimer footer on bot messages */
 .chatbot-msg__disclaimer {
   display: flex;

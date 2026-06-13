@@ -259,30 +259,52 @@
     scrollBottom();
   }
 
+  function parseCTAs(text) {
+    const ctas = [];
+    const clean = text.replace(/\[CTA:([^\|]+)\|([^\]]+)\]/g, (_, label, url) => {
+      ctas.push({ label: label.trim(), url: url.trim() });
+      return '';
+    }).trim();
+    return { clean, ctas };
+  }
+
   function appendBot(text, stream = true) {
+    const { clean, ctas } = parseCTAs(text);
     const el = document.createElement('div');
     el.className = 'chatbot-msg chatbot-msg--bot';
     el.innerHTML = `<div class="chatbot-msg__bubble"><span class="chatbot-msg__text"></span></div>`;
     getMessages().appendChild(el);
     scrollBottom();
     const span = el.querySelector('.chatbot-msg__text');
+    const bubble = el.querySelector('.chatbot-msg__bubble');
     const lang = getSiteLang();
     const disclaimerText = lang === 'vi'
       ? 'AI có thể nhầm — liên hệ trực tiếp để chắc chắn.'
       : 'AI can be wrong — reach out to verify.';
-    const emailLabel = lang === 'vi' ? 'Email Jay' : 'Email Jay';
-    const addDisclaimer = () => {
+    const addFooter = () => {
+      if (ctas.length > 0) {
+        const ctaRow = document.createElement('div');
+        ctaRow.className = 'chatbot-msg__ctas';
+        ctas.forEach(({ label, url }) => {
+          const a = document.createElement('a');
+          a.href = url;
+          a.className = 'chatbot-msg__cta-btn';
+          a.textContent = label + ' →';
+          ctaRow.appendChild(a);
+        });
+        bubble.appendChild(ctaRow);
+      }
       const d = document.createElement('div');
       d.className = 'chatbot-msg__disclaimer';
-      d.innerHTML = `<span>${disclaimerText}</span><a href="mailto:jay.tran@kreebox.com" class="chatbot-msg__disclaimer-btn">${emailLabel}</a>`;
-      el.querySelector('.chatbot-msg__bubble').appendChild(d);
+      d.innerHTML = `<span>${disclaimerText}</span><a href="mailto:jay.tran@kreebox.com" class="chatbot-msg__disclaimer-btn">Email Jay</a>`;
+      bubble.appendChild(d);
       scrollBottom();
     };
     if (stream) {
-      typeText(span, text, 0, addDisclaimer);
+      typeText(span, clean, 0, addFooter);
     } else {
-      span.textContent = text;
-      addDisclaimer();
+      span.textContent = clean;
+      addFooter();
     }
     return el;
   }
