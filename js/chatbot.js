@@ -62,20 +62,20 @@
           <svg class="cat-mascot" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <radialGradient id="cgFace" cx="40%" cy="28%" r="70%">
-                <stop offset="0%" stop-color="#d4e8f2"/>
-                <stop offset="42%" stop-color="#6a9db8"/>
-                <stop offset="100%" stop-color="#1a3245"/>
+                <stop offset="0%" stop-color="#4a4a5a"/>
+                <stop offset="42%" stop-color="#1e1e28"/>
+                <stop offset="100%" stop-color="#08080c"/>
               </radialGradient>
               <radialGradient id="cgEarL" cx="55%" cy="5%" r="95%">
-                <stop offset="0%" stop-color="#7ab4cc"/>
-                <stop offset="100%" stop-color="#1a3245"/>
+                <stop offset="0%" stop-color="#2e2e3a"/>
+                <stop offset="100%" stop-color="#08080c"/>
               </radialGradient>
               <radialGradient id="cgEarR" cx="45%" cy="5%" r="95%">
-                <stop offset="0%" stop-color="#7ab4cc"/>
-                <stop offset="100%" stop-color="#1a3245"/>
+                <stop offset="0%" stop-color="#2e2e3a"/>
+                <stop offset="100%" stop-color="#08080c"/>
               </radialGradient>
               <filter id="cgDrop" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#071420" flood-opacity="0.6"/>
+                <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.8"/>
               </filter>
             </defs>
 
@@ -99,13 +99,15 @@
             <!-- Left eye -->
             <g class="cat-eye cat-eye--left">
               <circle cx="22" cy="37" r="5.2" fill="white"/>
-              <circle cx="23" cy="37" r="3.3" fill="#12103a"/>
+              <circle cx="23" cy="37" r="3.6" fill="#0a0a10"/>
+              <circle cx="23" cy="37" r="3.6" fill="none" stroke="#C2F542" stroke-width="1.1" opacity="0.9"/>
               <circle cx="24.5" cy="35.5" r="1.35" fill="white"/>
             </g>
             <!-- Right eye -->
             <g class="cat-eye cat-eye--right">
               <circle cx="38" cy="37" r="5.2" fill="white"/>
-              <circle cx="39" cy="37" r="3.3" fill="#12103a"/>
+              <circle cx="39" cy="37" r="3.6" fill="#0a0a10"/>
+              <circle cx="39" cy="37" r="3.6" fill="none" stroke="#C2F542" stroke-width="1.1" opacity="0.9"/>
               <circle cx="40.5" cy="35.5" r="1.35" fill="white"/>
             </g>
 
@@ -113,7 +115,7 @@
             <path d="M28,42.5 L30,40 L32,42.5 Z" fill="#fda4af"/>
 
             <!-- Mouth (gentle smile) -->
-            <path d="M25.5,44.5 Q30,49 34.5,44.5" stroke="#5a9ab8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M25.5,44.5 Q30,49 34.5,44.5" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 
             <!-- Whiskers -->
             <line x1="3" y1="41" x2="19" y2="42.5" stroke="white" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
