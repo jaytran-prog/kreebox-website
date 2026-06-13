@@ -59,6 +59,7 @@
     wrap.innerHTML = `
       <button class="chatbot-fab" id="chatbotFab" aria-label="Chat with Phuong Tran" aria-expanded="false">
         <span class="chatbot-fab__icon chatbot-fab__icon--chat" aria-hidden="true">
+          <div class="cat-tilt-wrap">
           <svg class="cat-mascot" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
             <defs>
               <radialGradient id="cgFace" cx="40%" cy="28%" r="70%">
@@ -147,6 +148,7 @@
             <line x1="41" y1="42.5" x2="57" y2="41" stroke="white" stroke-width="0.9" opacity="0.55" stroke-linecap="round"/>
             <line x1="41" y1="44" x2="57" y2="44.5" stroke="white" stroke-width="0.85" opacity="0.45" stroke-linecap="round"/>
           </svg>
+          </div>
         </span>
         <span class="chatbot-fab__icon chatbot-fab__icon--close" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -575,9 +577,69 @@
     }
   }
 
+  // ── Cat cursor tracking ───────────────────────────────────────────
+  function initCatTracking() {
+    const fab = document.getElementById('chatbotFab');
+    if (!fab) return;
+    const svg = fab.querySelector('.cat-mascot');
+    const tiltWrap = fab.querySelector('.cat-tilt-wrap');
+    if (!svg || !tiltWrap) return;
+
+    const L = { x: 23, y: 37 };
+    const R = { x: 39, y: 37 };
+    const MAX_EYE = 1.3;
+    let cx = 0, cy = 0, tx = 0, ty = 0, raf = null;
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function applyOffsets(ox, oy) {
+      const le = svg.querySelector('.cat-eye--left');
+      const re = svg.querySelector('.cat-eye--right');
+      if (!le || !re) return;
+      const lc = le.querySelectorAll('circle');
+      const rc = re.querySelectorAll('circle');
+      [1, 2].forEach(i => {
+        if (lc[i]) { lc[i].setAttribute('cx', L.x + ox); lc[i].setAttribute('cy', L.y + oy); }
+        if (rc[i]) { rc[i].setAttribute('cx', R.x + ox); rc[i].setAttribute('cy', R.y + oy); }
+      });
+      if (lc[3]) { lc[3].setAttribute('cx', 24.5 + ox); lc[3].setAttribute('cy', 35.5 + oy); }
+      if (rc[3]) { rc[3].setAttribute('cx', 40.5 + ox); rc[3].setAttribute('cy', 35.5 + oy); }
+      tiltWrap.style.transform = `rotate(${(ox / MAX_EYE) * 4}deg)`;
+    }
+
+    function tick() {
+      cx = lerp(cx, tx, 0.18);
+      cy = lerp(cy, ty, 0.18);
+      applyOffsets(cx, cy);
+      if (Math.abs(tx - cx) > 0.01 || Math.abs(ty - cy) > 0.01) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        applyOffsets(tx, ty);
+        raf = null;
+      }
+    }
+
+    fab.addEventListener('mousemove', e => {
+      const r = fab.getBoundingClientRect();
+      const mx = e.clientX - (r.left + r.width / 2);
+      const my = e.clientY - (r.top + r.height / 2);
+      const dist = Math.sqrt(mx * mx + my * my) || 1;
+      const t = Math.min(dist / (r.width / 2), 1);
+      tx = (mx / dist) * t * MAX_EYE;
+      ty = (my / dist) * t * MAX_EYE;
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+
+    fab.addEventListener('mouseleave', () => {
+      tx = 0; ty = 0;
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+  }
+
   // ── Init ──────────────────────────────────────────────────────────
   function init() {
     createChatbot();
+    initCatTracking();
 
     document.getElementById('chatbotFab').addEventListener('click', () => {
       isOpen ? close() : open();
