@@ -17,13 +17,30 @@
     'Most impactful project you\'ve done?',
     'How do you approach AI product design?',
     'How do you lead design teams?',
+    'What\'s your design philosophy?',
+    'How do you balance design with business goals?',
+    'What\'s it like building AI tools as a designer?',
+    'Tell me about your agentic workflow experience',
+    'How do you run user research?',
+    'What separates good design from great design?',
+    'What are you learning or exploring right now?',
   ];
 
   const QUICK_PROMPTS_VI = [
     'Dự án ấn tượng nhất của bạn?',
     'Bạn thiết kế AI product như thế nào?',
     'Phong cách dẫn dắt team design của bạn?',
+    'Triết lý thiết kế của bạn là gì?',
+    'Bạn cân bằng thiết kế và mục tiêu kinh doanh thế nào?',
+    'Cảm giác thế nào khi vừa thiết kế vừa xây dựng AI?',
+    'Kể về kinh nghiệm agentic workflow của bạn',
+    'Bạn tiến hành user research như thế nào?',
+    'Điều gì tạo nên thiết kế xuất sắc thực sự?',
+    'Bạn đang học hay khám phá điều gì hiện tại?',
   ];
+
+  // Track which prompts have been shown so rotation doesn't repeat
+  let shownPromptIndices = [];
 
   const GREETING_EN = "Hey! I'm Jay 👋 Lead UX/UI Designer & Product Design Manager based in Ho Chi Minh City. Feel free to ask about my work, process, or experience.";
   const GREETING_VI = "Chào bạn! Tôi là Jay 👋 Lead UX/UI Designer & Product Design Manager tại TP.HCM. Bạn muốn khám phá portfolio, quy trình làm việc hay kinh nghiệm của tôi?";
@@ -227,6 +244,24 @@
     showQuickPrompts(lang, isWork || isCompany);
   }
 
+  function pickPrompts(pool, count = 3) {
+    // Pick `count` prompts from pool, avoiding recently shown ones
+    const available = pool.map((_, i) => i).filter(i => !shownPromptIndices.includes(i));
+    // If not enough fresh ones, reset history
+    if (available.length < count) {
+      shownPromptIndices = [];
+      available.push(...pool.map((_, i) => i).filter(i => !available.includes(i)));
+    }
+    const picked = [];
+    const src = [...available];
+    while (picked.length < count && src.length > 0) {
+      const idx = Math.floor(Math.random() * src.length);
+      picked.push(src.splice(idx, 1)[0]);
+    }
+    shownPromptIndices = [...shownPromptIndices, ...picked].slice(-pool.length);
+    return picked.map(i => pool[i]);
+  }
+
   function showQuickPrompts(lang, isContextPage = false) {
     const container = document.getElementById('chatbotQuick');
     if (!container) return;
@@ -241,7 +276,8 @@
         ? ['Tóm tắt dự án này cho tôi', 'Quy trình thiết kế như thế nào?', 'Kết quả đạt được là gì?']
         : ['Summarize this project for me', 'Walk me through the design process', 'What were the outcomes?'];
     } else {
-      prompts = lang === 'vi' ? QUICK_PROMPTS_VI : QUICK_PROMPTS_EN;
+      const pool = lang === 'vi' ? QUICK_PROMPTS_VI : QUICK_PROMPTS_EN;
+      prompts = pickPrompts(pool, 3);
     }
     container.innerHTML = '';
     prompts.forEach(p => {
