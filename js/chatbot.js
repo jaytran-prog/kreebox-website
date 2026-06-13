@@ -62,20 +62,20 @@
           <svg class="cat-mascot" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <radialGradient id="cgFace" cx="40%" cy="28%" r="70%">
-                <stop offset="0%" stop-color="#ddd6fe"/>
-                <stop offset="42%" stop-color="#818cf8"/>
-                <stop offset="100%" stop-color="#1e1b4b"/>
+                <stop offset="0%" stop-color="#d4e8f2"/>
+                <stop offset="42%" stop-color="#6a9db8"/>
+                <stop offset="100%" stop-color="#1a3245"/>
               </radialGradient>
               <radialGradient id="cgEarL" cx="55%" cy="5%" r="95%">
-                <stop offset="0%" stop-color="#818cf8"/>
-                <stop offset="100%" stop-color="#1e1b4b"/>
+                <stop offset="0%" stop-color="#7ab4cc"/>
+                <stop offset="100%" stop-color="#1a3245"/>
               </radialGradient>
               <radialGradient id="cgEarR" cx="45%" cy="5%" r="95%">
-                <stop offset="0%" stop-color="#818cf8"/>
-                <stop offset="100%" stop-color="#1e1b4b"/>
+                <stop offset="0%" stop-color="#7ab4cc"/>
+                <stop offset="100%" stop-color="#1a3245"/>
               </radialGradient>
               <filter id="cgDrop" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#0a0818" flood-opacity="0.55"/>
+                <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#071420" flood-opacity="0.6"/>
               </filter>
             </defs>
 
@@ -113,7 +113,7 @@
             <path d="M28,42.5 L30,40 L32,42.5 Z" fill="#fda4af"/>
 
             <!-- Mouth (gentle smile) -->
-            <path d="M25.5,44.5 Q30,49 34.5,44.5" stroke="#a78bfa" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M25.5,44.5 Q30,49 34.5,44.5" stroke="#5a9ab8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 
             <!-- Whiskers -->
             <line x1="3" y1="41" x2="19" y2="42.5" stroke="white" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
