@@ -266,10 +266,23 @@
     getMessages().appendChild(el);
     scrollBottom();
     const span = el.querySelector('.chatbot-msg__text');
+    const lang = getSiteLang();
+    const disclaimerText = lang === 'vi'
+      ? 'AI có thể nhầm — liên hệ trực tiếp để chắc chắn.'
+      : 'AI can be wrong — reach out to verify.';
+    const emailLabel = lang === 'vi' ? 'Email Jay' : 'Email Jay';
+    const addDisclaimer = () => {
+      const d = document.createElement('div');
+      d.className = 'chatbot-msg__disclaimer';
+      d.innerHTML = `<span>${disclaimerText}</span><a href="mailto:jay.tran@kreebox.com" class="chatbot-msg__disclaimer-btn">${emailLabel}</a>`;
+      el.querySelector('.chatbot-msg__bubble').appendChild(d);
+      scrollBottom();
+    };
     if (stream) {
-      typeText(span, text);
+      typeText(span, text, 0, addDisclaimer);
     } else {
       span.textContent = text;
+      addDisclaimer();
     }
     return el;
   }
@@ -309,11 +322,13 @@
     scrollBottom();
   }
 
-  function typeText(el, text, i = 0) {
+  function typeText(el, text, i = 0, onDone) {
     if (i < text.length) {
       el.textContent += text[i];
       scrollBottom();
-      setTimeout(() => typeText(el, text, i + 1), 12);
+      setTimeout(() => typeText(el, text, i + 1, onDone), 12);
+    } else if (onDone) {
+      onDone();
     }
   }
 

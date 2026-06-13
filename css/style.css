@@ -1951,3 +1951,33 @@ img {
   background: var(--accent);
   color: #0a0a0a;
 }
+
+/* AI disclaimer footer on bot messages */
+.chatbot-msg__disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.35);
+  font-family: var(--f-body);
+}
+.chatbot-msg__disclaimer span { flex: 1; line-height: 1.3; }
+.chatbot-msg__disclaimer-btn {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-family: var(--f-body);
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.chatbot-msg__disclaimer-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
