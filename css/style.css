@@ -1879,7 +1879,7 @@ img {
   border: none;
   background: transparent;
   font-family: var(--f-body);
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--ink);
   outline: none;
   min-width: 0;
