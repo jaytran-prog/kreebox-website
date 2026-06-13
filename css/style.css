@@ -1802,24 +1802,39 @@ img {
   background: var(--accent-bg);
 }
 
-/* Form */
-.chatbot-suggestions-btn {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+/* Suggest prompts pill button (above form) */
+.chatbot-action-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.5);
-  flex-shrink: 0;
-  transition: color var(--dur) var(--ease);
-  padding: 0;
+  margin-bottom: 0.5rem;
 }
-.chatbot-suggestions-btn:hover { color: var(--accent); }
+.chatbot-suggestions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 26px;
+  padding: 0 0.6rem 0 0.45rem;
+  border-radius: 99px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-alt);
+  cursor: pointer;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.7rem;
+  font-family: var(--f-body);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.chatbot-suggestions-btn svg { flex-shrink: 0; }
+.chatbot-suggestions-btn__label { line-height: 1; }
+.chatbot-suggestions-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-bg);
+}
 
+/* Form */
 .chatbot-form {
   display: flex;
   align-items: center;
