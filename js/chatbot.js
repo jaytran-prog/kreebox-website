@@ -87,20 +87,20 @@
               <circle cx="63" cy="4" r="3.2" fill="#4c4c62"/>
             </g>
 
-            <!-- Left arm — curved raise toward tooltip -->
+            <!-- Left arm — short hook gripping upper-left rim -->
             <g class="cat-arm cat-arm--left">
-              <path d="M 16,44 C 2,36 -6,22 -4,10" stroke="#1e1e2a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M 16,44 C 2,36 -6,22 -4,10" stroke="#363648" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="-4" cy="9" r="6" fill="#2e2e40"/>
-              <circle cx="-4" cy="9" r="4" fill="#383850"/>
+              <path d="M 12,30 C 2,22 0,13 8,9" stroke="#1e1e2a" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <path d="M 12,30 C 2,22 0,13 8,9" stroke="#363648" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <circle cx="8" cy="9" r="5" fill="#2e2e40"/>
+              <circle cx="8" cy="9" r="3" fill="#3c3c52"/>
             </g>
 
-            <!-- Right arm — curved raise toward tooltip -->
+            <!-- Right arm — short hook gripping upper-right rim -->
             <g class="cat-arm cat-arm--right">
-              <path d="M 44,44 C 58,36 66,22 64,10" stroke="#1e1e2a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M 44,44 C 58,36 66,22 64,10" stroke="#363648" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="64" cy="9" r="6" fill="#2e2e40"/>
-              <circle cx="64" cy="9" r="4" fill="#383850"/>
+              <path d="M 48,30 C 58,22 60,13 52,9" stroke="#1e1e2a" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <path d="M 48,30 C 58,22 60,13 52,9" stroke="#363648" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <circle cx="52" cy="9" r="5" fill="#2e2e40"/>
+              <circle cx="52" cy="9" r="3" fill="#3c3c52"/>
             </g>
 
             <!-- Left ear -->
