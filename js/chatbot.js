@@ -42,8 +42,8 @@
   // Track which prompts have been shown so rotation doesn't repeat
   let shownPromptIndices = [];
 
-  const GREETING_EN = "Hey! I'm Jay 👋 Lead UX/UI Designer & Product Design Manager based in Ho Chi Minh City. Feel free to ask about my work, process, or experience.";
-  const GREETING_VI = "Chào bạn! Tôi là Jay 👋 Lead UX/UI Designer & Product Design Manager tại TP.HCM. Bạn muốn khám phá portfolio, quy trình làm việc hay kinh nghiệm của tôi?";
+  const GREETING_EN = "Hey! I'm Phuong Tran 👋 Lead UX/UI Designer & Product Design Manager based in Ho Chi Minh City. Feel free to ask about my work, process, or experience.";
+  const GREETING_VI = "Chào bạn! Tôi là Phuong Tran 👋 Lead UX/UI Designer & Product Design Manager tại TP.HCM. Bạn muốn khám phá portfolio, quy trình làm việc hay kinh nghiệm của tôi?";
 
   let messages = [];
   let isOpen = false;
@@ -57,7 +57,7 @@
     const wrap = document.createElement('div');
     wrap.id = 'chatbot';
     wrap.innerHTML = `
-      <button class="chatbot-fab" id="chatbotFab" aria-label="Chat with Jay" aria-expanded="false">
+      <button class="chatbot-fab" id="chatbotFab" aria-label="Chat with Phuong Tran" aria-expanded="false">
         <span class="chatbot-fab__icon chatbot-fab__icon--chat" aria-hidden="true">
           <svg class="cat-mascot" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -131,13 +131,13 @@
       </button>
       <div class="chatbot-invite" id="chatbotInvite" aria-hidden="true"></div>
 
-      <div class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Chat with Jay" aria-hidden="true">
+      <div class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Chat with Phuong Tran" aria-hidden="true">
         <div class="chatbot-panel__header">
           <div class="chatbot-panel__avatar" aria-hidden="true">
             <img src="/assets/images/phuong-tran.jpg" alt="" width="36" height="36" />
           </div>
           <div class="chatbot-panel__info">
-            <p class="chatbot-panel__name">Jay Tran</p>
+            <p class="chatbot-panel__name">Phuong Tran</p>
             <p class="chatbot-panel__status">
               <span class="chatbot-panel__status-dot" aria-hidden="true"></span>
               AI-powered · responds instantly
@@ -339,7 +339,7 @@
       }
       const d = document.createElement('div');
       d.className = 'chatbot-msg__disclaimer';
-      d.innerHTML = `<span>${disclaimerText}</span><a href="mailto:jay.tran@kreebox.com" class="chatbot-msg__disclaimer-btn">Email Jay</a>`;
+      d.innerHTML = `<span>${disclaimerText}</span><a href="mailto:jay.tran@kreebox.com" class="chatbot-msg__disclaimer-btn">Email Phuong</a>`;
       bubble.appendChild(d);
       scrollBottom();
     };
@@ -368,7 +368,7 @@
       <span>Something went wrong on my end.</span>
       <a class="chatbot-error-cta" href="mailto:jay.tran@kreebox.com">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-        Email Jay directly
+        Email Phuong directly
       </a>
     </div>`;
     getMessages().appendChild(el);
@@ -381,7 +381,7 @@
     const el = document.createElement('div');
     el.className = 'chatbot-cta';
     el.innerHTML = `<a href="mailto:jay.tran@kreebox.com" class="chatbot-cta__link">
-      Talk to Jay directly →
+      Talk to Phuong directly →
     </a>`;
     getMessages().appendChild(el);
     scrollBottom();
