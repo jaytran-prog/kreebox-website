@@ -1641,6 +1641,13 @@ img {
 .chatbot-fab.is-open .chatbot-fab__icon--close { opacity: 1; transform: scale(1) rotate(0deg); }
 
 /* Cat mascot */
+.cat-tilt-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease-out;
+  transform-origin: center center;
+}
 .cat-mascot {
   animation: cat-idle 2.8s ease-in-out infinite;
   overflow: visible;
