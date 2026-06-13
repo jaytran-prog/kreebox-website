@@ -1680,11 +1680,11 @@ img {
   opacity: 1;
 }
 .cat-arm--left {
-  transform-origin: 16px 44px;
+  transform-origin: 12px 30px;
   animation: cat-arm-wave-l 1.8s ease-in-out infinite;
 }
 .cat-arm--right {
-  transform-origin: 44px 44px;
+  transform-origin: 48px 30px;
   animation: cat-arm-wave-r 2s ease-in-out infinite 0.3s;
 }
 .cat-tail {
@@ -1693,11 +1693,11 @@ img {
 }
 @keyframes cat-arm-wave-l {
   0%, 100% { transform: rotate(0deg); }
-  50%       { transform: rotate(-10deg); }
+  50%       { transform: rotate(-6deg); }
 }
 @keyframes cat-arm-wave-r {
   0%, 100% { transform: rotate(0deg); }
-  50%       { transform: rotate(10deg); }
+  50%       { transform: rotate(6deg); }
 }
 @keyframes cat-tail-swish {
   0%, 100% { transform: rotate(0deg); }
@@ -2086,7 +2086,7 @@ img {
   transition: opacity 0.3s var(--ease), transform 0.35s var(--ease-spring), bottom 0.4s var(--ease);
 }
 .chatbot-fab.is-intro ~ .chatbot-invite {
-  bottom: calc(100% + 2.2rem);
+  bottom: calc(100% + 1.2rem);
 }
 .chatbot-invite.is-visible {
   opacity: 1;
