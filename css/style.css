@@ -1984,7 +1984,7 @@ img {
   transition: opacity 0.3s var(--ease), transform 0.35s var(--ease-spring), bottom 0.4s var(--ease);
 }
 .chatbot-fab.is-intro ~ .chatbot-invite {
-  bottom: calc(100% + 1.6rem);
+  bottom: calc(100% + 2.2rem);
 }
 .chatbot-invite.is-visible {
   opacity: 1;

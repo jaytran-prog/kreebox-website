@@ -89,18 +89,18 @@
 
             <!-- Left arm — short sausage sticking out bottom-left -->
             <g class="cat-arm cat-arm--left">
-              <line x1="18" y1="52" x2="7" y2="59" stroke="#1e1e2a" stroke-width="13" stroke-linecap="round"/>
-              <line x1="18" y1="52" x2="7" y2="59" stroke="#363648" stroke-width="9" stroke-linecap="round"/>
-              <circle cx="7" cy="59" r="7" fill="#2e2e40"/>
-              <circle cx="7" cy="59" r="4.5" fill="#3c3c52"/>
+              <line x1="18" y1="52" x2="9" y2="58" stroke="#1e1e2a" stroke-width="13" stroke-linecap="round"/>
+              <line x1="18" y1="52" x2="9" y2="58" stroke="#363648" stroke-width="9" stroke-linecap="round"/>
+              <circle cx="9" cy="58" r="7" fill="#2e2e40"/>
+              <circle cx="9" cy="58" r="4.5" fill="#3c3c52"/>
             </g>
 
             <!-- Right arm — short sausage sticking out bottom-right -->
             <g class="cat-arm cat-arm--right">
-              <line x1="42" y1="52" x2="53" y2="59" stroke="#1e1e2a" stroke-width="13" stroke-linecap="round"/>
-              <line x1="42" y1="52" x2="53" y2="59" stroke="#363648" stroke-width="9" stroke-linecap="round"/>
-              <circle cx="53" cy="59" r="7" fill="#2e2e40"/>
-              <circle cx="53" cy="59" r="4.5" fill="#3c3c52"/>
+              <line x1="42" y1="52" x2="51" y2="58" stroke="#1e1e2a" stroke-width="13" stroke-linecap="round"/>
+              <line x1="42" y1="52" x2="51" y2="58" stroke="#363648" stroke-width="9" stroke-linecap="round"/>
+              <circle cx="51" cy="58" r="7" fill="#2e2e40"/>
+              <circle cx="51" cy="58" r="4.5" fill="#3c3c52"/>
             </g>
 
             <!-- Left ear -->
