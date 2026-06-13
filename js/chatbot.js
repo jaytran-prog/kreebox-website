@@ -81,26 +81,26 @@
 
             <!-- Tail (drawn first so head covers base) -->
             <g class="cat-tail">
-              <path d="M 46,42 C 66,34 74,16 63,4" stroke="#1e1e2a" stroke-width="8" fill="none" stroke-linecap="round"/>
-              <path d="M 46,42 C 66,34 74,16 63,4" stroke="#3e3e52" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-              <circle cx="63" cy="4" r="5.5" fill="#3a3a4e"/>
-              <circle cx="63" cy="4" r="3.2" fill="#4c4c62"/>
+              <path d="M 48,44 C 68,36 76,18 64,6" stroke="#1e1e2a" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <path d="M 48,44 C 68,36 76,18 64,6" stroke="#3e3e52" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <circle cx="64" cy="6" r="7" fill="#3a3a4e"/>
+              <circle cx="64" cy="6" r="4.5" fill="#4c4c62"/>
             </g>
 
-            <!-- Left arm — short hook gripping upper-left rim -->
+            <!-- Left arm — short sausage sticking out bottom-left -->
             <g class="cat-arm cat-arm--left">
-              <path d="M 12,30 C 2,22 0,13 8,9" stroke="#1e1e2a" stroke-width="9" fill="none" stroke-linecap="round"/>
-              <path d="M 12,30 C 2,22 0,13 8,9" stroke="#363648" stroke-width="6" fill="none" stroke-linecap="round"/>
-              <circle cx="8" cy="9" r="5" fill="#2e2e40"/>
-              <circle cx="8" cy="9" r="3" fill="#3c3c52"/>
+              <line x1="18" y1="52" x2="1" y2="63" stroke="#1e1e2a" stroke-width="14" stroke-linecap="round"/>
+              <line x1="18" y1="52" x2="1" y2="63" stroke="#363648" stroke-width="10" stroke-linecap="round"/>
+              <circle cx="1" cy="63" r="8" fill="#2e2e40"/>
+              <circle cx="1" cy="63" r="5" fill="#3c3c52"/>
             </g>
 
-            <!-- Right arm — short hook gripping upper-right rim -->
+            <!-- Right arm — short sausage sticking out bottom-right -->
             <g class="cat-arm cat-arm--right">
-              <path d="M 48,30 C 58,22 60,13 52,9" stroke="#1e1e2a" stroke-width="9" fill="none" stroke-linecap="round"/>
-              <path d="M 48,30 C 58,22 60,13 52,9" stroke="#363648" stroke-width="6" fill="none" stroke-linecap="round"/>
-              <circle cx="52" cy="9" r="5" fill="#2e2e40"/>
-              <circle cx="52" cy="9" r="3" fill="#3c3c52"/>
+              <line x1="42" y1="52" x2="59" y2="63" stroke="#1e1e2a" stroke-width="14" stroke-linecap="round"/>
+              <line x1="42" y1="52" x2="59" y2="63" stroke="#363648" stroke-width="10" stroke-linecap="round"/>
+              <circle cx="59" cy="63" r="8" fill="#2e2e40"/>
+              <circle cx="59" cy="63" r="5" fill="#3c3c52"/>
             </g>
 
             <!-- Left ear -->
