@@ -414,26 +414,54 @@
     const isCompany = path.includes('/company/');
     if (!isWork && !isCompany) return null;
 
-    const title = document.querySelector('meta[property="og:title"]')?.content
-      || document.title || '';
+    const txt = el => el?.textContent?.trim() || '';
+    const title = document.querySelector('meta[property="og:title"]')?.content || document.title || '';
     const description = document.querySelector('meta[name="description"]')?.content || '';
-    const h1 = document.querySelector('h1')?.textContent?.trim() || '';
+    const h1 = txt(document.querySelector('h1'));
 
-    // Gather key stat/overview text from the page (first few paragraphs)
-    const bodyText = Array.from(document.querySelectorAll('.case-intro p, .case-overview p, .work-overview p, .project-intro p, main p'))
-      .slice(0, 4)
-      .map(el => el.textContent.trim())
-      .filter(Boolean)
-      .join(' ');
+    // Subtitle / hero intro
+    const subtitle = txt(document.querySelector('.cs-hero__subtitle, .cs-intro, .hero-subtitle'));
+
+    // All section headings + body paragraphs
+    const sections = [];
+    document.querySelectorAll('.cs-section, .cs-body, section').forEach(sec => {
+      const heading = txt(sec.querySelector('h2, h3'));
+      const paras = Array.from(sec.querySelectorAll('p'))
+        .map(p => txt(p)).filter(Boolean).join(' ');
+      if (heading || paras) sections.push((heading ? heading + ': ' : '') + paras);
+    });
+
+    // Metrics / stats
+    const metrics = Array.from(document.querySelectorAll('.cs-metric, .metric, .stat'))
+      .map(m => {
+        const val = txt(m.querySelector('.cs-metric__value, .metric__value, strong, b'));
+        const label = txt(m.querySelector('.cs-metric__label, .metric__label, p:last-child, span:last-child'));
+        return val && label ? `${val} — ${label}` : txt(m);
+      }).filter(Boolean).join('; ');
+
+    // Feature segments / tags
+    const segments = Array.from(document.querySelectorAll('.cs-segment, .feature-item'))
+      .map(s => txt(s)).filter(Boolean).join('. ');
+
+    // Outcomes / results sections
+    const outcomes = Array.from(document.querySelectorAll('.cs-outcome, .outcome, .result'))
+      .map(o => txt(o)).filter(Boolean).join('. ');
 
     const type = isWork ? 'project case study' : 'company profile';
-    return `CURRENT PAGE CONTEXT (${type}):
-Title: ${title}
-Heading: ${h1}
-Description: ${description}
-${bodyText ? `Key content: ${bodyText.slice(0, 600)}` : ''}
+    const parts = [
+      `CURRENT PAGE CONTEXT (${type}):`,
+      `Title: ${title}`,
+      h1 ? `Heading: ${h1}` : '',
+      description ? `Overview: ${description}` : '',
+      subtitle ? `Intro: ${subtitle}` : '',
+      metrics ? `Key metrics: ${metrics}` : '',
+      segments ? `Feature areas: ${segments.slice(0, 600)}` : '',
+      outcomes ? `Outcomes: ${outcomes.slice(0, 400)}` : '',
+      sections.length ? `Content:\n${sections.join('\n').slice(0, 3000)}` : '',
+      `\nThe user is on this page now. Answer questions specifically about this ${type} using the content above.`
+    ].filter(Boolean).join('\n');
 
-The user is currently reading this page. You can help them explore or summarize it. Answer questions about this specific ${type} in detail.`;
+    return parts;
   }
 
   // ── Invite bubble ─────────────────────────────────────────────────
