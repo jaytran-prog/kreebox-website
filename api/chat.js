@@ -55,7 +55,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'API key not configured' });
   }
 
-  const MODELS = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-2.0-flash-lite'];
+  // Free tier first (cheapest), fall back to more capable model
+  const MODELS = ['gemini-2.5-flash-lite', 'gemini-2.5-flash'];
 
   const body = JSON.stringify({
     system_instruction: { parts: [{ text: systemPrompt }] },
