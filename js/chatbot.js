@@ -62,17 +62,17 @@
           <svg class="cat-mascot" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <radialGradient id="cgFace" cx="40%" cy="28%" r="70%">
-                <stop offset="0%" stop-color="#4a4a5a"/>
-                <stop offset="42%" stop-color="#1e1e28"/>
-                <stop offset="100%" stop-color="#08080c"/>
+                <stop offset="0%" stop-color="#606272"/>
+                <stop offset="42%" stop-color="#2a2a38"/>
+                <stop offset="100%" stop-color="#0e0e16"/>
               </radialGradient>
               <radialGradient id="cgEarL" cx="55%" cy="5%" r="95%">
-                <stop offset="0%" stop-color="#2e2e3a"/>
-                <stop offset="100%" stop-color="#08080c"/>
+                <stop offset="0%" stop-color="#3e3e50"/>
+                <stop offset="100%" stop-color="#0e0e16"/>
               </radialGradient>
               <radialGradient id="cgEarR" cx="45%" cy="5%" r="95%">
-                <stop offset="0%" stop-color="#2e2e3a"/>
-                <stop offset="100%" stop-color="#08080c"/>
+                <stop offset="0%" stop-color="#3e3e50"/>
+                <stop offset="100%" stop-color="#0e0e16"/>
               </radialGradient>
               <filter id="cgDrop" x="-20%" y="-20%" width="140%" height="140%">
                 <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.8"/>

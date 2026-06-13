@@ -1495,14 +1495,14 @@ img {
   align-items: center;
   justify-content: center;
   color: #fff;
-  box-shadow: 0 4px 24px rgba(106,157,184,0.35), 0 0 0 1px rgba(194,245,66,0.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06), 0 0 0 1.5px rgba(194,245,66,0.18);
   transition: transform var(--dur) var(--ease-spring), box-shadow var(--dur) var(--ease);
   margin-left: auto;
   overflow: visible;
 }
 .chatbot-fab:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 32px rgba(106,157,184,0.45), 0 0 0 2px rgba(194,245,66,0.5);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 12px 40px rgba(0,0,0,0.22), 0 0 0 2px rgba(194,245,66,0.5);
 }
 .chatbot-fab:active { transform: scale(0.93); }
 .chatbot-fab__icon {
