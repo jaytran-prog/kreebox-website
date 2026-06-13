@@ -188,16 +188,147 @@ if (!prefersReducedMotion) {
   }
 }
 
-// ─── Subtle parallax on orbs ─────────────────────────────────────────────────
+// ─── Orb parallax — mouse + scroll combined ──────────────────────────────────
 if (!prefersReducedMotion) {
   const orbs = document.querySelectorAll('.hero__orb');
+  const heroEl = document.querySelector('.hero');
   if (orbs.length) {
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
+    let mouseX = 0, mouseY = 0;
+    let scrollY = 0;
+
+    const updateOrbs = () => {
       orbs.forEach((orb, i) => {
-        const speed = 0.04 + i * 0.02;
-        orb.style.transform = `translateY(${y * speed}px)`;
+        const mDepth  = (i + 1) * 14;
+        const sSpeed  = 0.04 + i * 0.02;
+        orb.style.transform =
+          `translate(${mouseX * mDepth}px, ${mouseY * mDepth + scrollY * sSpeed}px)`;
       });
+    };
+
+    if (heroEl) {
+      heroEl.addEventListener('mousemove', e => {
+        const r = heroEl.getBoundingClientRect();
+        mouseX = (e.clientX - r.left - r.width  / 2) / r.width;
+        mouseY = (e.clientY - r.top  - r.height / 2) / r.height;
+        updateOrbs();
+      }, { passive: true });
+      heroEl.addEventListener('mouseleave', () => {
+        mouseX = 0; mouseY = 0;
+        updateOrbs();
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      scrollY = window.scrollY;
+      updateOrbs();
     }, { passive: true });
   }
+}
+
+// ─── Card 3D tilt ────────────────────────────────────────────────────────────
+if (!prefersReducedMotion) {
+  document.querySelectorAll('.archive-card, .community-card, .cs-related__card')
+    .forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width  / 2) / (r.width  / 2);
+        const y = (e.clientY - r.top  - r.height / 2) / (r.height / 2);
+        card.style.transform =
+          `perspective(700px) rotateY(${x * 7}deg) rotateX(${-y * 5}deg) translateY(-4px)`;
+      }, { passive: true });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+}
+
+// ─── Section heading reveal (wrap inner text, observe) ───────────────────────
+if (!prefersReducedMotion) {
+  document.querySelectorAll('.section-header .display-md, .page-hero .display-xl').forEach(el => {
+    const inner = document.createElement('span');
+    inner.className = 'reveal-inner';
+    inner.innerHTML = el.innerHTML;
+    el.innerHTML = '';
+    el.appendChild(inner);
+    el.classList.add('reveal-heading');
+  });
+
+  const revealObserver = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.2 }
+  );
+  document.querySelectorAll('.reveal-heading').forEach(el => revealObserver.observe(el));
+}
+
+// ─── Custom cursor ───────────────────────────────────────────────────────────
+if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+  const dot  = Object.assign(document.createElement('div'), { className: 'cursor-dot' });
+  const ring = Object.assign(document.createElement('div'), { className: 'cursor-ring' });
+  document.body.append(dot, ring);
+
+  let mx = -200, my = -200;
+  let rx = -200, ry = -200;
+  let rafId;
+
+  // Dot follows instantly
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+  }, { passive: true });
+
+  // Ring follows with smooth lag
+  const tickRing = () => {
+    rx += (mx - rx) * 0.1;
+    ry += (my - ry) * 0.1;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    rafId = requestAnimationFrame(tickRing);
+  };
+  tickRing();
+
+  // Hover enlarge
+  const HOVER_SEL = 'a, button, [role="button"], .work-item, .archive-card, .community-card, label';
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest(HOVER_SEL)) ring.classList.add('is-hovering');
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest(HOVER_SEL)) ring.classList.remove('is-hovering');
+  });
+
+  // Click shrink
+  document.addEventListener('mousedown', () => ring.classList.add('is-clicking'));
+  document.addEventListener('mouseup',   () => ring.classList.remove('is-clicking'));
+
+  // Hide when cursor leaves window
+  document.addEventListener('mouseleave', () => {
+    dot.classList.add('is-hidden'); ring.classList.add('is-hidden');
+  });
+  document.addEventListener('mouseenter', () => {
+    dot.classList.remove('is-hidden'); ring.classList.remove('is-hidden');
+  });
+}
+
+// ─── Magnetic nav links ──────────────────────────────────────────────────────
+if (!prefersReducedMotion) {
+  document.querySelectorAll('.nav__links a:not(.nav__cta)').forEach(link => {
+    link.addEventListener('mousemove', e => {
+      const r = link.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width  / 2;
+      const y = e.clientY - r.top  - r.height / 2;
+      link.style.transform = `translate(${x * 0.25}px, ${y * 0.35}px)`;
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.transform = '';
+      link.style.transition = 'transform 0.4s cubic-bezier(0.16,1,0.3,1), color 0.25s';
+    });
+    link.addEventListener('mouseenter', () => {
+      link.style.transition = 'color 0.25s';
+    });
+  });
 }
