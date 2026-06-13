@@ -1590,21 +1590,21 @@ img {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background: #1a1740;
+  background: #111f2a;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  box-shadow: 0 4px 24px rgba(99,102,241,0.5), 0 0 0 1px rgba(129,140,248,0.2);
+  box-shadow: 0 4px 24px rgba(106,157,184,0.35), 0 0 0 1px rgba(194,245,66,0.15);
   transition: transform var(--dur) var(--ease-spring), box-shadow var(--dur) var(--ease);
   margin-left: auto;
   overflow: visible;
 }
 .chatbot-fab:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 32px rgba(99,102,241,0.6), 0 0 0 1px rgba(129,140,248,0.35);
+  box-shadow: 0 8px 32px rgba(106,157,184,0.45), 0 0 0 2px rgba(194,245,66,0.5);
 }
 .chatbot-fab:active { transform: scale(0.93); }
 .chatbot-fab__icon {
@@ -1618,7 +1618,7 @@ img {
 .chatbot-fab__icon--close {
   opacity: 0;
   transform: scale(0.5) rotate(-90deg);
-  background: #1a1740;
+  background: #111f2a;
   width: 62px; height: 62px;
   border-radius: 50%;
 }
