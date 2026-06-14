@@ -42,8 +42,8 @@
   // Track which prompts have been shown so rotation doesn't repeat
   let shownPromptIndices = [];
 
-  const GREETING_EN = "Hey! I'm Phuong Tran 👋 Lead UX/UI Designer & Product Design Manager based in Ho Chi Minh City. Feel free to ask about my work, process, or experience.";
-  const GREETING_VI = "Chào bạn! Tôi là Phuong Tran 👋 Lead UX/UI Designer & Product Design Manager tại TP.HCM. Bạn muốn khám phá portfolio, quy trình làm việc hay kinh nghiệm của tôi?";
+  const GREETING_EN = "Hey! I'm Phuong Tran 👋 Lead UX/UI Designer & Product Design Manager based in Ho Chi Minh City — and this AI assistant is something I designed and built myself, as a live example of how I work at the intersection of design and AI. Ask me about my projects, process, or what it's like being a designer who actually builds the things they design.";
+  const GREETING_VI = "Chào bạn! Tôi là Phuong Tran 👋 Lead UX/UI Designer & Product Design Manager tại TP.HCM — và AI assistant này chính tôi tự thiết kế lẫn xây dựng, như một minh chứng thực tế về cách tôi làm việc ở giao điểm giữa design và AI. Hỏi tôi về dự án, quy trình, hoặc cảm giác thế nào khi vừa là designer vừa tự tay build sản phẩm AI nhé.";
 
   let messages = [];
   let isOpen = false;
