@@ -243,6 +243,12 @@ const initEnhancements = () => {
       mx = e.clientX; my = e.clientY;
       dot.style.left = mx + 'px';
       dot.style.top  = my + 'px';
+      // Start on first mousemove (handles Windows/browsers where mouseenter on document doesn't fire)
+      if (!cursorInside) {
+        cursorInside = true;
+        dot.classList.remove('is-hidden'); ring.classList.remove('is-hidden');
+      }
+      if (!rafId) rafId = requestAnimationFrame(tickRing);
     }, { passive: true });
 
     const HOVER_SEL = 'a, button, [role="button"], .work-item, .archive-card, .community-card, label';
@@ -255,11 +261,6 @@ const initEnhancements = () => {
     document.addEventListener('mousedown', () => ring.classList.add('is-clicking'));
     document.addEventListener('mouseup',   () => ring.classList.remove('is-clicking'));
 
-    document.addEventListener('mouseenter', () => {
-      cursorInside = true;
-      dot.classList.remove('is-hidden'); ring.classList.remove('is-hidden');
-      if (!rafId) rafId = requestAnimationFrame(tickRing);
-    });
     document.addEventListener('mouseleave', () => {
       cursorInside = false;
       dot.classList.add('is-hidden'); ring.classList.add('is-hidden');
