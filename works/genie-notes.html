@@ -50,9 +50,8 @@
   </div>
 
   <style>
-    body.nda-blurred > *:not(#nda-overlay):not(nav) { filter: blur(10px); pointer-events: none; user-select: none; transition: filter 0.3s; }
-    body.nda-blurred > nav { filter: blur(10px); }
-    body:not(.nda-blurred) > *:not(#nda-overlay) { filter: none; pointer-events: auto; user-select: auto; }
+    body.nda-blurred > *:not(#nda-overlay) { filter: blur(10px); transition: filter 0.3s; }
+    body:not(.nda-blurred) > *:not(#nda-overlay) { filter: none; }
     #nda-pw:focus { border-color: var(--accent, #c2f542); }
     @keyframes nda-shake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
     .nda-shake { animation: nda-shake 0.35s ease; }
