@@ -42,15 +42,16 @@
         <p id="nda-error" aria-live="polite" style="display:none;font-size:0.78rem;color:#f87171;font-family:var(--f-mono,'monospace');margin:0;" data-i18n="nda.error">Incorrect password. Try again or email me.</p>
         <button type="submit" onclick="ndaCheck()" style="padding:0.75rem 1rem;background:var(--ink,#fff);color:var(--bg,#0a0a0a);border:none;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:var(--f-display,'sans-serif');letter-spacing:-0.01em;" data-i18n="nda.unlock">Unlock</button>
       </form>
-      <button onclick="history.back()" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;background:none;border:none;cursor:pointer;font-size:0.82rem;color:var(--ink-3,#888);font-family:var(--f-mono,'monospace');letter-spacing:0.04em;padding:0.25rem 0;">
+      <a href="../works.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;color:var(--ink-3,#888);font-family:var(--f-mono,'monospace');letter-spacing:0.04em;padding:0.25rem 0;text-decoration:none;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
         <span data-i18n="nda.goback">Go back</span>
-      </button>
+      </a>
     </div>
   </div>
 
   <style>
-    body.nda-blurred > *:not(#nda-overlay) { filter: blur(10px); pointer-events: none; user-select: none; transition: filter 0.3s; }
+    body.nda-blurred > *:not(#nda-overlay):not(nav) { filter: blur(10px); pointer-events: none; user-select: none; transition: filter 0.3s; }
+    body.nda-blurred > nav { filter: blur(10px); }
     body:not(.nda-blurred) > *:not(#nda-overlay) { filter: none; pointer-events: auto; user-select: auto; }
     #nda-pw:focus { border-color: var(--accent, #c2f542); }
     @keyframes nda-shake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
