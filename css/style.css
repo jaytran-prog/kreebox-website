@@ -704,6 +704,99 @@ body::after {
 .cs-visual__placeholder span { font-family: var(--f-mono); font-size: 0.68rem; letter-spacing: 0.08em; opacity: 0.55; }
 .cs-visual img { width: 100%; display: block; object-fit: cover; }
 .cs-visual__caption { padding: 0.75rem 1.25rem; font-family: var(--f-mono); font-size: 0.68rem; color: var(--ink-3); border-top: 1px solid var(--border); letter-spacing: 0.04em; }
+
+/* ─── Case study image lightbox ─────────────────────────────────────────── */
+.lightbox-trigger { cursor: zoom-in; pointer-events: auto; }
+.cs-visual__caption-hint { color: var(--accent); opacity: 0.85; }
+.lightbox-hint {
+  position: fixed;
+  z-index: 100001;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(9,9,11,0.88);
+  color: #fff;
+  border-radius: 999px;
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(16px, 16px) scale(0.94);
+  transition: opacity 0.15s var(--ease), transform 0.15s var(--ease);
+  will-change: left, top;
+}
+.lightbox-hint.is-visible { opacity: 1; transform: translate(16px, 16px) scale(1); }
+.lightbox-hint svg { flex-shrink: 0; }
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(9,9,11,0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-slow) var(--ease), visibility var(--dur-slow) var(--ease);
+}
+.lightbox-overlay.is-open { opacity: 1; visibility: visible; }
+.lightbox-overlay__img {
+  max-width: min(1200px, 90vw);
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transform: scale(0.96);
+  transition: transform var(--dur-slow) var(--ease);
+}
+.lightbox-overlay.is-open .lightbox-overlay__img { transform: scale(1); }
+.lightbox-overlay__close,
+.lightbox-overlay__prev,
+.lightbox-overlay__next {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  cursor: pointer;
+  transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.lightbox-overlay__close:hover,
+.lightbox-overlay__prev:hover,
+.lightbox-overlay__next:hover { background: rgba(255,255,255,0.16); }
+.lightbox-overlay__close { top: 1.5rem; right: 1.5rem; }
+.lightbox-overlay__prev { left: 1.5rem; top: 50%; transform: translateY(-50%); }
+.lightbox-overlay__next { right: 1.5rem; top: 50%; transform: translateY(-50%); }
+.lightbox-overlay__prev:hover, .lightbox-overlay__next:hover { transform: translateY(-50%) scale(1.08); }
+.lightbox-overlay__counter {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.65);
+}
+@media (max-width: 640px) {
+  .lightbox-overlay { padding: 5.5rem 1rem 4rem; }
+  .lightbox-overlay__close { top: 1rem; right: 1rem; width: 38px; height: 38px; }
+  .lightbox-overlay__prev { left: 0.5rem; width: 38px; height: 38px; }
+  .lightbox-overlay__next { right: 0.5rem; width: 38px; height: 38px; }
+}
 .cs-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; margin: 2rem 0; }
 .cs-metric { background: var(--bg-alt); padding: 1.5rem; transition: background var(--dur); }
 .cs-metric:hover { background: var(--accent-bg); }

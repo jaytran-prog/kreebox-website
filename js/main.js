@@ -142,6 +142,106 @@ if (csSections.length && tocLinks.length) {
   csSections.forEach(s => tocObserver.observe(s));
 }
 
+// ─── Case study image lightbox ────────────────────────────────────────────────
+if (document.querySelector('.cs-hero')) {
+  const galleryImages = [...document.querySelectorAll('img')].filter(
+    img => !img.closest('#chatbot') && !img.closest('.nav')
+  );
+
+  if (galleryImages.length) {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `
+      <button class="lightbox-overlay__close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-overlay__prev" aria-label="Previous image">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="lightbox-overlay__next" aria-label="Next image">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <img class="lightbox-overlay__img" alt="" />
+      <p class="lightbox-overlay__counter"></p>
+    `;
+    document.body.appendChild(overlay);
+
+    const lbImg    = overlay.querySelector('.lightbox-overlay__img');
+    const counter  = overlay.querySelector('.lightbox-overlay__counter');
+    const btnPrev  = overlay.querySelector('.lightbox-overlay__prev');
+    const btnNext  = overlay.querySelector('.lightbox-overlay__next');
+    const btnClose = overlay.querySelector('.lightbox-overlay__close');
+    let current = 0;
+
+    const render = i => {
+      current = (i + galleryImages.length) % galleryImages.length;
+      const img = galleryImages[current];
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || '';
+      counter.textContent = `${current + 1} / ${galleryImages.length}`;
+      const showNav = galleryImages.length > 1;
+      btnPrev.style.display = btnNext.style.display = showNav ? '' : 'none';
+    };
+
+    const openAt = i => {
+      render(i);
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
+
+    // Cursor-following "click to enlarge" hint (desktop/mouse only — touch users
+    // get the same signal for free on their first tap)
+    let hint = null;
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      hint = document.createElement('div');
+      hint.className = 'lightbox-hint';
+      hint.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg><span data-i18n="lightbox.hint">${t('lightbox.hint')}</span>`;
+      document.body.appendChild(hint);
+    }
+
+    galleryImages.forEach((img, i) => {
+      img.classList.add('lightbox-trigger');
+      img.addEventListener('click', () => openAt(i));
+      if (hint) {
+        img.addEventListener('mouseenter', () => hint.classList.add('is-visible'));
+        img.addEventListener('mouseleave', () => hint.classList.remove('is-visible'));
+        img.addEventListener('mousemove', e => {
+          hint.style.left = e.clientX + 'px';
+          hint.style.top = e.clientY + 'px';
+        });
+      }
+    });
+
+    // Reinforce the same signal in existing captions, for touch users and anyone
+    // who scans past the hover state
+    document.querySelectorAll('.cs-visual__caption').forEach(caption => {
+      const visual = caption.closest('.cs-visual');
+      if (visual && visual.querySelector('img.lightbox-trigger')) {
+        const hintText = document.createElement('span');
+        hintText.className = 'cs-visual__caption-hint';
+        hintText.setAttribute('data-i18n', 'lightbox.captionHint');
+        hintText.textContent = t('lightbox.captionHint');
+        caption.appendChild(hintText);
+      }
+    });
+
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', () => render(current - 1));
+    btnNext.addEventListener('click', () => render(current + 1));
+    overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', e => {
+      if (!overlay.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') render(current - 1);
+      if (e.key === 'ArrowRight') render(current + 1);
+    });
+  }
+}
+
 // ─── Deferred enhancements (after first paint) ───────────────────────────────
 // Everything below is visual enhancement only — defer to avoid blocking TBT
 const initEnhancements = () => {
