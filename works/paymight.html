@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"dark");</script>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayMight Web3 Payment Platform UX Design | Phuong Tran</title>
+  <meta name="description" content="UX/UI design of PayMight, a Web3 cross-border payment platform virtual bank accounts, pay/receive/transfer flows, and a yield dashboard. Case study by Phuong Tran, freelance UI/UX designer." />
+  <meta name="keywords" content="web3 payment design, cross-border fintech UX, crypto banking app design, KYC onboarding UX" />
+  <!-- SEO -->
+  <link rel="canonical" href="https://phuongtran.kreebox.com/works/paymight" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Phuong Tran" />
+  <meta property="og:url" content="https://phuongtran.kreebox.com/works/paymight" />
+  <meta property="og:title" content="PayMight Web3 Payment Platform UX Design | Phuong Tran" />
+  <meta property="og:description" content="UX/UI design of PayMight, a Web3 cross-border payment platform virtual bank accounts, pay/receive/transfer flows, and a yield dashboard. Case study by Phuong Tran, freelance UI/UX designer." />
+  <meta property="og:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PayMight Web3 Payment Platform UX Design | Phuong Tran" />
+  <meta name="twitter:description" content="UX/UI design of PayMight, a Web3 cross-border payment platform virtual bank accounts, pay/receive/transfer flows, and a yield dashboard. Case study by Phuong Tran, freelance UI/UX designer." />
+  <meta name="twitter:image" content="https://phuongtran.kreebox.com/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=2" />
+</head>
+<body class="nda-blurred">
+
+  <!-- NDA Lock Overlay -->
+  <div id="nda-overlay" role="dialog" aria-modal="true" aria-labelledby="nda-title" style="position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:rgba(0,0,0,0.72);backdrop-filter:blur(4px);">
+    <div style="background:var(--bg-card,#111);border:1px solid var(--border,#2a2a2a);border-radius:16px;padding:2.5rem 2rem;max-width:420px;width:100%;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+      <div style="width:48px;height:48px;background:var(--bg-alt,#1a1a1a);border:1px solid var(--border,#2a2a2a);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3,#888)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <span style="display:inline-block;font-family:var(--f-mono,'monospace');font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent,#c2f542);background:rgba(194,245,66,0.08);border:1px solid rgba(194,245,66,0.2);padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:1rem;" data-i18n="nda.badge">NDA Protected</span>
+      <h2 id="nda-title" style="font-family:var(--f-display,'sans-serif');font-size:1.2rem;font-weight:700;color:var(--ink,#fff);margin:0 0 0.6rem;letter-spacing:-0.02em;" data-i18n="nda.title">Confidential Work</h2>
+      <p style="font-size:0.88rem;color:var(--ink-2,#aaa);line-height:1.65;margin:0 0 1.75rem;" data-i18n="nda.desc">This case study is protected by NDA. A password is required to access the content.</p>
+      <form id="nda-form" onsubmit="return false;" style="display:flex;flex-direction:column;gap:0.75rem;">
+        <input id="nda-pw" type="password" placeholder="Enter password" data-i18n-placeholder="nda.placeholder" autocomplete="off" aria-label="Case study password" style="width:100%;box-sizing:border-box;padding:0.75rem 1rem;background:var(--bg-alt,#1a1a1a);border:1px solid var(--border,#2a2a2a);border-radius:8px;color:var(--ink,#fff);font-size:0.9rem;font-family:var(--f-mono,'monospace');outline:none;transition:border-color 0.15s;" />
+        <p id="nda-error" aria-live="polite" style="display:none;font-size:0.78rem;color:#f87171;font-family:var(--f-mono,'monospace');margin:0;" data-i18n="nda.error">Incorrect password. Try again or email me.</p>
+        <button type="submit" onclick="ndaCheck()" style="padding:0.75rem 1rem;background:var(--ink,#fff);color:var(--bg,#0a0a0a);border:none;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:var(--f-display,'sans-serif');letter-spacing:-0.01em;" data-i18n="nda.unlock">Unlock</button>
+      </form>
+      <a href="../works.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;color:var(--ink-3,#888);font-family:var(--f-mono,'monospace');letter-spacing:0.04em;padding:0.25rem 0;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="nda.goback">Go back</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    body.nda-blurred > *:not(#nda-overlay) { filter: blur(10px); transition: filter 0.3s; }
+    body:not(.nda-blurred) > *:not(#nda-overlay) { filter: none; }
+    #nda-pw:focus { border-color: var(--accent, #c2f542); }
+    @keyframes nda-shake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
+    .nda-shake { animation: nda-shake 0.35s ease; }
+  </style>
+
+  <script>
+    (function() {
+      if (sessionStorage.getItem('nda_paymight') === '1') {
+        document.body.classList.remove('nda-blurred');
+        var o = document.getElementById('nda-overlay');
+        if (o) o.style.display = 'none';
+      }
+    })();
+    function ndaCheck() {
+      var pw = document.getElementById('nda-pw').value;
+      var err = document.getElementById('nda-error');
+      var input = document.getElementById('nda-pw');
+      if (pw === 'jay.tran@kreebox0103') {
+        sessionStorage.setItem('nda_paymight', '1');
+        document.getElementById('nda-overlay').style.display = 'none';
+        document.body.classList.remove('nda-blurred');
+      } else {
+        err.style.display = 'block';
+        input.classList.add('nda-shake');
+        input.value = '';
+        setTimeout(function() { input.classList.remove('nda-shake'); }, 400);
+        input.focus();
+      }
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && document.getElementById('nda-overlay').style.display !== 'none') ndaCheck();
+    });
+  </script>
+
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Reading progress"></div>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" style="display:flex;align-items:center;gap:9px;"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><rect width="8" height="8" rx="1" fill="var(--accent)"/></svg>Phuong Tran</a>
+      <ul class="nav__links" role="list">
+        <li><a href="../works.html" data-i18n="nav.works">Works</a></li>
+        <li><a href="../now.html" data-i18n="nav.now">Now</a></li>
+        <li><a href="https://www.linkedin.com/newsletters/product-design-sharing-7068805116568481792/" target="_blank" rel="noopener" data-i18n="nav.writings">Writings ↗</a></li>
+        <li><a href="mailto:jay.tran@kreebox.com" class="nav__cta" data-i18n="nav.cta">Have a chat</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="lang-toggle" aria-label="Chuyển sang tiếng Việt">VI</button>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__hamburger" aria-expanded="false" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="cs-hero">
+    <div class="container">
+      <a href="../works.html" class="cs-hero__back hero-stagger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <span data-i18n="back.works">See all works</span>
+      </a>
+      <div class="cs-hero__tags hero-stagger">
+        <span class="tag" data-i18n="work.paymight.tag.1">Web3 Payments</span>
+        <span class="tag" data-i18n="work.paymight.tag.2">Cross-border Fintech</span>
+        <span class="tag" data-i18n="work.paymight.tag.3">Compliance UX</span>
+        <span class="tag" data-i18n="work.paymight.tag.4">0→1 Design</span>
+        <span class="tag" data-i18n="work.paymight.tag.5">Freelance</span>
+      </div>
+      <h1 class="display-xl cs-hero__title hero-stagger" data-i18n="work.paymight.title">Designing a Web3 payment platform where cross-border money moves like a local transfer</h1>
+      <p class="cs-hero__subtitle hero-stagger" data-i18n-html="work.paymight.subtitle">A year-long freelance engagement designing PayMight end to end virtual bank accounts, pay/receive/transfer flows across fiat and digital assets, staged KYC verification, and a yield dashboard for people who don't want their crypto sitting idle.</p>
+      <div class="cs-meta hero-stagger">
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.myRole">My Role</p><p class="cs-meta__value" data-i18n="work.paymight.meta.role">Product Designer (Freelance)</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.company">Company</p><p class="cs-meta__value">PayMight · Remote</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.year">Year</p><p class="cs-meta__value">2025–2026</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.type">Type</p><p class="cs-meta__value">0→1 product design · Web3 fintech</p></div>
+        <div class="cs-meta__item"><p class="cs-meta__label" data-i18n="meta.duration">Duration</p><p class="cs-meta__value" data-i18n="work.paymight.meta.duration">1 year</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0;">
+    <div class="container">
+      <div class="cs-phone-gallery">
+        <img src="../assets/paymight/paymight-home.png" alt="PayMight home screen with total balance and quick actions" loading="eager" />
+        <img src="../assets/paymight/paymight-wallet.png" alt="PayMight wallet screen showing fiat and crypto balances" loading="eager" />
+        <img src="../assets/paymight/paymight-rewards.png" alt="PayMight referral and rewards screen with invite code" loading="eager" />
+      </div>
+      <p style="font-family:var(--f-mono);font-size:0.68rem;color:var(--ink-3);margin-top:1.5rem;text-align:center;letter-spacing:0.04em;" data-i18n="work.paymight.heroCaption">Home, wallet, and referral &amp; rewards screens designed as one coherent system</p>
+    </div>
+  </div>
+
+  <div class="cs-layout">
+    <aside class="cs-toc" aria-label="Table of contents">
+      <p class="cs-toc__label" data-i18n="toc.label">Contents</p>
+      <ul class="cs-toc__list" role="list">
+        <li><a href="#context" class="cs-toc__link"><span data-i18n="work.paymight.toc.1">I Context</span></a></li>
+        <li><a href="#problem" class="cs-toc__link"><span data-i18n="work.paymight.toc.2">II The design problem</span></a></li>
+        <li><a href="#users" class="cs-toc__link"><span data-i18n="work.paymight.toc.3">III Users</span></a></li>
+        <li><a href="#approach" class="cs-toc__link"><span data-i18n="work.paymight.toc.4">IV Design approach</span></a></li>
+        <li><a href="#flows" class="cs-toc__link"><span data-i18n="work.paymight.toc.5">V Core flows</span></a></li>
+        <li><a href="#delivery" class="cs-toc__link"><span data-i18n="work.paymight.toc.6">VI What shipped</span></a></li>
+      </ul>
+    </aside>
+
+    <main class="cs-content">
+
+      <section class="cs-section fade-up" id="context">
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.paymight.section.1.num">Section I</span><h2 class="cs-section__title" data-i18n="work.paymight.section.1.title">Cross-border money still moves like it's 1995</h2></div>
+        <div class="cs-body">
+          <p data-i18n-html="work.paymight.body.1">Sending money across borders is still slow and expensive for anyone outside a traditional bank's correspondent network freelancers getting paid by an overseas client, remote workers wiring money home, digital asset holders who want to spend crypto without becoming a full-time trader. They end up choosing between slow bank wires with opaque fees, remittance apps that only handle fiat, or crypto exchanges that don't talk to a bank account at all.</p>
+          <p data-i18n-html="work.paymight.body.2">PayMight set out to close that gap: one account that handles fiat and digital assets together. Virtual bank accounts for collecting and paying in USD, EUR, and GBP. Direct wallet-to-wallet and wallet-to-bank transfers. And a yield product for people holding BTC, ETH, or USDT who don't want that value sitting flat.</p>
+          <p data-i18n-html="work.paymight.body.3">I joined as the freelance product designer for a year-long engagement, designing the platform from account creation through to daily use MiBank onboarding, the Pay/Receive/Transfer core, and the MiEarn dashboard.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><p class="cs-metric__value" data-i18n="work.paymight.metric.1.value">3</p><p class="cs-metric__label" data-i18n="work.paymight.metric.1">Core money movements designed end-to-end: Pay, Receive, Transfer</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">60+</p><p class="cs-metric__label" data-i18n="work.paymight.metric.2">Payout currencies supported, from HKD and PHP to JPY and KRW</p></div>
+          <div class="cs-metric"><p class="cs-metric__value">T+1</p><p class="cs-metric__label" data-i18n="work.paymight.metric.3">KYC turnaround target built into the verification flow</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="problem">
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.paymight.section.2.num">Section II</span><h2 class="cs-section__title" data-i18n="work.paymight.section.2.title">Two systems of trust: fiat compliance and blockchain transparency</h2></div>
+        <div class="cs-body">
+          <p data-i18n-html="work.paymight.body.4">The hardest part of PayMight wasn't screen count. It was that the product has to satisfy two entirely different trust systems at once. Fiat rails demand KYC, sanctions screening, and jurisdiction-specific compliance we were designing for users across Canada, the US, and the EU from day one. Blockchain rails demand something else: visible, verifiable transactions with no intermediary to call when something goes wrong. A user moving USDT into a EUR bank account needs to feel safe under both sets of rules at once, and the interface is the only place those two systems actually meet.</p>
+          <p data-i18n-html="work.paymight.body.5">The second problem was legibility. Off-ramping BTC or ETH into a bank withdrawal has more moving parts than a card payment an exchange rate, a network, a settlement window, a fee stack. If any one of those is unclear, the user won't finish the withdrawal, because moving real money through an unfamiliar sequence is exactly the moment people stop trusting a product.</p>
+        </div>
+        <div class="cs-pullquote"><p data-i18n-html="work.paymight.body.6">Compliance and blockchain transparency are solving the same problem from opposite directions proving a transaction is safe. My job was making sure the interface didn't argue with itself while doing both.</p></div>
+      </section>
+
+      <section class="cs-section fade-up" id="users">
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.paymight.section.3.num">Section III</span><h2 class="cs-section__title" data-i18n="work.paymight.section.3.title">Three users, one account they all have to trust with real money</h2></div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title" data-i18n="work.paymight.sub.1">The Cross-Border Earner</h3>
+          <div class="cs-body"><p data-i18n-html="work.paymight.body.7">Freelancers and remote employees getting paid by overseas clients or employers. Mental model: "I did the work, I need the money in my local bank, and I need to know exactly what I'll actually receive after fees." Needs: a receiving account that looks and behaves like a real bank account, clear same-name payout rules, and a payout total they can trust before they confirm.</p></div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title" data-i18n="work.paymight.sub.2">The Asset Holder</h3>
+          <div class="cs-body"><p data-i18n-html="work.paymight.body.8">People holding BTC, ETH, or USDT who need to spend or move that value into everyday life rent, tuition, family remittances without fully cashing out on an exchange first. Mental model: "This is worth something right now, I want it in my bank account without three extra apps in between." Needs: a clear off-ramp path, an honest exchange rate, and confidence that the blockchain transaction and the bank transfer are the same event, not two separate leaps of faith.</p></div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title" data-i18n="work.paymight.sub.3">The Idle-Balance Holder</h3>
+          <div class="cs-body"><p data-i18n-html="work.paymight.body.9">Users who already hold BTC, ETH, or USDT and don't want it sitting flat. Mental model: "I'm not trading, I just don't want this doing nothing." Needs: a simple entry into yield with the term and expected return visible before committing, and a real-time way to check it's actually earning not a black box.</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="approach">
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.paymight.section.4.num">Section IV</span><h2 class="cs-section__title" data-i18n="work.paymight.section.4.title">Ask for what the next step needs, and make it one account, not two</h2></div>
+        <div class="cs-body">
+          <p data-i18n-html="work.paymight.body.10">Account opening was the first fork in the whole product: a new user shouldn't have to understand blockchain mechanics, banking compliance, and yield terms before they can send their first payment. I designed onboarding to collect identity details progressively, tied to the specific rail the user is about to use, rather than front-loading a long form before they've seen any value.</p>
+          <p data-i18n-html="work.paymight.body.11">The second decision was making the fiat and crypto sides of the product look like one account, not two. Balances, transaction history, and payout status use the same visual language whether the underlying movement is a SWIFT transfer or an on-chain transaction the user shouldn't have to context-switch between "the bank part" and "the crypto part" of an app they're trusting with real money.</p>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title" data-i18n="work.paymight.sub.4">Verification that doesn't feel like an interrogation</h3>
+          <div class="cs-body"><p data-i18n-html="work.paymight.body.12">KYC is the single biggest drop-off risk in any fintech onboarding, so I staged it around what the user is actually trying to do enough verification to open the account and see the product, more only when they try to move money past a certain threshold or use a named payout. Progress is always visible, and the T+1 turnaround is stated up front instead of left as an open-ended wait.</p></div>
+        </div>
+      </section>
+
+      <section class="cs-section fade-up" id="flows">
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.paymight.section.5.num">Section V</span><h2 class="cs-section__title" data-i18n="work.paymight.section.5.title">Pay, Receive, Transfer and the account that carries them</h2></div>
+        <div class="cs-body"><p data-i18n-html="work.paymight.body.13">Three flows share one foundation. Receive generates a payment link, QR code, or dedicated virtual account depending on who's paying and in what currency, then settles into whichever currency the user has designated. Pay handles both digital-asset and fiat payments from the same balance screen, whether the recipient is online, a merchant terminal, or another PayMight user. Transfer strips out everything but the essentials for direct wallet-to-wallet or wallet-to-bank movement no intermediary screens, because there's no intermediary in the transaction itself.</p></div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title" data-i18n="work.paymight.sub.5">MiBank onboarding</h3>
+          <div class="cs-body"><p data-i18n-html="work.paymight.body.14">Named collection and payout accounts only work if the name on the account matches the name on the user's verified identity, so the design surfaces that constraint early before a user picks a currency rather than as a rejection message after they've already tried to send money. Currency selection is scoped to what's actually usable at that user's verification level.</p></div>
+        </div>
+        <div class="cs-subsection">
+          <h3 class="cs-subsection__title" data-i18n="work.paymight.sub.6">MiEarn</h3>
+          <div class="cs-body"><p data-i18n-html="work.paymight.body.15">Deposit an asset, see the term and real-time yield before committing, then track accrual on a dashboard that behaves like a receipt, not a trading chart. The design deliberately avoids the volatility-driven, constantly-refreshing feel of a trading app this is a savings product wearing crypto's rails, not a speculation tool.</p></div>
+        </div>
+        <div class="cs-visual fade-up" style="display:flex;justify-content:center;">
+          <img src="../assets/paymight/paymight-wallet.png" alt="PayMight wallet screen with unified fiat and crypto balances" style="height:480px;width:auto;border-radius:1.75rem;box-shadow:0 12px 40px rgba(0,0,0,0.45);" loading="lazy" />
+        </div>
+        <p class="cs-visual__caption" style="text-align:center;" data-i18n="work.paymight.caption.flows">Fiat and crypto balances share one visual language in the wallet screen no context-switching between "the bank part" and "the crypto part"</p>
+      </section>
+
+      <section class="cs-section fade-up" id="delivery">
+        <div class="cs-section__header"><span class="cs-section__number" data-i18n="work.paymight.section.6.num">Section VI</span><h2 class="cs-section__title" data-i18n="work.paymight.section.6.title">What shipped over a year</h2></div>
+        <div class="cs-segments">
+          <div class="cs-segment"><span class="cs-segment__tag" data-i18n="work.paymight.segment.1.tag">Shipped</span><p class="cs-segment__name" data-i18n="work.paymight.segment.1.name">MiBank Virtual Accounts</p><p class="cs-segment__desc" data-i18n="work.paymight.segment.1.desc">Named collection and payout onboarding with currency-scoped verification, supporting USD/EUR/GBP collection and 60+ payout currencies</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag" data-i18n="work.paymight.segment.2.tag">Shipped</span><p class="cs-segment__name" data-i18n="work.paymight.segment.2.name">Pay / Receive / Transfer</p><p class="cs-segment__desc" data-i18n="work.paymight.segment.2.desc">Unified core flows for digital-asset and fiat movement, spanning payment links, QR codes, and direct wallet transfers</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag" data-i18n="work.paymight.segment.3.tag">Shipped</span><p class="cs-segment__name" data-i18n="work.paymight.segment.3.name">MiEarn Dashboard</p><p class="cs-segment__desc" data-i18n="work.paymight.segment.3.desc">Yield product for BTC, ETH, and USDT holders with visible terms and real-time accrual tracking</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag" data-i18n="work.paymight.segment.4.tag">Shipped</span><p class="cs-segment__name" data-i18n="work.paymight.segment.4.name">Off-Ramp Flow</p><p class="cs-segment__desc" data-i18n="work.paymight.segment.4.desc">Digital-asset-to-fiat withdrawal across five supported assets, with transparent rate and fee display before confirmation</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag" data-i18n="work.paymight.segment.5.tag">Shipped</span><p class="cs-segment__name" data-i18n="work.paymight.segment.5.name">Staged KYC Verification</p><p class="cs-segment__desc" data-i18n="work.paymight.segment.5.desc">Identity checks scoped to what the user is trying to do next, with a stated T+1 turnaround instead of an open-ended wait</p></div>
+          <div class="cs-segment"><span class="cs-segment__tag" data-i18n="work.paymight.segment.6.tag">Shipped</span><p class="cs-segment__name" data-i18n="work.paymight.segment.6.name">Unified Balance UI</p><p class="cs-segment__desc" data-i18n="work.paymight.segment.6.desc">One visual system for fiat and blockchain transactions so users don't have to context-switch between the bank part and the crypto part</p></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:2rem 0;">
+          <span class="tag" style="padding:0.3rem 0.8rem;" data-i18n="work.paymight.reflection.1">Web3 payment design</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;" data-i18n="work.paymight.reflection.2">Compliance-aware UX</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;" data-i18n="work.paymight.reflection.3">Progressive verification</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;" data-i18n="work.paymight.reflection.4">Fintech · Web3</span>
+          <span class="tag" style="padding:0.3rem 0.8rem;" data-i18n="work.paymight.reflection.5">0→1 freelance</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="container">
+    <section style="padding:4rem 0;border-top:1px solid var(--border);">
+      <p style="font-family:var(--f-mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2rem;" data-i18n="work.paymight.relatedLabel">Other fintech &amp; product projects</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <a href="kreebox-crypto.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);" data-i18n="work.paymight.relatedTag1">Kreebox · Freelance</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);" data-i18n="work.paymight.relatedCard1">Kreebox Crypto Lending App</p>
+        </a>
+        <a href="my-balance.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;text-decoration:none;color:inherit;">
+          <p style="font-family:var(--f-mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);" data-i18n="work.paymight.relatedTag2">Tiki · Feature</p>
+          <p style="font-family:var(--f-display);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);" data-i18n="work.paymight.relatedCard2">My Balance Seller Payout</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand"><p class="footer__brand-name">Phuong Tran</p><p class="footer__tagline" data-i18n="footer.tagline">Product designer crafting thoughtful digital experiences with an eye for detail and obsession with craft.</p></div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.nav-title">Navigation</p><ul class="footer__nav-links" role="list"><li><a href="../works.html" data-i18n="nav.works">Works</a></li><li><a href="../now.html" data-i18n="nav.now">Now</a></li></ul></div>
+          <div class="footer__nav-group"><p class="footer__nav-title" data-i18n="footer.contact-title">Contact</p><ul class="footer__nav-links" role="list"><li><a href="mailto:jay.tran@kreebox.com">Email</a></li><li><a href="https://linkedin.com/in/phuong-tran89" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
+        </nav>
+      </div>
+      <div class="footer__bottom"><p class="footer__copy" data-i18n="footer.copy">© 2026 Phuong Tran. Built with care.</p></div>
+    </div>
+  </footer>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/chatbot.js?v=2"></script>
+  <script>
+    const bar = document.getElementById('progressBar');
+    if (bar) window.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%'; }, { passive: true });
+    const secs = document.querySelectorAll('.cs-section[id]'), tocLinks = document.querySelectorAll('.cs-toc__link');
+    if (secs.length && tocLinks.length) { const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { tocLinks.forEach(l => l.classList.remove('active')); const a = document.querySelector('.cs-toc__link[href="#' + e.target.id + '"]'); if (a) a.classList.add('active'); } }); }, { rootMargin: '-20% 0px -70% 0px' }); secs.forEach(s => io.observe(s)); }
+  </script>
+
+</body>
+</html>
